@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+    --theme-color: #327CCB; /* #4E9CB5 */
+}
+
+.App > .content {
+  margin: 0 auto;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}

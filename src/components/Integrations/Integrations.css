@@ -1,0 +1,177 @@
+
+.integrations {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    position: relative;
+    transform: skewY(5deg);
+    max-width: 1200px;
+    margin: 0 auto 150px;
+    padding-top: 300px;
+}
+
+.integrations .integrationList {
+    margin-top: -10px;
+    width: 45%;
+    display: inline-block;
+    margin-right: 4%;
+    margin-left: 6%;
+}
+
+.integrations .title {
+    font-size: 4em;
+    font-weight: 500;
+    color: black;
+}
+
+.integrations .integration {
+    padding: 15px;
+    margin: 15px;
+    background: white;
+    border-radius: 2px;
+    display: inline-block;
+    width: 480px;
+    height: 90px;
+    cursor: pointer;
+    vertical-align: top;
+    transition: all 0.2s ease-in-out;
+    color: black;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+}
+
+.integrations .leftSection {
+    width: 100px;
+    display: inline-block;
+}
+
+.integrations .rightSection {
+    width: 280px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+.integrations .integration:hover {
+    box-shadow: rgba(0,0,0,0.5) 5px 9px 40px -11px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    margin-top: 13px;
+    margin-bottom: 17px;
+}
+
+.integration .logo {
+    margin-left: 0;
+    margin-top: 5px;
+    display: inline-block;
+    width: 100px;
+    height: 90px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 220%;
+    font-weight: 600;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.integrations .logo.blank {
+    background-color: lightgray;
+    width: 69px;
+    height: 70px;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 69px;
+    font-size: 60px;
+    padding-left: 1px;
+}
+
+.integration .logo svg {
+    transform: rotate(-20deg);
+    width: inherit;
+    height: auto;
+    margin-left: -10px;
+    margin-top: -1px;
+}
+
+.integration .logo svg g {
+    fill: #327ccb;
+}
+
+.integrations .name {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.integrations .description {
+    margin-top: 8px;
+    font-weight: 100;
+    font-size: 14px;
+    width: 290px;
+}
+
+.integrations .underline {
+    width: 80px;
+    height: 3px;
+    background: #327ccb;
+    margin-top: 1px;
+}
+
+.integrations .textWrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    padding: 1% 5% 6% 8%;
+}
+
+.integrations .buttonOuter {
+    margin-top: 7%;
+    font-weight: 300;
+}
+
+.integrations .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+}
+
+.integrations .buttonText:hover {
+    background-color: #5490d0 !important;
+}
+
+.integrations .arrowWrapper {
+    display: inline-block;
+    height: 90px;
+    vertical-align: top;
+    width: 50px;
+    float: right;
+}
+
+.integrations .arrow {
+    margin-left: -15px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.integrations .arrow svg {
+    font-size: 50px;
+    line-height: 90px;
+    color: lightgrey;
+    font-weight: 100;
+}
+
+.integrations .integration:hover .arrow {
+    margin-left: 0;
+    opacity: 1;
+}

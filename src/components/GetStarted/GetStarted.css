@@ -1,0 +1,44 @@
+
+.getStarted {
+    width: 100vw;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.getStarted .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.getStarted .button {
+    margin-top: 7%;
+    font-weight: 300;
+}
+
+.getStarted .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+}
+
+.getStarted .buttonText:hover {
+    background-color: #5490d0 !important;
+}
+
+.getStarted .leftSide {
+    width: 40%;
+    display: inline-block;
+    font-size: 4em;
+}
+
+.getStarted .rightSide {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}

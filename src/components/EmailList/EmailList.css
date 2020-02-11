@@ -1,0 +1,81 @@
+
+.emailList {
+    width: 100vw;
+    text-align: center;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    height: 400px;
+}
+
+.emailList .wrapper {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    background-color: white;
+}
+
+.emailList .content {
+    max-width: 1200px;
+    margin: 50px auto 150px;
+    height: 200px;
+}
+
+.emailList .title {
+    font-weight: 400;
+    color: black;
+    font-size: 3em;
+}
+
+.emailList .subtitles {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.emailList .subtitle {
+    font-weight: 100;
+    font-size: 1em;
+    color: black;
+}
+
+.emailList .emailInput {
+    display: inline-block;
+}
+
+.emailList .inputWrapper input {
+    border: none;
+    background: #f2f3f2;
+    outline: none;
+    display: inline-block;
+    border-radius: 4px;
+    width: 400px;
+    max-width: 80vw;
+    height: 30px;
+    vertical-align: top;
+    padding: 5px 5px 5px 20px;
+    color: black;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.emailList .buttonOuter {
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    margin: 0 0 0 20px;
+}
+
+.emailList .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    padding: 6px 30px;
+    margin: 0;
+    height: 40px;
+    line-height: 30px;
+}
+
+.emailList .buttonText:hover {
+    background-color: #5490d0 !important;
+}

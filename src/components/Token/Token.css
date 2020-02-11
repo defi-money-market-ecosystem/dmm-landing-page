@@ -1,0 +1,104 @@
+
+.token {
+    transform: skewY(5deg);
+    margin-bottom: 220px;
+}
+
+.token .content {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.token .tokenInfo {
+    width: 54%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+.token .tokenInfo .border {
+    height: 4px;
+    background: #327ccb;
+    width: 110px;
+}
+
+.token .tokenInfo .subtext {
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.token .tempLogo {
+    border-radius: 50%;
+    margin: 10px 13px 10px;
+    display: inline-block;
+    width: 12%;
+    height: auto;
+}
+
+.token .tempLogo svg {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.token .tempLogo svg path {
+    fill: #327ccb;
+    height: 40px;
+    width: 40px;
+}
+
+.token .name {
+    font-family: 'Raleway', sans-serif;
+    line-height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4%;
+    font-size: 18px;
+    margin-top: 0.7%;
+}
+
+.token .textWrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    padding: 6% 5% 6% 8%;
+}
+
+.token .title {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.token .subtitle {
+    margin-top: 4%;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.token .tokenInfo .subtitle {
+    margin-top: 4%;
+    font-weight: 400;
+    font-size: 2.3em;
+    margin-bottom: 2px;
+}
+
+.token .buttonOuter {
+    margin-top: 7%;
+    font-weight: 300;
+}
+
+.token .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+}
+
+.token .buttonText:hover {
+    background-color: #5490d0 !important;
+}

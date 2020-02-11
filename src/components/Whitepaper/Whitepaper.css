@@ -1,0 +1,180 @@
+
+.whitepaper {
+    transform: skewY(5deg);
+}
+
+.whitepaper .content {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.whitepaperGraphic {
+    display: inline-block;
+    width: 49.5%;
+}
+
+.whitepaper .frontPaper {
+    background-color: white;
+    width: 70%;
+    float: right;
+    height: 37vw;
+    z-index: 50;
+    margin-bottom: -37vw;
+}
+
+.whitepaper .tempLogo {
+    border-radius: 50%;
+    margin: 10px 13px 10px;
+    display: inline-block;
+    width: 12%;
+    height: auto;
+}
+
+.whitepaper .tempLogo svg {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.whitepaper .tempLogo svg path {
+    fill: #327ccb;
+    height: 40px;
+    width: 40px;
+}
+
+.whitepaper .name {
+    font-family: 'Raleway', sans-serif;
+    line-height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4%;
+    font-size: 18px;
+    margin-top: 0.7%;
+}
+
+.whitepaper .paperLogo {
+    display: inline-block;
+    margin: 3% 7%;
+}
+
+.whitepaper .paragraph {
+    padding: 0 13%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.whitepaper .line {
+    margin-bottom: 6%;
+    height: 0.8vw;
+    max-height: 10px;
+}
+
+.whitepaper .block {
+    background: #efefef;
+    height: 0.8vw;
+    max-height: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.whitepaper .block1 {
+    width: 10%;
+}
+
+.whitepaper .block2 {
+    width: 20%;
+}
+
+.whitepaper .block3 {
+    width: 30%;
+}
+
+.whitepaper .block4 {
+    width: 40%;
+}
+
+.whitepaper .block5 {
+    width: 50%;
+}
+
+.whitepaper .block6 {
+    width: 60%;
+}
+
+.whitepaper .block7 {
+    width: 70%;
+}
+
+.whitepaper .block8 {
+    width: 80%;
+}
+
+.whitepaper .block9 {
+    width: 90%;
+}
+
+.whitepaper .block10 {
+    width: 100%;
+}
+
+.whitepaper .white {
+    background-color: white;
+}
+
+.whitepaper .middlePaper {
+    width: 70%;
+    float: right;
+    height: 37vw;
+    margin-bottom: -37vw;
+    transform: rotate(-6deg) translate(-39px, 17px);
+    background-color: #8cbaec;
+    z-index: 49;
+}
+
+.whitepaper .backPaper {
+    width: 70%;
+    float: right;
+    height: 37vw;
+    transform: rotate(-12deg) translate(-80px, 40px);
+    background-color: #327ccb;
+    z-index: 48;
+}
+
+.whitepaper .textWrapper {
+    display: inline-block;
+    width: 34.5%;
+    padding: 6%;
+    vertical-align: top;
+}
+
+.whitepaper .title {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.whitepaper .subtitle {
+    margin-top: 4%;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.whitepaper .buttonOuter {
+    margin-top: 7%;
+    font-weight: 300;
+}
+
+.whitepaper .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+}
+
+.whitepaper .buttonText:hover {
+    background-color: #5490d0 !important;
+}

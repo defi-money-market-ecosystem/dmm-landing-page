@@ -1,0 +1,101 @@
+
+.footer {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-color: #327ccb;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer .leftSide {
+    width: calc(30% - 40px);
+    padding: 20px;
+    height: 160px;
+    text-align: left;
+}
+
+.footer .leftSide a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.footer .leftSide a:hover {
+    text-decoration: underline;
+}
+
+.footer .middle {
+    width: 30%;
+}
+
+.footer .middle svg {
+    height: 60%;
+    width: 60%;
+    transform: rotate(-20deg);
+    margin-left: -20px;
+    margin-top: 25px;
+}
+
+.footer .middle g {
+    fill: #deeefe;
+}
+
+.footer .rightSide {
+    width: calc(30% - 40px);
+    text-align: right;
+    padding: 0 20px;
+}
+
+.footer .copyright {
+    font-weight: 100;
+    font-size: 0.8em;
+    margin-top: -1px;
+}
+
+.footer .dmm {
+    font-weight: 100;
+    font-size: 4em;
+    font-family: "Raleway",sans-serif;
+    margin-top: 25px;
+    margin-bottom: 4px;
+}
+
+.footer .comment {
+}
+
+.footer .socialMedia {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.footer .socialMedia svg {
+    font-size: 35px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.footer .socialMedia path {
+    fill: white;
+    -webkit-transition: fill 0.2s ease-in-out;
+    -moz-transition: fill 0.2s ease-in-out;
+    -ms-transition: fill 0.2s ease-in-out;
+    -o-transition: fill 0.2s ease-in-out;
+    transition: fill 0.2s ease-in-out;
+}
+
+.footer .socialMedia svg:hover path {
+    fill: #87b9ef;/*#deeefe;*/
+}

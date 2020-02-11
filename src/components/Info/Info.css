@@ -1,0 +1,131 @@
+
+.info {
+    font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    margin: 750px auto 0;
+    max-width: 1200px;
+}
+
+.info .blueBanner {
+    width: 100%;
+    background-color: var(--theme-color);
+    left: 0;
+    transform: skewY(-5deg);
+    margin-top: 6%;
+    box-shadow: rgba(0,0,0,0.5) inset 0 10px 10px -10px;
+    font-family: 'Open Sans', sans-serif;
+    height: 400px;
+    overflow: hidden;
+}
+
+.info #blueBanner1 {
+    height: 450px;
+    width: 200vw;
+    margin-left: -100vw;
+    margin-top: 240px;
+}
+
+.info #blueBanner2 {
+    box-shadow: none;
+    height: 390px;
+    width: 200vw;
+    margin-left: -100vw;
+    margin-top: 400px;
+}
+
+.info #blueBanner3 {
+    box-shadow: none;
+    height: 1500px;
+    z-index: -1;
+    background: rgb(50,124,203);
+    background: linear-gradient(180deg, rgba(50,124,203,1) 0%, rgba(50,124,203,1) 35%, rgba(50,124,203,0.45281862745098034) 100%);
+    width: 200vw;
+    margin-left: -100vw;
+    margin-top: 410px;
+}
+
+.info .lightBlueBanner {
+    background-color: #03A9F4;
+}
+
+.info .content {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 600;
+    position: relative;
+    text-align: left;
+    max-width: 1200px;
+    margin: -1155px auto 0;
+}
+
+.info .title {
+    margin-bottom: 30px;
+    display: none;
+}
+
+.info .section {
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.info .section.white {
+    color: var(--theme-color);
+}
+
+.info .number {
+    display: inline-block;
+    font-size: 35vw;
+    padding: 1%;
+    vertical-align: bottom;
+    line-height: 370px;
+}
+
+.info .text {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-weight: 400;
+}
+
+.info .section.white .text {
+    color: black;
+}
+
+.info .text .subtext {
+    font-size: 0.6em;
+    margin-top: 25px;
+    font-weight: 200;
+    cursor: pointer;
+    -webkit-transition: margin-left 0.1s ease-in-out;
+    -moz-transition: margin-left 0.1s ease-in-out;
+    -ms-transition: margin-left 0.1s ease-in-out;
+    -o-transition: margin-left 0.1s ease-in-out;
+    transition: margin-left 0.1s ease-in-out;
+}
+
+.info .text .subtext:hover {
+    margin-left: 5px;
+}
+
+.info #text2,
+.info #text4 {
+    width: 70%;
+}
+
+@media screen and (min-width: 1200px) {
+    .info .number {
+        font-size: 420px;
+    }
+}
+
+.info .flattener {
+    width: 100%;
+    background-color: #327ccb;
+    height: 15%;
+    margin-bottom: -110px;
+    display: none;
+}

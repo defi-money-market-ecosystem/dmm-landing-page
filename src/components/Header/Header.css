@@ -1,0 +1,54 @@
+
+.header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    text-align: left;
+    padding-top: 18%;
+    height: calc(100vh - 18%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.headerInner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .content {
+    width: 80%;
+    animation-duration: 1000ms !important;
+    height: 40px;
+    margin-bottom: 200px;
+}
+
+.header .blue {
+    color: var(--theme-color);
+    font-weight: 600;
+}
+
+.header .learnMore {
+    font-size: 0.5em;
+    font-weight: 100;
+    margin-top: 50px;
+    animation-delay: 250ms !important;
+}
+
+.header #bird {
+    position: absolute;
+}
+
+.header #bird svg {
+    transform: rotate(-20deg);
+    width: 175%;
+    height: auto;
+    margin-left: -34%;
+    margin-top: -57%;
+    margin-bottom: -33%;
+}
+
+.header #bird svg g {
+    fill: #327ccb;
+    opacity: 0.10;
+}
