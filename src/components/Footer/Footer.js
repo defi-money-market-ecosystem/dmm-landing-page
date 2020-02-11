@@ -8,7 +8,7 @@ const Footer = (props) => {
     <div className={'footer'}>
       <div className={'content'}>
         <div className={'leftSide'}>
-          <a style={{'font-weight': 800}} href={'#'}>Get DMM</a>
+          <a style={{'font-weight': '800'}} href={'#'}>Get DMM</a>
           <a href={'#'}>Docs</a>
           <a href={'#'}>Legal</a>
           <a href={'#'}>Smart Contract</a>

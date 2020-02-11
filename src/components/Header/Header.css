@@ -33,6 +33,18 @@
     font-weight: 100;
     margin-top: 50px;
     animation-delay: 250ms !important;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+}
+
+.header .learnMore:hover {
+    margin-top: 52px;
+    margin-bottom: -2px;
 }
 
 .header #bird {

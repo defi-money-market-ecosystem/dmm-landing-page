@@ -5,6 +5,12 @@ import Fade from 'react-reveal/Fade';
 import './Header.css';
 
 const Header = (props) => {
+  const myRef = React.createRef();
+
+  const handleScrollToElement = () => {
+    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <div className={'header'}>
       <div className={'headerInner'}>
@@ -57,10 +63,11 @@ const Header = (props) => {
           </div>
         </Fade>
         <Fade bottom>
-          <div className={'learnMore'}>
+          <div className={'learnMore'} onClick={() => handleScrollToElement()}>
             Find out how ↓
           </div>
         </Fade>
+        <div ref={myRef}/>
       </div>
     </div>
   );
