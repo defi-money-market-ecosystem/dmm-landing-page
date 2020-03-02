@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="451px" height="416px" viewBox="0 0 451 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Graph</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Graph" transform="translate(12.000000, 12.000000)" stroke="#FFFFFF" stroke-width="25">
+            <path d="M359.5,20.5 L375.5,43.5" id="Line-2"></path>
+            <path d="M359,20 L333,33" id="Line-2"></path>
+            <path d="M1.5,0.488449147 L1.5,390.075842" id="Line"></path>
+            <path d="M426.502656,391 L3,391" id="Line"></path>
+            <path d="M1.17553327,391.220711 C89.0019183,363.749198 166.304528,315.148975 233.083362,245.420042 C299.862197,175.691108 341.501076,102.291331 358,25.220711" id="Path-23"></path>
+        </g>
+    </g>
+</svg>

@@ -14,13 +14,23 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    padding: 20px 0;
+}
+
+@media (max-width: 1219px) {
+    .footer .content {
+        padding: 20px 2%;
+    }
 }
 
 .footer .leftSide {
-    width: calc(30% - 40px);
-    padding: 20px;
+    width: calc(30%);
+    /*padding: 20px;*/
     height: 160px;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .footer .leftSide a {
@@ -28,7 +38,6 @@
     color: white;
     text-decoration: none;
     font-size: 1em;
-    line-height: 2em;
     font-weight: 400;
     width: fit-content;
 }
@@ -46,7 +55,7 @@
     width: 60%;
     transform: rotate(-20deg);
     margin-left: -20px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .footer .middle g {
@@ -54,23 +63,29 @@
 }
 
 .footer .rightSide {
-    width: calc(30% - 40px);
+    width: calc(30%);
     text-align: right;
-    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 160px;
 }
 
 .footer .copyright {
     font-weight: 100;
     font-size: 0.8em;
     margin-top: -1px;
+    position: absolute;
+    bottom: 20px;
+    width: 30%;
+    text-align: center;
+    max-width: 360px;
 }
 
 .footer .dmm {
     font-weight: 100;
     font-size: 4em;
     font-family: "Raleway",sans-serif;
-    margin-top: 25px;
-    margin-bottom: 4px;
 }
 
 .footer .comment {
@@ -78,7 +93,6 @@
 
 .footer .socialMedia {
     text-align: right;
-    margin-top: 10px;
 }
 
 .footer .socialMedia svg {
@@ -98,4 +112,101 @@
 
 .footer .socialMedia svg:hover path {
     fill: #87b9ef;/*#deeefe;*/
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer .socialMedia svg {
+        font-size: 30px;
+    }
+}
+
+
+/* small */
+@media (max-width: 767px) {
+    .footer .leftSide {
+        width: 30%;
+        height: 160px;
+    }
+
+    .footer .leftSide a {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    .footer .middle svg {
+        height: 80%;
+        width: 80%;
+        margin-top: 0px;
+    }
+
+    .footer .rightSide {
+        width: 30%;
+        height: 160px;
+    }
+
+    .footer .dmm {
+        font-size: 4em;
+        margin-top: -5px;
+    }
+
+    .footer .comment {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+
+    .footer .socialMedia {
+        margin-top: 0;
+    }
+
+    .footer .socialMedia svg {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .footer .leftSide {
+        width: 30%;
+        height: 160px;
+    }
+
+    .footer .leftSide a {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    .footer .middle svg {
+        height: 80%;
+        width: 80%;
+        margin-top: 0px;
+    }
+
+    .footer .rightSide {
+        width: 30%;
+        height: 160px;
+    }
+
+    .footer .dmm {
+        font-size: 2.5em;
+        margin-top: -5px;
+    }
+
+    .footer .comment {
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
+
+    .footer .socialMedia {
+        margin-top: 0;
+    }
+
+    .footer .socialMedia svg {
+        font-size: 22px;
+        margin-top: 10px;
+        margin-left: 4px;
+    }
 }

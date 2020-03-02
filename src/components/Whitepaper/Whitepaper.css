@@ -178,3 +178,79 @@
 .whitepaper .buttonText:hover {
     background-color: #5490d0 !important;
 }
+
+.whitepaper .textWrapper.top {
+    display: none;
+}
+
+
+/* tablet */
+@media (min-width: 650px) and (max-width: 991px) {
+    .whitepaper .title {
+        font-size: 3em;
+    }
+
+    .whitepaper .textWrapper {
+        padding: 0 6%;
+    }
+
+    .whitepaper .whitepaperGraphic img {
+        width: 100%;
+    }
+
+    .whitepaper .buttonText {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 750px) {
+    .whitepaper .textWrapper {
+        margin-bottom: 80px;
+    }
+
+    .whitepaper .buttonText {
+        font-size: 0.8em;
+    }
+}
+
+
+/* mobile */
+@media (max-width: 649px) {
+    .whitepaper .textWrapper {
+        display: none;
+        margin-bottom: 40px;
+    }
+
+    .whitepaper .textWrapper.top {
+        display: inline-block;
+        width: 90%;
+        padding: 5%;
+    }
+
+    .whitepaper .whitepaperGraphic {
+        width: 90%;
+        padding: 5%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .whitepaper .whitepaperGraphic img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .whitepaper .title {
+        font-size: 3em;
+        display: inline-block;
+        margin-right: 13px;
+    }
+
+    .whitepaper .subtitle {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    .whitepaper .buttonOuter {
+        margin-top: 10px;
+    }
+}

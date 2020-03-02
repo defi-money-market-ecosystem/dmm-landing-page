@@ -65,6 +65,11 @@
     padding: 6% 5% 6% 8%;
 }
 
+.token .point.short {
+    height: 151px !important;
+    margin-bottom: -60px !important;
+}
+
 .token .title {
     font-size: 4em;
     font-weight: 500;
@@ -101,4 +106,77 @@
 
 .token .buttonText:hover {
     background-color: #5490d0 !important;
+}
+
+.token .buttonOuter.lower {
+    display: none;
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .token .point.short {
+        height: 147px !important;
+        margin-bottom: -28px !important
+    }
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+    .token {
+        margin-bottom: 100px;
+    }
+
+    .token .content {
+        padding: 5%;
+    }
+
+    .token .buttonOuter.lower {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .token .textWrapper,
+    .token .tokenInfo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .token .title {
+        font-size: 3em;
+        display: inline-block;
+        margin-right: 13px;
+    }
+
+    .token .subtitle {
+        margin-top: 10px;
+    }
+
+    .token .point.short {
+        height: 127px !important;
+        margin-bottom: -43px !important;
+    }
+
+    .token .tokenInfo .subtitle {
+        font-size: 2em;
+    }
+
+    .token .tokenInfo .subtext {
+        font-size: 1em;
+    }
+
+    .token .textWrapper .buttonOuter {
+        display: none;
+    }
+
+    .token .buttonOuter {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 593px) {
+    .token .point.short {
+        height: 147px !important;
+    }
 }

@@ -59,12 +59,12 @@ const Header = (props) => {
         </div>
         <Fade bottom>
           <div className={'content'}>
-            The DeFi Money Market Ecosystem currently has <span className={'blue'}>10,000,000</span> DMM tokens minted and ready to earn <span className={'blue'}>6.25%</span> interest.
+            The DeFi Money Market Ecosystem currently has <span className={'blue'}>10,000,000</span> DMM tokens minted and earning <span className={'blue'}>6.25%</span> interest.
           </div>
         </Fade>
         <Fade bottom>
-          <div className={'learnMore'} onClick={() => handleScrollToElement()}>
-            Find out how ↓
+          <div className={'learnMore'}>
+            <span onClick={() => handleScrollToElement()}>Find out how ↓</span>
           </div>
         </Fade>
         <div ref={myRef}/>

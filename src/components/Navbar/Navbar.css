@@ -2,12 +2,19 @@
 .navbar {
     height: 60px;
     background: none;
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     text-align: left;
     padding-top: 10px;
+    overflow: hidden;
+    padding-right: 20px;
+    width: calc(100% - 20px);
+    z-index: 999;
+}
+
+.MuiDialog-root {
+    position: absolute !important;
 }
 
 .navbar .content {
@@ -52,10 +59,44 @@
 .navbar .appButton {
     color: white !important;
     background-color: #327ccb !important;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 200;
     box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
-    height: 45px;
-    width: 75px;
-    margin-top: 9px;
+    height: 40px;
+    width: 115px;
+    margin-top: 10px;
+}
+
+.dialogBox {
+    padding: 20px;
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        padding-right: 20px;
+        width: calc(100% - 20px);
+    }
+
+    .navbar .appButton {
+        height: 40px;
+        line-height: 30px;
+    }
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+    .navbar {
+        padding-right: 20px;
+        width: calc(100% - 20px);
+    }
+
+    .navbar .appButton {
+        height: 36px;
+        line-height: 24px;
+        font-size: 15px;
+        width: 100px;
+    }
 }

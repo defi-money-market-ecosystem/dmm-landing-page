@@ -1,16 +1,47 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Fade from 'react-reveal/Fade';
+import Dialog from '@material-ui/core/Dialog';
 
 import './Integrations.css';
 
 const Integrations = (props) => {
+  Integrations.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = value => {
+    setOpen(false);
+  };
+
   return (
     <div className={'integrations'}>
+      <div className={'textWrapper top'}>
+        <div className={'title line1'}>
+          Community
+        </div>
+        <div className={'title line2'}>
+          Integrations
+        </div>
+        <div className={'buttonOuter'}>
+          <Button className={'buttonText'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
+            Read the docs
+          </Button>
+        </div>
+      </div>
       <Fade bottom cascade>
         <div className={'integrationList'}>
-          <div className={'integration'} onClick={() => window.open("http://www.google.com", "_blank")}>
+          <div className={'integration'} onClick={() => handleClickOpen()}>
             <div className={'leftSection'}>
               <div className={'logo'}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
@@ -71,7 +102,7 @@ const Integrations = (props) => {
               </div>
             </div>
           </div>
-          <div className={'integration'} onClick={() => window.open("http://www.google.com", "_blank")}>
+          <div className={'integration'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
             <div className={'leftSection'}>
               <div className={'logo blank'}>
                 +
@@ -102,11 +133,16 @@ const Integrations = (props) => {
           Integrations
         </div>
         <div className={'buttonOuter'}>
-          <Button className={'buttonText'} onClick={() => window.open("http://www.google.com", "_blank")}>
+          <Button className={'buttonText'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
             Read the docs
           </Button>
         </div>
       </div>
+      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+        <div className={'dialogBox'}>
+          Coming very soon!
+        </div>
+      </Dialog>
     </div>
   );
 };

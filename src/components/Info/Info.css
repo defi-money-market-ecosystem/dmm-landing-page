@@ -4,8 +4,8 @@
     width: 100vw;
     position: relative;
     left: 0;
-    margin: 750px auto 0;
     max-width: 1200px;
+    margin: calc(100vh - 100px) auto 0;
 }
 
 .info .blueBanner {
@@ -21,7 +21,7 @@
 }
 
 .info #blueBanner1 {
-    height: 450px;
+    height: 1000px;
     width: 200vw;
     margin-left: -100vw;
     margin-top: 240px;
@@ -105,6 +105,7 @@
     -ms-transition: margin-left 0.1s ease-in-out;
     -o-transition: margin-left 0.1s ease-in-out;
     transition: margin-left 0.1s ease-in-out;
+    width: fit-content;
 }
 
 .info .text .subtext:hover {
@@ -128,4 +129,141 @@
     height: 15%;
     margin-bottom: -110px;
     display: none;
+}
+
+
+@media (max-width: 1199px) {
+    .info #blueBanner1 {
+        height: 1300px;
+    }
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .info {
+        margin: calc(100vh - 100px) auto 0;
+    }
+
+    .info #blueBanner1 {
+        height: 1300px;
+    }
+
+    .info #blueBanner2 {
+        height: 290px;
+        margin-top: 300px;
+    }
+
+    .info .content {
+        margin: -900px auto 0;
+        padding: 0 3%;
+    }
+
+    .info .section {
+        font-size: 0.7em;
+        margin-bottom: 20px;
+    }
+
+    .info .number {
+        font-size: 270px;
+        line-height: 260px;
+        margin-left: 1%;
+    }
+
+    .info .text {
+        width: 70%;
+    }
+
+    .info #text2,
+    .info #text4 {
+        width: 60%;
+    }
+}
+
+/* small */
+@media (max-width: 767px) {
+    .info {
+        margin: calc(100vh - 100px) auto 0;
+    }
+
+    .info #blueBanner1 {
+        height: 1300px;
+    }
+
+    .info #blueBanner2 {
+        height: 290px;
+        margin-top: 300px;
+    }
+
+    .info .content {
+        margin: -880px auto 0;
+        padding: 0 3%;
+    }
+
+    .info .section {
+        font-size: 0.6em;
+        margin-bottom: 20px;
+    }
+
+    .info .number {
+        font-size: 270px;
+        line-height: 260px;
+        margin-left: 1%;
+    }
+
+    .info .text {
+        width: 60%;
+    }
+
+    .info #text2,
+    .info #text4 {
+        width: 60%;
+    }
+
+    .info .text .subtext {
+        font-size: 0.8em;
+    }
+}
+
+
+/* mobile */
+@media (max-width: 600px) {
+    .info {
+        margin: calc(100vh - 100px) auto 0;
+    }
+
+    .info #blueBanner1 {
+        height: 1200px;
+    }
+
+    .info #blueBanner2 {
+        height: 290px;
+        margin-top: 300px;
+    }
+
+    .info .content {
+        margin: -855px auto 0;
+        padding: 0;
+    }
+
+    .info .section {
+        margin-bottom: 90px;
+        font-size: 0.7em;
+    }
+
+    .info .number {
+        font-size: 230px;
+        line-height: 200px;
+        margin: 0;
+    }
+
+    .info .text {
+        margin-left: 0;
+        font-size: 0.7em;
+    }
+
+    .info #text2,
+    .info #text4 {
+        width: 60%;
+    }
 }

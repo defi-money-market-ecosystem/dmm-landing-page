@@ -1,18 +1,38 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Dialog from '@material-ui/core/Dialog';
+import PDF from '../../assets/DMM-Disclamier.pdf';
 
 import './Footer.css';
+import Token from "../Token/Token";
 
 const Footer = (props) => {
+  Footer.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = value => {
+    setOpen(false);
+  };
+
   return (
     <div className={'footer'}>
       <div className={'content'}>
         <div className={'leftSide'}>
-          <a style={{'font-weight': '800'}} href={'#'}>Get DMM</a>
-          <a href={'#'}>Docs</a>
-          <a href={'#'}>Legal</a>
-          <a href={'#'}>Smart Contract</a>
-          <a href={'#'}>Chainlink Integration</a>
+          <a style={{'fontWeight': '800'}} href={'#'} onClick={() => handleClickOpen()}>Get DMM</a>
+          <a href={'https://github.com/defi-money-market-ecosystem/protocol/wiki'} target={'_blank'}>Docs</a>
+          <a href={PDF} target={'_blank'}>Legal</a>
+          <a href={'https://rinkeby.etherscan.io/address/0x02ee9AEbb75470D517BFf722D36762d2b231539C'} target={'_blank'}>Smart Contract</a>
+          <a href={'https://docs.chain.link/docs/defi-money-market-chainlink-testnet'} target={'_blank'}>Chainlink Integration</a>
         </div>
         <div className={'middle'}>
           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
@@ -64,17 +84,22 @@ const Footer = (props) => {
           <div className={'dmm'}>
             DMM
           </div>
-          <div className={'comment'}>
-            Join the conversation:
-          </div>
           <div className={'socialMedia'}>
-            <FontAwesomeIcon icon={['fab', 'twitter']} />
-            <FontAwesomeIcon icon={['fab', 'reddit']} />
-            <FontAwesomeIcon icon={['fab', 'medium']} />
-            <FontAwesomeIcon icon={['fab', 'telegram']} />
+            <div className={'comment'}>
+              Join the conversation:
+            </div>
+            <a href={'https://twitter.com/DmmDAO'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
+            <a href={'https://www.reddit.com/r/DMMDAO/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'reddit']} /></a>
+            <a href={'https://medium.com/dmm-dao'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'medium']} /></a>
+            <a href={'https://discord.gg/9dM8yaA'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'discord']} /></a>
           </div>
         </div>
       </div>
+      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+        <div className={'dialogBox'}>
+          Coming very soon!
+        </div>
+      </Dialog>
     </div>
   );
 };

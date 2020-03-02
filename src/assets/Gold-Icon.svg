@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="853px" height="479px" viewBox="0 0 853 479" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Gold</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Gold" transform="translate(12.000000, 12.000000)" stroke="#FFFFFF" stroke-width="25">
+            <path d="M145.233781,347.5 L114.986678,454.5 L294.76472,454.5 L264.517617,347.5 L145.233781,347.5 Z" id="Rectangle-12"></path>
+            <path d="M355.233781,347.5 L324.986678,454.5 L504.76472,454.5 L474.517617,347.5 L355.233781,347.5 Z" id="Rectangle-12"></path>
+            <path d="M565.233781,347.5 L534.986678,454.5 L714.76472,454.5 L684.517617,347.5 L565.233781,347.5 Z" id="Rectangle-12"></path>
+            <path d="M250.233781,215.5 L219.986678,322.5 L399.76472,322.5 L369.517617,215.5 L250.233781,215.5 Z" id="Rectangle-12"></path>
+            <path d="M460.233781,215.5 L429.986678,322.5 L609.76472,322.5 L579.517617,215.5 L460.233781,215.5 Z" id="Rectangle-12"></path>
+            <path d="M355.233781,83.5 L324.986678,190.5 L504.76472,190.5 L474.517617,83.5 L355.233781,83.5 Z" id="Rectangle-12"></path>
+            <path d="M0.944311174,209 L91.5,251.422485" id="Line-6" stroke-linecap="round"></path>
+            <path d="M638.611378,0.5 L715.111378,75.4224849" id="Line-6" stroke-linecap="round" transform="translate(677.055689, 38.000000) scale(-1, 1) translate(-677.055689, -38.000000) "></path>
+            <path d="M113.055689,0.5 L189.555689,75.4224849" id="Line-6" stroke-linecap="round"></path>
+            <path d="M737,202 L827.555689,244.422485" id="Line-6" stroke-linecap="round" transform="translate(782.277844, 223.211242) scale(-1, 1) translate(-782.277844, -223.211242) "></path>
+        </g>
+    </g>
+</svg>

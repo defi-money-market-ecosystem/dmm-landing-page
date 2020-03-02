@@ -175,3 +175,135 @@
     margin-left: 0;
     opacity: 1;
 }
+
+.integrations .textWrapper.top {
+    display: none;
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .integrations {
+        padding-top: 250px;
+    }
+
+    .integrations .integrationList {
+        width: 48%;
+        padding: 0 5%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .integrations .title {
+        font-size: 3em;
+    }
+
+    .integrations .rightSection {
+        width: calc(100% - 130px);
+    }
+
+    .integrations .integration {
+        margin: 15px 0;
+        width: 90%;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .integrations .leftSection {
+        width: 80px;
+    }
+
+    .integrations .name {
+        font-size: 24px;
+    }
+
+    .integrations .logo {
+        margin-left: -10px;
+    }
+
+    .integrations .logo.blank {
+        margin-left: 5px;
+    }
+
+    .integrations .description {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .integrations .textWrapper {
+        padding-left: 0;
+    }
+
+    .integrations .arrowWrapper {
+        width: 40px;
+        margin-left: -40px;
+    }
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+    .integrations {
+        padding-top: 200px;
+    }
+
+    .integrations .textWrapper {
+        display: none;
+    }
+
+    .integrations .textWrapper.top {
+        display: inline-block;
+        width: 90%;
+        padding: 5%;
+    }
+
+    .integrations .integrationList {
+        width: 90%;
+        padding: 3% 5%;
+        margin: 0;
+    }
+
+    .integrations .title {
+        font-size: 3em;
+        display: inline-block;
+        margin-right: 13px;
+    }
+
+    .integrations .integration {
+        margin: 15px 0;
+        width: 90%;
+    }
+
+    .integrations .arrowWrapper {
+        display: none;
+    }
+
+    .integrations .leftSection {
+        width: 80px;
+    }
+
+    .integrations .rightSection {
+        width: calc(100% - 110px);
+    }
+
+    .integrations .name {
+        font-size: 24px;
+    }
+
+    .integrations .logo {
+        margin-left: -10px;
+    }
+
+    .integrations .logo.blank {
+        margin-left: 5px;
+    }
+
+    .integrations .description {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .integrations .buttonOuter {
+        margin-top: 10px;
+    }
+}

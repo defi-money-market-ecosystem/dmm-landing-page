@@ -1,0 +1,165 @@
+
+.quickFacts {
+    width: 100%;
+    margin: calc(100vh) auto 0;
+    position: absolute;
+    z-index: 9999999;
+    top: 0;
+    color: white;
+}
+
+.quickFacts .content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.quickFacts .title {
+    font-size: 3em;
+    padding: 0 2%;
+}
+
+.quickFacts .factsList {
+    text-align: center;
+    width: calc(96%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.quickFacts .factRow {
+    width: 100%;
+    display: inline-block;
+    max-width: calc(600px - 2%);
+}
+
+.quickFacts .fact {
+    display: inline-block;
+    max-width: 250px;
+    vertical-align: top;
+    text-align: left;
+}
+
+@media (max-width: 1200px) {
+    .quickFacts .factsList {
+        display: inline-block;
+        padding-top: 30px;
+    }
+
+    .quickFacts .fact {
+        margin: 0 10%;
+    }
+}
+
+.quickFacts .factTitle {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.quickFacts .underline {
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin-top: 10px;
+}
+
+.quickFacts .text {
+    font-weight: 100;
+    margin-top: 15px;
+}
+
+.quickFacts .icon {
+    height: 170px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.quickFacts .iconInner {
+    width: 240px;
+    margin-bottom: 30px;
+}
+
+.quickFacts img {
+    max-height: 110px;
+    max-width: 110px;
+}
+
+.quickFacts .gold img {
+    max-height: 220px;
+    max-width: 220px;
+    width: 150px;
+}
+
+@media (max-width: 900px) {
+    .quickFacts .fact {
+        margin: 0 6%;
+    }
+}
+
+@media (max-width: 700px) {
+    .quickFacts .factsList {
+
+    }
+    
+    .quickFacts .title {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .quickFacts .fact {
+        margin: 0 5%;
+        max-width: 190px;
+    }
+
+    .quickFacts .iconInner {
+        width: 190px;
+    }
+
+    .quickFacts .factTitle {
+        font-size: 1.2em;
+    }
+
+    .quickFacts .text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .quickFacts .fact {
+        max-width: 40%;
+    }
+
+    .quickFacts .icon {
+        height: 125px;
+    }
+
+    .quickFacts .iconInner {
+        max-width: 120px;
+    }
+
+    .quickFacts img {
+        max-height: 70px;
+        max-width: 70px;
+    }
+
+    .quickFacts .gold img {
+        max-height: 140px;
+        max-width: 140px;
+        width: 100px;
+    }
+
+    .quickFacts .factTitle {
+        font-size: 1em;
+    }
+
+    .quickFacts .underline {
+        width: 50px;
+    }
+
+    .quickFacts .text {
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+}

@@ -1,9 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
 
 import './Navbar.css';
 
 const Navbar = (props) => {
+  Navbar.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = value => {
+    setOpen(false);
+  };
+
   return (
     <div className={'navbar'}>
       <div className={'content'}>
@@ -52,11 +70,16 @@ c-35 38 -73 65 -134 95 -74 37 -96 43 -164 46 -46 3 -123 -3 -187 -13 -181
           DMM
         </div>
         <div className={'appButtonWrapper'}>
-          <Button className={'appButton'} onClick={() => window.open("http://www.google.com", "_blank")}>
-            APP
+          <Button className={'appButton'} onClick={() => handleClickOpen()}>
+            GET DMM
           </Button>
         </div>
       </div>
+      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+        <div className={'dialogBox'}>
+          Coming very soon!
+        </div>
+      </Dialog>
     </div>
   );
 };

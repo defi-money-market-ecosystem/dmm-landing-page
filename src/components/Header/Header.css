@@ -3,12 +3,13 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 3em;
     text-align: left;
-    padding-top: 18%;
+    padding: 18% 5% 0;
     height: calc(100vh - 18%);
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
+    overflow: hidden;
 }
 
 .headerInner {
@@ -20,7 +21,13 @@
     width: 80%;
     animation-duration: 1000ms !important;
     height: 40px;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
+}
+
+@media (min-width: 1200px) {
+    .header .content {
+        margin-bottom: 200px;
+    }
 }
 
 .header .blue {
@@ -55,12 +62,93 @@
     transform: rotate(-20deg);
     width: 175%;
     height: auto;
-    margin-left: -34%;
+    margin-left: -54%;
     margin-top: -57%;
     margin-bottom: -33%;
+}
+
+@media (min-width: 1200px) {
+    .header #bird svg {
+        margin-left: -34%;
+    }
 }
 
 .header #bird svg g {
     fill: #327ccb;
     opacity: 0.10;
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header {
+        padding: 150px 5% 0;
+    }
+
+    .header #bird svg {
+        width: 145%;
+        margin-left: -38%;
+        margin-top: -350px;
+    }
+
+    .header .content {
+        margin-bottom: 350px;
+    }
+
+    .header .learnMore {
+
+    }
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+    .header {
+        font-size: 2.5em;
+        height: 600px;
+        padding: 5% 3% 0 3%;
+        width: 94%;
+    }
+
+    .header #bird svg {
+        width: 145%;
+        margin-left: -30%;
+        margin-bottom: 0;
+        margin-top: -40%;
+    }
+
+    .header .content {
+        width: 90%;
+        margin: 150px 0 280px;
+    }
+
+    .header .learnMore {
+        width: 90%;
+        margin: 50px 0 0;
+    }
+}
+
+/* mobile */
+@media (max-width: 500px) {
+    .header {
+        font-size: 1.5em;
+        height: 600px;
+    }
+
+    .header #bird svg {
+        width: 145%;
+        margin-left: -30%;
+        margin-top: -150px;
+        margin-bottom: 0;
+    }
+
+    .header .content {
+        width: 90%;
+        margin: 150px auto 180px;
+    }
+
+    .header .learnMore {
+        width: 90%;
+        margin: 50px auto 0;
+    }
 }

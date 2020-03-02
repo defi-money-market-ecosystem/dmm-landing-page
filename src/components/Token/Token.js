@@ -1,10 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
+import Dialog from '@material-ui/core/Dialog';
 
 import './Token.css';
+import Integrations from "../Integrations/Integrations";
 
 const Token = (props) => {
+  Token.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = value => {
+    setOpen(false);
+  };
+
   return (
     <div className={'token'}>
       <div className={'content'}>
@@ -36,8 +55,7 @@ const Token = (props) => {
                 order to perform transactions.
               </div>
             </div>
-            <div className={'point'} style={{'height': '151px',
-              'margin-bottom': '-60px'}}>
+            <div className={'point short'}>
               <div className={'subtitle'}>
                 ERC-20 Compliant
               </div>
@@ -58,7 +76,17 @@ const Token = (props) => {
             </div>
           </div>
         </Fade>
+        <div className={'buttonOuter lower'}>
+          <Button className={'buttonText'} onClick={() => handleClickOpen()}>
+            Get your DMM
+          </Button>
+        </div>
       </div>
+      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+        <div className={'dialogBox'}>
+          Coming very soon!
+        </div>
+      </Dialog>
     </div>
   );
 };
