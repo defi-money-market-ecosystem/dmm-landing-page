@@ -33,7 +33,7 @@ const Info = (props) => {
             <div className={'main'}>
               DAI or USDC are deposited in exchange for DMM tokens.
             </div>
-            <div className={'subtext'} onClick={() => window.open('https://rinkeby.etherscan.io/address/0x02ee9AEbb75470D517BFf722D36762d2b231539C', "_blank")}>
+            <div className={'subtext'} onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2', "_blank")}>
               See the smart contract →
             </div>
           </div>
@@ -44,7 +44,7 @@ const Info = (props) => {
             <div className={'main'}>
               The deposited DAI and USDC are used to acquire real-world, income producing assets, all viewable on chain.
             </div>
-            <div className={'subtext'}>
+            <div className={'subtext'} onClick={() => window.open('https://explorer.defimoneymarket.com', "_blank")}>
               Browse the assets →
             </div>
           </div>
@@ -55,7 +55,7 @@ const Info = (props) => {
             <div className={'main'}>
               The assets pay out interest, which is returned to the DMM Ecosystem.
             </div>
-            <div className={'subtext'} onClick={() => handleClickOpen()}>
+            <div className={'subtext'} onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2', "_blank")}>
               See the accumulated interest →
             </div>
           </div>
@@ -66,18 +66,13 @@ const Info = (props) => {
             <div className={'main'}>
               DMM are freely swapped back for the original DAI/USDC deposited plus interest accrued.
             </div>
-            <div className={'subtext'} onClick={() => handleClickOpen()}>
+            <div className={'subtext'} onClick={() => window.open("https://app.defimoneymarket.com", "_blank")}>
               Get your DMM →
             </div>
           </div>
         </div>
       </div>
       <div className={'flattener'}/>
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-        <div className={'dialogBox'}>
-          Coming very soon!
-        </div>
-      </Dialog>
     </div>
   );
 };

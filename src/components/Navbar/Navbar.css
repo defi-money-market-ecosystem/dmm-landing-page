@@ -20,6 +20,8 @@
 .navbar .content {
   max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar .tempLogo {
@@ -50,6 +52,24 @@
     line-height: 60px;
     display: inline-block;
     vertical-align: top;
+}
+
+.navbar .exchangeRatesWrapper {
+    width: fit-content;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.navbar .exchangeRatesWrapper span {
+    line-height: 60px;
+}
+
+.navbar .bold {
+    font-weight: 400;
+}
+
+.navbar .light {
+    font-weight: 100;
 }
 
 .navbar .appButtonWrapper {
@@ -98,5 +118,9 @@
         line-height: 24px;
         font-size: 15px;
         width: 100px;
+    }
+
+    .navbar .exchangeRatesWrapper {
+        display: none;
     }
 }

@@ -38,7 +38,7 @@ const Token = (props) => {
             Transferable. Usable. Stable.
           </div>
           <div className={'buttonOuter'}>
-            <Button className={'buttonText'} onClick={() => window.open("http://www.google.com", "_blank")}>
+            <Button className={'buttonText'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
               Get your DMM
             </Button>
           </div>
@@ -77,16 +77,11 @@ const Token = (props) => {
           </div>
         </Fade>
         <div className={'buttonOuter lower'}>
-          <Button className={'buttonText'} onClick={() => handleClickOpen()}>
+          <Button className={'buttonText'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
             Get your DMM
           </Button>
         </div>
       </div>
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-        <div className={'dialogBox'}>
-          Coming very soon!
-        </div>
-      </Dialog>
     </div>
   );
 };

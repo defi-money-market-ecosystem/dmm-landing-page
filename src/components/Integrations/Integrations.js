@@ -41,7 +41,7 @@ const Integrations = (props) => {
       </div>
       <Fade bottom cascade>
         <div className={'integrationList'}>
-          <div className={'integration'} onClick={() => handleClickOpen()}>
+          <div className={'integration'} onClick={() => window.open("https://app.defimoneymarket.com", "_blank")}>
             <div className={'leftSection'}>
               <div className={'logo'}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
@@ -93,7 +93,7 @@ const Integrations = (props) => {
               </div>
               <div className={'underline'}/>
               <div className={'description'}>
-                The basic app to deposit token and receive DMM, and visa-versa.
+                The basic app to deposit token and receive mTokens, and visa-versa.
               </div>
             </div>
             <div className={'arrowWrapper'}>
@@ -138,11 +138,6 @@ const Integrations = (props) => {
           </Button>
         </div>
       </div>
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-        <div className={'dialogBox'}>
-          Coming very soon!
-        </div>
-      </Dialog>
     </div>
   );
 };

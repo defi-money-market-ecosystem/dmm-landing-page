@@ -15,7 +15,7 @@ const GetStarted = (props) => {
             Get started with DMM in minutes!
           </div>
           <div className={'button'}>
-            <Button className={'buttonText'} onClick={() => window.open("http://www.google.com", "_blank")}>
+            <Button className={'buttonText'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
               Read the docs
             </Button>
           </div>

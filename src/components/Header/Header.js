@@ -64,7 +64,7 @@ const Header = (props) => {
         </Fade>
         <Fade bottom>
           <div className={'learnMore'}>
-            <span onClick={() => handleScrollToElement()}>Find out how ↓</span>
+            <span>Find out how ↓</span>
           </div>
         </Fade>
         <div ref={myRef}/>
