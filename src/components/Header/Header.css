@@ -3,7 +3,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 3em;
     text-align: left;
-    padding: 18% 5% 0;
+    padding: 14% 5% 0;
     height: calc(100vh - 18%);
     position: absolute;
     top: 0;
@@ -26,7 +26,7 @@
 
 @media (min-width: 1200px) {
     .header .content {
-        margin-bottom: 200px;
+        margin-bottom: 250px;
     }
 }
 
@@ -78,6 +78,11 @@
     opacity: 0.10;
 }
 
+@media (max-width: 1025px) {
+    .header .content {
+        margin-bottom: 350px;
+    }
+}
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -125,6 +130,12 @@
     .header .learnMore {
         width: 90%;
         margin: 50px 0 0;
+    }
+}
+
+@media (max-width: 646px) {
+    .header .content {
+        margin-bottom: 350px;
     }
 }
 

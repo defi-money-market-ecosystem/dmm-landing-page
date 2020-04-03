@@ -29,10 +29,10 @@ const Token = (props) => {
       <div className={'content'}>
         <div className={'textWrapper'}>
           <div className={'title line1'}>
-            The DMM
+            DMM
           </div>
           <div className={'title line2'}>
-            Token
+            Tokens
           </div>
           <div className={'subtitle'}>
             Transferable. Usable. Stable.

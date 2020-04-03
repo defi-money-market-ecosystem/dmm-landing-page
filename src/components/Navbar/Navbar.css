@@ -103,6 +103,10 @@
         height: 40px;
         line-height: 30px;
     }
+
+    .usdc {
+        display: none !important;
+    }
 }
 
 

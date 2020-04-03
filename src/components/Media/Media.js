@@ -3,6 +3,10 @@ import CoinTelegraphLogo from '../../assets/Cointelegraph-logo.png';
 import DecryptLogo from '../../assets/Decrypto-logo.png';
 import CryptoNinjasLogo from '../../assets/CryptoNinjas-logo.png';
 import MediumLogo from '../../assets/Medium-logo.png';
+import CryptoTickerLogo from '../../assets/CryptoTicker-logo.png';
+import BaiduBlogLogo from '../../assets/BaiduBlog-logo.png';
+import CryptoDivisasLogo from '../../assets/CryptoDivisas-logo.png';
+import ChainNewsLogo from '../../assets/ChainNews-logo.svg';
 
 import './Media.css';
 
@@ -33,6 +37,21 @@ class Media extends React.Component {
               <div className={'publication'}>
                 <div className={'publicationInner'}>
                   <a href={'https://www.cryptoninjas.net/2020/03/16/draper-goren-holm-ventures-purchases-stake-in-defi-money-market-dao/'}><img src={CryptoNinjasLogo}/></a>
+                </div>
+              </div>
+              <div className={'publication'}>
+                <div className={'publicationInner'}>
+                  <a href={'https://cryptoticker.io/en/chainlink-dmm-defi/'}><img src={CryptoTickerLogo}/></a>
+                </div>
+              </div>
+              <div className={'publication'}>
+                <div className={'publicationInner'}>
+                  <a href={'http://baijiahao.baidu.com/s?id=1660223157350871842'}><img src={BaiduBlogLogo}/></a>
+                </div>
+              </div>
+              <div className={'publication'}>
+                <div className={'publicationInner'}>
+                  <a href={'https://www.chainnews.com/articles/941813846721.htm'}><img src={ChainNewsLogo}/></a>
                 </div>
               </div>
             </div>

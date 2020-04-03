@@ -39,6 +39,7 @@ class App extends React.Component {
       userProfile: null,
       daiRate: null,
       usdcRate: null,
+      ethRate: null,
     };
 
     const unregisterAuthObserver = Firebase.auth().onAuthStateChanged((user) => {
@@ -73,18 +74,23 @@ class App extends React.Component {
       `https://api.defimoneymarket.com/v1/dmm/tokens/${tokenList['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'].dmmTokenId.toString(10)}/exchange-rate`,
       {headers: {'Accept': 'application/json'}},
     );
+    const ethResponse = await fetch(
+      `https://api.defimoneymarket.com/v1/dmm/tokens/3/exchange-rate`,
+      {headers: {'Accept': 'application/json'}},
+    );
 
     const daiRate = new NumberUtil.BN((await daiResponse.json())["data"]["exchange_rate"]);
     const usdcRate = new NumberUtil.BN((await usdcResponse.json())["data"]["exchange_rate"]);
+    const ethRate = new NumberUtil.BN((await ethResponse.json())["data"]["exchange_rate"]);
 
-    this.setState({ daiRate, usdcRate });
+    this.setState({ daiRate, usdcRate, ethRate });
   }
 
   render() {
     return (
       <div className={'App'}>
         <div className={'content'}>
-          <Navbar onClose={() => {}} open selectedValue={1} daiRate={this.state.daiRate} usdcRate={this.state.usdcRate}/>
+          <Navbar onClose={() => {}} open selectedValue={1} daiRate={this.state.daiRate} usdcRate={this.state.usdcRate} ethRate={this.state.ethRate}/>
           <Header/>
           <QuickFacts/>
           <Info onClose={() => {}} open selectedValue={1}/>
