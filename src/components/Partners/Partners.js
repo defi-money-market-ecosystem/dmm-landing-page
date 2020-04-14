@@ -3,6 +3,7 @@ import HuobiLogo from '../../assets/Huobi-logo.png';
 import ChainlinkLogo from '../../assets/Chainlink-logo.png';
 import DraperVentureNetwork from '../../assets/Draper-Venture-Network-logo.png';
 import FortmaticLogo from '../../assets/Fortmatic-logo.png';
+import TrustWalletLogo from '../../assets/TrustWallet-Logo.png';
 import DIFCLogo from '../../assets/DIFC-logo.png';
 import GnosisLogo from '../../assets/Gnosis-logo.png';
 import TotleLogo from '../../assets/Totle-logo.png';
@@ -43,6 +44,11 @@ class Partners extends React.Component {
               <div className={'publication'}>
                 <div className={'partnersInner'}>
                   <img src={FortmaticLogo}/>
+                </div>
+              </div>
+              <div className={'publication'}>
+                <div className={'partnersInner'}>
+                  <img src={TrustWalletLogo}/>
                 </div>
               </div>
               <div className={'publication'}>

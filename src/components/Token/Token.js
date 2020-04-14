@@ -66,12 +66,12 @@ const Token = (props) => {
             </div>
             <div className={'point'}>
               <div className={'subtitle'}>
-                Consistent value
+                Stable growth
               </div>
               <div className={'border'}/>
               <div className={'subtext'}>
-                Because DMM is backed by stablecoins and a consistent interest rate, it's value is very predictable and consistent,
-                making it a dependable store of value safe from crypto volatility.
+                Because DMM is backed by real-world assets and a consistent interest rate, it's growth in value is very predictable and consistent,
+                making it a dependable source of yield.
               </div>
             </div>
           </div>

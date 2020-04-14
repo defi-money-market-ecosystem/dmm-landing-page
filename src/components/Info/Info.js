@@ -33,7 +33,7 @@ const Info = (props) => {
             <div className={'main'}>
               DAI, USDC, or ETH are deposited in exchange for DMM tokens.
             </div>
-            <div className={'subtext'} onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2', "_blank")}>
+            <div className={'subtext'} onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2#tokentxns', "_blank")}>
               See the smart contract →
             </div>
           </div>
