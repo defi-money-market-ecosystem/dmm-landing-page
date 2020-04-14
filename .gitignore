@@ -5,8 +5,14 @@
 /.pnp
 .pnp.js
 
+package-lock.json
+
 # testing
 /coverage
+
+.idea/
+
+.firebase/*.cache
 
 # production
 /build
