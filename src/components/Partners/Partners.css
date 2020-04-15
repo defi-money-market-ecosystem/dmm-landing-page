@@ -43,6 +43,15 @@
 
 .partners .publication img {
     width: 170px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.partners .publication img:hover {
+    transform: scale(1.1);
 }
 
 .partners .partnersInner {
@@ -74,12 +83,12 @@
 
 @media (max-width: 629px) {
     .partners {
-        height: 800px;
+        height: 900px;
     }
 }
 
 @media (max-width: 419px) {
     .partners {
-        height: 1300px;
+        height: 1500px;
     }
 }
