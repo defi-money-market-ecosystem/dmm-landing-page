@@ -1,0 +1,20 @@
+[debug] [2020-04-27T19:56:43.754Z] ----------------------------------------------------------------------
+[debug] [2020-04-27T19:56:43.756Z] Command:       /Users/corey/.nvm/versions/node/v9.2.1/bin/node /Users/corey/.nvm/versions/node/v9.2.1/bin/firebase deploy
+[debug] [2020-04-27T19:56:43.756Z] CLI Version:   7.4.0
+[debug] [2020-04-27T19:56:43.756Z] Platform:      darwin
+[debug] [2020-04-27T19:56:43.756Z] Node Version:  v9.2.1
+[debug] [2020-04-27T19:56:43.757Z] Time:          Mon Apr 27 2020 15:56:43 GMT-0400 (EDT)
+[debug] [2020-04-27T19:56:43.757Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-04-27T19:56:43.786Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-27T19:56:43.787Z] > authorizing via signed-in user
+[debug] [2020-04-27T19:56:43.787Z] [iam] checking project dmm-landing-page for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-27T19:56:43.789Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-27T19:56:43.790Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-27T19:56:44.435Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-27T19:56:44.456Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dmm-landing-page:testIamPermissions  
+
+[debug] [2020-04-27T19:56:45.633Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-27T19:56:45.637Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dmm-landing-page  
+ 
