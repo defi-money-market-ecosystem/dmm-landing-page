@@ -30,6 +30,7 @@ const Footer = (props) => {
         <div className={'leftSide'}>
           <a style={{'fontWeight': '800'}} href={'https://app.defimoneymarket.com'} target={'_blank'}>Get DMM</a>
           <a href={'https://github.com/defi-money-market-ecosystem/protocol/wiki'} target={'_blank'}>Docs</a>
+          <a href={'https://defimoneymarket.com/DMM-SECBIT-Audit.pdf'} target={'_blank'}>Security Audit</a>
           <a href={PDF} target={'_blank'}>Legal</a>
           <a href={'https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2'} target={'_blank'}>Smart Contract</a>
           <a href={'https://docs.chain.link/docs/defi-money-market-chainlink-ethereum-mainnet'} target={'_blank'}>Chainlink Integration</a>
