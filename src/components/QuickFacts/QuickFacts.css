@@ -86,6 +86,10 @@
     max-width: 110px;
 }
 
+.quickFacts img.vehiclesImage {
+    max-width: 170px;
+}
+
 .quickFacts .gold img {
     max-height: 220px;
     max-width: 220px;

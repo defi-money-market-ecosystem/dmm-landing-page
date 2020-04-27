@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 import GraphIcon from '../../assets/Graph-Icon.svg';
 import CarIcon from '../../assets/Car-Icon.svg';
+import VehicleIcon from '../../assets/Vehicles-graphic-image.png';
 import ChainIcon from '../../assets/Chain-Icon.svg';
 import GoldIcon from '../../assets/Gold-Icon.svg';
 
@@ -34,7 +35,7 @@ const QuickFacts = (props) => {
           <div className={'fact'}>
             <div className={'icon'}>
               <div className={'iconInner'}>
-                <img src={CarIcon} alt={'car icon'}/>
+                <img className={'vehiclesImage'} src={VehicleIcon} alt={'vehicle icon'}/>
               </div>
             </div>
             <div className={'factTitle'}>

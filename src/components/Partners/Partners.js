@@ -4,6 +4,7 @@ import ChainlinkLogo from '../../assets/Chainlink-logo.png';
 import DraperVentureNetwork from '../../assets/Draper-Venture-Network-logo.png';
 import CoinbaseLogo from '../../assets/Coinbase-logo.png';
 import FortmaticLogo from '../../assets/Fortmatic-logo.png';
+import PortisLogo from '../../assets/Portis-logo.png';
 import TrustWalletLogo from '../../assets/TrustWallet-Logo.png';
 import DIFCLogo from '../../assets/DIFC-logo.png';
 import GnosisLogo from '../../assets/Gnosis-logo.png';
@@ -51,6 +52,11 @@ class Partners extends React.Component {
               <div className={'publication'}>
                 <div className={'partnersInner'}>
                   <a href={'https://fortmatic.com/'} target="_blank"><img src={FortmaticLogo}/></a>
+                </div>
+              </div>
+              <div className={'publication'}>
+                <div className={'partnersInner'}>
+                  <a href={'https://portis.io/'} target="_blank"><img src={PortisLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
