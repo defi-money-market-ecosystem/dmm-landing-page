@@ -121,7 +121,7 @@ const Navbar = (props) => {
         </div>
         <div className={'appButtonWrapper'}>
           <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
-            GET DMM
+            APP
           </Button>
         </div>
       </div>
