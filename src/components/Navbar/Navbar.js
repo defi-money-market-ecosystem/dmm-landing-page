@@ -2,9 +2,8 @@ import React from 'react';
 import CountUp from 'react-countup';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
 
-import NumberUtil, {fromDecimalToBN, humanize} from "../../utils/NumberUtil";
+import NumberUtil, { fromDecimalToBN, humanize } from '../../utils/NumberUtil';
 
 import './Navbar.css';
 
@@ -29,12 +28,14 @@ const Navbar = (props) => {
     <div className={'navbar'}>
       <div className={'content'}>
         <div>
-          <div className={'tempLogo'}> <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
-            <metadata>
-              Created by potrace 1.12, written by Peter Selinger 2001-2015
-            </metadata>
-            <g transform="translate(0.000000,527.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-              <path d="M3673 4020 c-26 -11 -30 -28 -8 -36 8 -3 20 -24 27 -45 6 -22 17 -44
+          <div className={'tempLogo'}>
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt"
+                 viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
+              <metadata>
+                Created by potrace 1.12, written by Peter Selinger 2001-2015
+              </metadata>
+              <g transform="translate(0.000000,527.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path d="M3673 4020 c-26 -11 -30 -28 -8 -36 8 -3 20 -24 27 -45 6 -22 17 -44
   25 -50 16 -14 18 -69 2 -69 -6 0 -34 26 -62 57 -127 141 -130 143 -186 143
   -58 0 -71 -14 -48 -52 8 -13 18 -36 21 -52 4 -17 17 -44 29 -60 12 -17 27 -45
   33 -62 l11 -32 -46 20 c-25 11 -53 26 -62 34 -22 20 -25 18 -64 -21 -41 -40
@@ -68,8 +69,9 @@ const Navbar = (props) => {
   -54 88 -74 111 -20 23 -53 64 -72 90 -19 27 -41 55 -48 64 -8 8 -59 76 -114
   150 -131 175 -157 205 -220 252 -54 41 -150 120 -178 148 -9 9 -34 29 -55 45
   -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"></path>
-            </g>
-          </svg></div>
+              </g>
+            </svg>
+          </div>
           <div className={'name'}>
             DMM
           </div>
@@ -78,8 +80,8 @@ const Navbar = (props) => {
           <span className={'bold'}>1</span>
           <span className={'light'}>&nbsp;mDAI =&nbsp;</span>
           <CountUp
-            start={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1),18)) : 0}
-            end={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
+            start={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1), 18)) : 0}
+            end={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
             duration={60 * 60}
             separator=" "
             decimals={8}
@@ -93,8 +95,8 @@ const Navbar = (props) => {
           <span className={'bold'}>1</span>
           <span className={'light'}>&nbsp;mUSDC =&nbsp;</span>
           <CountUp
-            start={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1),18)) : 0}
-            end={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
+            start={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1), 18)) : 0}
+            end={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
             duration={60 * 60}
             separator=" "
             decimals={8}
@@ -108,8 +110,8 @@ const Navbar = (props) => {
           <span className={'bold'}>1</span>
           <span className={'light'}>&nbsp;mETH =&nbsp;</span>
           <CountUp
-            start={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1),18)) : 0}
-            end={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
+            start={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1), 18)) : 0}
+            end={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
             duration={60 * 60}
             separator=" "
             decimals={8}
@@ -120,7 +122,7 @@ const Navbar = (props) => {
           <span className={'light'}>&nbsp;ETH</span>
         </div>
         <div className={'appButtonWrapper'}>
-          <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
+          <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', '_blank')}>
             APP
           </Button>
         </div>
