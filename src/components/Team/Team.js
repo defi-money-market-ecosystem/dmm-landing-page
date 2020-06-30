@@ -95,7 +95,7 @@ class Team extends React.Component {
                 Matthew Finestone
               </div>
               <div className={'role'}>
-                Partner
+                Advisor
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/" target={'_blank'}>LinkedIn</a>

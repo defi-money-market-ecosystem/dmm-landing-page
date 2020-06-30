@@ -54,6 +54,11 @@
     transform: scale(1.1);
 }
 
+.partners img.dxdaoLogo {
+    width: 70px;
+    margin-bottom: -20px;
+}
+
 .partners .partnersInner {
     display: flex;
     flex-direction: column;
