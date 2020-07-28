@@ -87,11 +87,6 @@ class Partners extends React.Component {
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://loopring.org/#/'} target="_blank"><img src={LoopringLogo}/></a>
-                </div>
-              </div>
-              <div className={'publication'}>
-                <div className={'partnersInner'}>
                   <a href={'https://twitter.com/DMMDAO/status/1258063889222135808?s=20'} target="_blank"><img src={ZerionLogo}/></a>
                 </div>
               </div>
