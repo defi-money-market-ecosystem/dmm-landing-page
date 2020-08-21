@@ -1,0 +1,118 @@
+
+.governance {
+    padding-top: 100px;
+    text-align: left;
+}
+
+.governance-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.governance h2 {
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+.topSection {
+    height: auto;
+}
+
+.topSection p {
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    line-height: 32px;
+    width: 50%;
+}
+
+.governance a {
+    text-decoration: none;
+    color: #327ccb;
+    font-weight: 600;
+}
+
+.governance .governanceGraphic {
+    position: absolute;
+    top: -14%;
+    right: -28%;
+    opacity: 0.4;
+    height: 130%;
+}
+
+.governance .governanceGraphic img {
+    height: 100%;
+    width: auto;
+}
+
+.highlight {
+    color: #327ccb;
+    font-weight: 600;
+}
+
+.governance .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 20px;
+    padding: 6px 30px;
+    margin-right: 10px;
+}
+
+.underline {
+    height: 4px;
+    background: #327ccb;
+    width: 110px;
+}
+
+.underline.large {
+    margin-top: -30px;
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.bottomSection {
+    background: linear-gradient(180deg,#327ccb, #4f94de 3%,#8bbbef 8%,#bdddff 12%,#deeeff 20%);
+    transform: skewY(-5deg);
+    margin-top: 100px;
+    box-shadow: inset 0 10px 10px -10px rgba(0,0,0,.5);
+    height: auto;
+    overflow: hidden;
+    margin-bottom: -100px;
+}
+
+.bottomSection .governance-inner {
+    transform: skewY(5deg);
+    margin-top: 250px;
+    padding-bottom: 200px;
+}
+
+.bottomSection .section {
+    width: 60%;
+    margin-bottom: 120px;
+}
+
+.bottomSection .section.right {
+    margin-left: 40%;
+}
+
+.bottomSection h3 {
+    font-size: 2.7em;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.bottomSection p {
+    line-height: 160%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.bottomSection li {
+    margin-bottom: 10px;
+}

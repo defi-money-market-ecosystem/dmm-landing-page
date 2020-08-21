@@ -74,21 +74,7 @@ const Navbar = (props) => {
             DMM
           </div>
         </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mDAI =&nbsp;</span>
-          <CountUp
-            start={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1),18)) : 0}
-            end={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;DAI</span>
-        </div>
+
         <div className={'exchangeRatesWrapper usdc'}>
           <span className={'bold'}>1</span>
           <span className={'light'}>&nbsp;mUSDC =&nbsp;</span>
@@ -118,6 +104,36 @@ const Navbar = (props) => {
             suffix=""
           />
           <span className={'light'}>&nbsp;ETH</span>
+        </div>
+        <div className={'exchangeRatesWrapper'}>
+          <span className={'bold'}>1</span>
+          <span className={'light'}>&nbsp;mUSDT =&nbsp;</span>
+          <CountUp
+            start={props.usdtRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdtRate).div(NumberUtil._1),18)) : 0}
+            end={props.usdtRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdtRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
+            duration={60 * 60}
+            separator=" "
+            decimals={8}
+            decimal="."
+            prefix=""
+            suffix=""
+          />
+          <span className={'light'}>&nbsp;USDT</span>
+        </div>
+        <div className={'exchangeRatesWrapper'}>
+          <span className={'bold'}>1</span>
+          <span className={'light'}>&nbsp;mDAI =&nbsp;</span>
+          <CountUp
+            start={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1),18)) : 0}
+            end={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
+            duration={60 * 60}
+            separator=" "
+            decimals={8}
+            decimal="."
+            prefix=""
+            suffix=""
+          />
+          <span className={'light'}>&nbsp;DAI</span>
         </div>
         <div className={'appButtonWrapper'}>
           <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
