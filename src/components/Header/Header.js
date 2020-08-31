@@ -59,7 +59,7 @@ const Header = (props) => {
         </div>
         <Fade bottom>
           <div className={'content'}>
-            Earn <span className={'blue'}>6.25%</span> on ETH, DAI and USDC with <span className={'blue'}>DeFi Money Market (DMM)</span> all backed by real world income generating assets viewable on-chain.
+            Earn <span className={'blue'}>6.25%</span> on ETH, DAI, USDT, and USDC with <span className={'blue'}>DeFi Money Market (DMM)</span> all backed by real world income generating assets viewable on-chain.
           </div>
         </Fade>
         <Fade bottom>
