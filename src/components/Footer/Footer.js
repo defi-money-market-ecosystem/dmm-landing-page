@@ -93,6 +93,7 @@ const Footer = (props) => {
             <a href={'https://t.me/DmmOfficial'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'telegram']} /></a>
             <a href={'https://medium.com/dmm-dao'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'medium']} /></a>
             <a href={'https://discord.gg/9dM8yaA'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'discord']} /></a>
+            <a href={'https://discord.gg/9dM8yaA'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'discord']} /></a>
           </div>
         </div>
       </div>

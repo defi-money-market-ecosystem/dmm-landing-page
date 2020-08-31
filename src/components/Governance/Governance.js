@@ -4,6 +4,9 @@ import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
 import Dialog from '@material-ui/core/Dialog';
 import GovernanceGraphic from '../../assets/governance-graphic.svg';
+import BallotBoxGraphic from '../../assets/ballot-box.svg';
+import RevenueGraphic from '../../assets/revenue-graphic.svg';
+import StructureGraphic from '../../assets/structure-graphic.svg';
 
 import './Governance.css';
 
@@ -15,13 +18,19 @@ const Governance = (props) => {
           <div className={'governance-inner'}>
             <h2>DMM Governance</h2>
             <div className={'underline large'}/>
-            <p>The DeFi Money Market Ecosystem is governed by a <span className={'highlight'}>Decentralized Autonomous Organization (DAO)</span>.</p>
-            <p>DAO community members can dictate the direction of the ecosystem by voting with the DMM Governance token <span className={'highlight'}>DMG</span>.</p>
-            <p>This leads to <span className={'highlight'}>aligned incentives</span> - DMG token holders vote for decisions that grow the ecosystem and benefit from the success of the ecosystem.</p>
-            <p>Anyone can get involved, get started by checking out the <a href={'https://dao.governance.com'}>DAO dashboard</a> or learning more about DMG below.</p>
-            <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
-              DAO Dashboard
-            </Button>
+            {/*<div className={'governanceGraphicTop'}>
+              <img src={GovernanceGraphic} alt={'Governance graphic'}/>
+            </div>*/}
+            <p>The DeFi Money Market (DMM) Ecosystem is governed by a global <span className={'highlight'}><a href={'https://medium.com/dmm-dao/the-basics-of-a-decentralized-autonomous-organization-dao-23ac71b357d0'} target={'_blank'}>Decentralized Autonomous Organization (DAO)</a></span>.</p>
+            <p>DAO community members dictate the direction of the ecosystem and its revenue-generating real world assets by voting with <span className={'highlight'}><a href={'https://etherscan.io/token/0xEd91879919B71bB6905f23af0A68d231EcF87b14'} target={'_blank'}>DMG</a></span>, the native Governance Token of DMM.</p>
+            <div className={'governance-buttons'}>
+              <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
+                DAO Dashboard
+              </Button>
+              <Button className={'buttonText secondary'} onClick={() => window.open('https://governance.defimoneymarket.com/', "_blank")}>
+                Governance Forum
+              </Button>
+            </div>
             <div className={'governanceGraphic'}>
               <img src={GovernanceGraphic} alt={'Governance graphic'}/>
             </div>
@@ -29,130 +38,124 @@ const Governance = (props) => {
         </div>
         <div className={'bottomSection'}>
           <div className={'governance-inner'}>
+            <div className={'section right'}>
+              <div className={'textWrapper'}>
+                <h3>Overview</h3>
+                <div className={'underline'}/>
+                <p>
+                  The DMM governance token, DMG, is an ERC-20 token on the Ethereum blockchain used for the governance of the ecosystem via the DMM DAO, which can upgrade and modify the on-chain smart contracts and manage its adjacent assets.
+                </p>
+                <p>
+                  Ownership of DMG represents the right to govern the parameters of the DMM Protocol including the guidelines and decisions surrounding the introduction of new assets to the ecosystem in regards to both asset type and asset location.
+                </p>
+                <p>
+                  DMG is a fork of Compound’s COMP governance token (featuring native delegation and vote weighting) with added capability such as meta-transactions and a native burn function.
+                </p>
+              </div>
+              <div className={'imageWrapper'}>
+                <div id={'bird'}>
+                  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
+                    <metadata>
+                      Created by potrace 1.12, written by Peter Selinger 2001-2015
+                    </metadata>
+                    <g transform="translate(0.000000,527.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                      <path d="M3673 4020 c-26 -11 -30 -28 -8 -36 8 -3 20 -24 27 -45 6 -22 17 -44
+  25 -50 16 -14 18 -69 2 -69 -6 0 -34 26 -62 57 -127 141 -130 143 -186 143
+  -58 0 -71 -14 -48 -52 8 -13 18 -36 21 -52 4 -17 17 -44 29 -60 12 -17 27 -45
+  33 -62 l11 -32 -46 20 c-25 11 -53 26 -62 34 -22 20 -25 18 -64 -21 -41 -40
+  -42 -48 -15 -82 11 -14 20 -33 20 -42 0 -9 20 -57 46 -105 25 -49 43 -95 40
+  -102 -10 -25 -56 -16 -256 52 -25 8 -76 23 -115 33 -38 11 -83 24 -100 30 -54
+  19 -129 42 -195 61 -86 25 -154 47 -215 70 -27 11 -66 23 -85 26 -19 4 -51 15
+  -70 24 -19 9 -57 23 -85 29 -27 7 -57 19 -65 26 -14 12 -24 11 -74 -9 -74 -30
+  -79 -36 -69 -77 11 -39 63 -74 128 -85 22 -3 59 -14 82 -24 24 -10 64 -22 90
+  -26 56 -8 86 -21 78 -35 -10 -15 -158 -10 -241 8 -66 14 -84 15 -138 3 -33 -7
+  -79 -16 -101 -19 -43 -7 -61 -36 -28 -48 10 -3 27 -16 38 -28 22 -25 132 -61
+  212 -71 69 -8 113 -24 113 -39 0 -20 -27 -26 -152 -30 -137 -4 -172 -13 -176
+  -44 -2 -13 0 -27 5 -32 4 -4 67 -15 138 -24 141 -17 205 -31 205 -44 0 -15
+  -32 -23 -113 -28 -43 -3 -80 -10 -83 -14 -3 -5 12 -25 32 -46 36 -35 40 -37
+  120 -41 105 -6 112 -12 96 -91 -16 -77 -16 -80 14 -91 15 -6 38 -20 53 -31 14
+  -11 55 -42 90 -69 35 -28 67 -50 71 -50 9 0 123 -91 157 -124 13 -13 67 -46
+  120 -73 141 -71 221 -150 365 -362 13 -18 41 -54 64 -80 22 -25 69 -82 104
+  -126 35 -44 79 -96 98 -116 47 -51 142 -180 142 -194 0 -6 11 -26 25 -45 45
+  -61 40 -70 -82 -170 -62 -51 -65 -52 -179 -71 -64 -10 -163 -22 -220 -25 -58
+  -4 -107 -11 -111 -16 -3 -6 -1 -20 5 -31 16 -32 32 -121 32 -172 0 -48 3 -52
+  119 -197 70 -88 91 -92 171 -38 14 10 50 34 80 54 30 20 66 44 80 53 14 9 56
+  37 93 61 l68 45 113 -7 c62 -4 129 -11 147 -16 19 -6 74 -13 122 -17 81 -6 89
+  -4 108 15 39 42 69 17 69 -56 0 -47 12 -59 76 -75 39 -10 53 -20 79 -57 17
+  -25 38 -45 45 -45 8 0 19 18 25 42 20 80 72 108 100 53 12 -23 22 -30 45 -30
+  36 0 47 16 26 39 -8 9 -19 33 -23 53 -5 20 -23 52 -41 72 -31 35 -35 36 -102
+  36 -57 0 -74 4 -90 20 -56 56 -5 77 208 85 80 4 213 42 228 66 3 5 12 9 21 9
+  16 0 52 21 186 107 37 23 97 63 135 86 37 24 93 61 126 83 32 21 68 45 80 51
+  31 19 90 16 116 -5 21 -17 22 -23 14 -68 -7 -38 -5 -60 7 -97 26 -76 34 -78
+  79 -27 37 43 39 48 40 113 0 68 9 90 62 152 13 15 17 42 19 114 l2 94 -49 54
+  c-35 38 -73 65 -134 95 -74 37 -96 43 -164 46 -46 3 -123 -3 -187 -13 -181
+  -29 -235 -14 -258 75 -8 34 -30 195 -55 420 -14 123 -6 101 -130 335 -21 38
+  -54 88 -74 111 -20 23 -53 64 -72 90 -19 27 -41 55 -48 64 -8 8 -59 76 -114
+  150 -131 175 -157 205 -220 252 -54 41 -150 120 -178 148 -9 9 -34 29 -55 45
+  -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
             <div className={'section'}>
-              <h3>Overview</h3>
-              <div className={'underline'}/>
-              <p>
-
-              </p>
-              <p>
-                The DeFi Money Market (DMM) governance token (DMG) is an ERC-20 token that effectuates governance of the ecosystem via the DMM DAO, which has control over the Ethereum smart contracts and its adjacent assets.
-              </p>
-              <p>
-                Ownership of DMG represents the right to govern the parameters of the DMM Protocol as well as governance over the ability and decisions surrounding the introduction of new assets to the ecosystem in regards to both asset type and asset location.
-              </p>
-              <p>
-                Additionally, the decentralized community governing the DMM DAO can vote to modify the DMG tokenomics and utility, which could include a claim on the excess revenue generated from within the DMM ecosystem.
-              </p>
-              <p>
-                The DMG token is a fork of Compound’s COMP governance token (featuring native delegation and vote weighting) with added capability such as meta-transaction support and a native burn function.
-              </p>
+              <div className={'textWrapper'}>
+                <h3>DAO Voting</h3>
+                <div className={'underline'}/>
+                <p>
+                  The initial parameters of the DMM DAO include a 0.2% minimum quorum threshold (500k DMG), a 0.04% proposal creation threshold (100k DMG), where votes lasts three days after creation, and undergo a two day safety period for safe exits as needed.
+                </p>
+                <p>
+                  These parameters can be fully adjusted by the DMM DAO and evolve over time as the needs of the DMM ecosystem changes as more real world assets get brought on-chain.
+                </p>
+                <p>
+                  Current proposals and the DMM DAO dashboard can be found at <a href={'https://dao.defimoneymarket.com'}>dao.defimoneymarket.com</a> under the Vote tab, which provides full transparency into the process.
+                </p>
+              </div>
+              <div className={'imageWrapper'}><img src={BallotBoxGraphic} alt={'Ballot Box'}/></div>
             </div>
             <div className={'section right'}>
-              <h3>Revenue and Growth Model</h3>
-              <div className={'underline'}/>
-              <p>
-                The current revenue model for the DMM DAO is quite straightforward and is composed of four main areas:
-                <ol>
-                  <li>Excess interest revenue</li>
-                  <li>Token burns, which can be initiated by a vote from the decentralized DMM DAO and done through excess interest revenue or via origination fees</li>
-                  <li>Voting and staking for asset introduction, which is in the process of being decentralized and should result in a significant number of tokens being moved away from the liquid supply</li>
-                  <li>If an individual or a group owns a block of DMG and reserves Principal or Affiliate membership to introduce assets into the DMME, they will also generate asset introduction or origination fees.</li>
-                </ol>
-                Like some of the other best token projects in the industry, we anticipate the DAO making minor tweaks to the token’s growth and revenue models as time progresses and more information about the protocol’s usage is obtained.
-              </p>
+              <div className={'textWrapper'}>
+                <h3>Revenue</h3>
+                <div className={'underline'}/>
+                <p>
+                  Since the DMME is overcollateralized — with real-assets yielding more in revenue than payments due to mAsset holders — the DMM DAO becomes the recipient of a positive income stream that can be used to fund further loans, capitalize related assets, burn DMG or otherwise grow the ecosystem.
+                </p>
+                <p>
+                  The DMM Ecosystem currently consists of $8M+ in revenue generating real world assets, that creates revenue streams for the DAO today.
+                </p>
+                <p>
+                  As the DMM Ecosystem grows and acquires more exposure to real world assets, the dao will have more excess revenue at its disposal to further grow and fund the ecosystem further.
+                </p>
+              </div>
+              <div className={'imageWrapper'}><img src={RevenueGraphic} alt={'Revenue graphic'}/></div>
             </div>
             <div className={'section'}>
-              <h3>Revenue</h3>
-              <div className={'underline'}/>
-              <p>
-                Since the DMME is overcollateralized — with real-assets yielding more in revenue than payments due to mAsset holders — the DMM DAO is the recipient of a positive income stream that can be used to fund further loans, capitalize related assets, burn DMG or otherwise grow the ecosystem.
-              </p>
-              <p>
-                The DMM DAO is unique in that it is one of the few DAOs that is already producing revenue and has a straightforward revenue model that grows as DMM’s AUM grows.
-              </p>
-              <p>
-                All assets introduced to the ecosystem are overcollateralized on an income production basis. Currently, the DMME generates 6.25% APY for mToken holders while the underlying assets generate in total between 8% and 12% APY. This excess interest assures that payments of 6.25% to depositors continue to be made, and any extra accrues to the DMM DAO.
-              </p>
-            </div>
-            <div className={'section right'}>
-              <h3>Uses of Revenue</h3>
-              <div className={'underline'}/>
-              <p>
-                After payments are made to lenders, excess revenue generated by the DAO will used in accordance with how the DAO has voted, likely to grow the ecosystem and to reward DMG token holders.
-              </p>
-              <p>
-                Once the DMM DAO vote reaches a threshold agreed upon by the DMG holders, the DAO may elect to purchase DMG tokens off the open market to burn them, increasing token demand and lowering the supply available.
-              </p>
-              <p>
-                Token burns will be tracked on the <a href={'https://dao.defimoneymarket.com'}>governance dashboard</a> in order to provide transparency into the revenue the DMM DAO engages in and generates.
-              </p>
-              <p>
-                As development, marketing, and maintenance becomes increasingly decentralized, we anticipate a portion of the DAO’s revenue will be used to pay for future protocol work and development.
-              </p>
+              <div className={'textWrapper'}>
+                <h3>DAO Structure</h3>
+                <div className={'underline'}/>
+                <p>
+                  After payments are made to lenders, excess revenue generated by the DAO will be used in accordance with how the DAO has voted, namely to grow the ecosystem and reward DMG token holders.
+                </p>
+                <p>
+                  As development, marketing, and maintenance of the DMM ecosystem becomes increasingly decentralized, we anticipate a portion of the DAO’s revenue will be used to pay for future protocol work and development.
+                </p>
+              </div>
+              <div className={'imageWrapper'}><img src={StructureGraphic} alt={'structure graphic'}/></div>
             </div>
             <p>
-              Through the governance structure we have laid out above, it is our goal that the DMG governance token and community DAO will enable DMM to become a highly decentralized protocol removing any single point of failure. We anticipate that changes and fine-tuning to this structure will be required and we are open to any and all feedback you may have as DMM is a community driven project first and foremost.
+              Through the governance structure we have laid out above and in our previous articles, it is our goal that the DMG governance token and the DMM community-operated DAO will enable DMM to become a highly decentralized protocol mitigating any potential single point of failure. We anticipate that fine-tuning this structure will be required over time and we are open to any and all feedback you may have as DMM is a community driven project first and foremost.
             </p>
-
-
-
-            {/*<div className={'section'}>
-              <h3>Overview</h3>
-              <div className={'underline'}/>
-              <p>
-                The DeFi Money Market (DMM) DAO governance token, DMG, is the tool through which the community governs and grows the DMM ecosystem and the underlying protocol. As we look to build a vibrant global community, DMG is a critical component that will engender broad participation and mitigate centralized governance risk. Specifically, DMG effectuates governance of the ecosystem via the DMM DAO, which has control over the Ethereum smart contracts and its adjacent assets.
-              </p>
-              <p>
-                Ownership of DMG represents the right to govern the parameters of the DMM Protocol as well as governance over the ability and decisions surrounding the introduction of new assets to the ecosystem in regards to both asset type and asset location. Additionally the decentralized community governing the DMM DAO can vote to modify the DMG tokenomics and utility, which could include a claim on the excess revenue generated from within the DMM ecosystem. The DMG token is a fork of Compound’s COMP governance token (featuring native delegation and vote weighting) with added capability such as meta-transaction support and a native burn function.
-              </p>
+            <div className={'bottomLinkWrapper'}>
+              <div className={'bottomLinkText'}>
+                <h2>Get started now:</h2>
+              </div>
+              <div className={'bottomButtonWrapper'}>
+                <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
+                  DAO Dashboard
+                </Button>
+              </div>
             </div>
-            <div className={'section'}>
-              <h3>Revenue and Growth Model</h3>
-              <div className={'underline'}/>
-              <p>
-                The current revenue model for the DMM DAO is quite straightforward and is composed of four main areas:
-                <ol>
-                  <li>Excess interest revenue</li>
-                  <li>Token burns, which can be initiated by a vote from the decentralized DMM DAO and done through excess interest revenue or via origination fees</li>
-                  <li>Voting and staking for asset introduction, which is in the process of being decentralized and should result in a significant number of tokens being moved away from the liquid supply</li>
-                  <li>If an individual or a group owns a block of DMG and reserves Principal or Affiliate membership to introduce assets into the DMME, they will also generate asset introduction or origination fees.</li>
-                  Like some of the other best token projects in the industry, we anticipate the DAO making minor tweaks to the token’s growth and revenue model as time progresses and more information about the protocol’s usage is obtained.
-                </ol>
-              </p>
-              <p>
-                Ownership of DMG represents the right to govern the parameters of the DMM Protocol as well as governance over the ability and decisions surrounding the introduction of new assets to the ecosystem in regards to both asset type and asset location. Additionally the decentralized community governing the DMM DAO can vote to modify the DMG tokenomics and utility, which could include a claim on the excess revenue generated from within the DMM ecosystem. The DMG token is a fork of Compound’s COMP governance token (featuring native delegation and vote weighting) with added capability such as meta-transaction support and a native burn function.
-              </p>
-            </div>
-            <div className={'section'}>
-              <h3>Revenue</h3>
-              <div className={'underline'}/>
-              <p>
-                Further, as the DMME is overcollateralized — with real-assets yielding more than payments due to mAsset holders — the DMM DAO is the recipient of a positive income stream that can be used to fund further loans, capitalize related assets, burn DMG or otherwise grow the ecosystem. The DMM DAO is unique in that it is one of the few DAOs that is already producing revenue and has a straightforward revenue model that grows as DMM’s AUM grows. There is currently $8.5M in car equity loans backing all current mTokens, visible on the DMM swap app.
-              </p>
-              <p>
-                As all the assets introduced to the ecosystem are overcollateralized on an income production basis (as the DMM currently generates 6.25% interest for mTokens holders while the underlying assets generate in total between 8% — 12% interest, there is a constant generation of additional income), these excess income streams assure that 1) That payments of the 6.25% to depositors are made and 2) Excess amounts accrue to the DMM DAO. While still in its infancy, to date the DMM DAO has generated approximately 5.5% annualized revenue on an asset based basis. Just in the month of April alone, circulating mTokens grew 180% to $227k worth of user-deposited funds. Additionally to date, there have been over $670k worth of mTokens purchased in total.
-              </p>
-              <p>
-                Revenue through rights to governance over asset introduction
-              </p>
-              <p>
-                A certain percentage of DMG tokens are required to introduce assets into the DMME (to assure that all DMG holders interests are aligned). The first few test assets are being developed by partners working directly with the DMM Foundation. Some of these assets can include real estate, aviation, and construction equipment. More details can be found in our Chainlink article. Upon the issuance and sale of DMG, we will be rolling out over the next 12 months the fully decentralized onboarding of assets into the DMME. Below we list a high level view on how we envision this to work. While not definitive, we look forward to working with DMG holders and the community to create a unique system that can be scalable on a global basis.
-              </p>
-              <p>
-                Revenue from % of Origination or Asset Introduction Fees for Principal and Affiliate Members: Principal or Affiliate Members (see full information on how this operates below) will contribute 5% of the Origination or Asset Introduction Fees charged to DMG holders on a pro rata basis.
-              </p>
-            </div>
-            <div className={'section'}>
-              <h3>Uses of Revenue</h3>
-              <div className={'underline'}/>
-              <p>
-                Once the DMM DAO vote reaches a threshold agreed upon by the DMG holders, the DAO may elect to purchase DMG tokens off the open market to burn them, increasing token demand and lowering the supply available. Token burns will be tracked on a governance dashboard designed to provide transparency into the revenue the DMM DAO engages in and generates. As development, marketing, and maintenance becomes increasingly decentralized, we anticipate a portion of the DAO’s revenue will be used to pay for future protocol work and development.
-              </p>
-            </div>
-            <p>
-              Through the governance structure we have laid out above, it is our goal that the DMG governance token and community DAO will enable DMM to become a highly decentralized protocol removing any single point of failure. We anticipate that changes and fine-tuning to this structure will be required and we are open to any and all feedback you may have as DMM is a community driven project first and foremost.
-            </p>*/}
           </div>
         </div>
     </div>
