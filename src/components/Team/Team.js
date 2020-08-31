@@ -39,7 +39,7 @@ class Team extends React.Component {
                 Gregory Keough
               </div>
               <div className={'role'}>
-                Founder
+                Member
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/gregorykeough/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/gregorykeough/" target={'_blank'}>LinkedIn</a>
@@ -53,7 +53,7 @@ class Team extends React.Component {
                 Derek Acree
               </div>
               <div className={'role'}>
-                Founder
+                Member
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/derekacree/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/derekacree/" target={'_blank'}>LinkedIn</a>
@@ -67,7 +67,7 @@ class Team extends React.Component {
                 Corey Caplan
               </div>
               <div className={'role'}>
-                Founder
+                Member
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/corey-caplan/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/corey-caplan/" target={'_blank'}>LinkedIn</a>
@@ -81,7 +81,7 @@ class Team extends React.Component {
                 Adam Knuckey
               </div>
               <div className={'role'}>
-                Founder
+                Member
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/adam-knuckey-720612108/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/adam-knuckey-720612108/" target={'_blank'}>LinkedIn</a>
@@ -95,7 +95,7 @@ class Team extends React.Component {
                 Matthew Finestone
               </div>
               <div className={'role'}>
-                Partner
+                Advisor
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/" target={'_blank'}>LinkedIn</a>
@@ -109,7 +109,7 @@ class Team extends React.Component {
                 Zachary Rynes
               </div>
               <div className={'role'}>
-                Partner
+                Member
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/zachary-rynes-a98417173/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/zachary-rynes-a98417173/" target={'_blank'}>LinkedIn</a>

@@ -8,6 +8,7 @@ import PortisLogo from '../../assets/Portis-logo.png';
 import TrustWalletLogo from '../../assets/TrustWallet-Logo.png';
 import DIFCLogo from '../../assets/DIFC-logo.png';
 import GnosisLogo from '../../assets/Gnosis-logo.png';
+import DXDAOLogo from '../../assets/dxDAO-logo.png';
 import TotleLogo from '../../assets/Totle-logo.png';
 import BlocknativeLogo from '../../assets/Blocknative-logo.png';
 import LoopringLogo from '../../assets/Loopring-logo.png';
@@ -36,27 +37,27 @@ class Partners extends React.Component {
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://chain.link/'} target="_blank"><img src={ChainlinkLogo}/></a>
+                  <a href={'https://twitter.com/chainlink/status/1234496138092437504?s=20'} target="_blank"><img src={ChainlinkLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://drapernetwork.com/'} target="_blank"><img src={DraperVentureNetwork}/></a>
+                  <a href={'https://twitter.com/DMMDAO/status/1239562607020965889?s=20'} target="_blank"><img src={DraperVentureNetwork}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://www.coinbase.com/'} target="_blank"><img src={CoinbaseLogo}/></a>
+                  <a href={'https://twitter.com/DMMDAO/status/1246552061820338176?s=20'} target="_blank"><img src={CoinbaseLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://fortmatic.com/'} target="_blank"><img src={FortmaticLogo}/></a>
+                  <a href={'https://twitter.com/DMMDAO/status/1234982542429700098?s=20'} target="_blank"><img src={FortmaticLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://portis.io/'} target="_blank"><img src={PortisLogo}/></a>
+                  <a href={'https://twitter.com/DMMDAO/status/1253798540704243712?s=20'} target="_blank"><img src={PortisLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
@@ -71,27 +72,22 @@ class Partners extends React.Component {
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://gnosis.io/'} target="_blank"><img src={GnosisLogo}/></a>
+                  <a href={'https://twitter.com/mesa_eth/status/1275106582716612609?s=20'} target="_blank"><img className={'dxdaoLogo'} src={DXDAOLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://www.totle.com/'} target="_blank"><img src={TotleLogo}/></a>
+                  <a href={'https://twitter.com/TotleCrypto/status/1234590563044904966?s=20'} target="_blank"><img src={TotleLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://www.blocknative.com/'} target="_blank"><img src={BlocknativeLogo}/></a>
+                  <a href={'https://twitter.com/DMMDAO/status/1234551610237444097?s=20'} target="_blank"><img src={BlocknativeLogo}/></a>
                 </div>
               </div>
               <div className={'publication'}>
                 <div className={'partnersInner'}>
-                  <a href={'https://loopring.org/#/'} target="_blank"><img src={LoopringLogo}/></a>
-                </div>
-              </div>
-              <div className={'publication'}>
-                <div className={'partnersInner'}>
-                  <a href={'https://zerion.io/'} target="_blank"><img src={ZerionLogo}/></a>
+                  <a href={'https://twitter.com/DMMDAO/status/1258063889222135808?s=20'} target="_blank"><img src={ZerionLogo}/></a>
                 </div>
               </div>
             </div>

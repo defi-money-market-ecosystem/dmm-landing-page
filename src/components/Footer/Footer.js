@@ -28,7 +28,7 @@ const Footer = (props) => {
     <div className={'footer'}>
       <div className={'content'}>
         <div className={'leftSide'}>
-          <a style={{'fontWeight': '800'}} href={'https://app.defimoneymarket.com'} target={'_blank'}>Get DMM</a>
+          <a style={{'fontWeight': '800'}} href={'https://app.defimoneymarket.com'} target={'_blank'}>APP</a>
           <a href={'https://github.com/defi-money-market-ecosystem/protocol/wiki'} target={'_blank'}>Docs</a>
           <a href={'https://defimoneymarket.com/DMM-SECBIT-Audit.pdf'} target={'_blank'}>Security Audit</a>
           <a href={PDF} target={'_blank'}>Legal</a>
@@ -90,7 +90,7 @@ const Footer = (props) => {
               Join the conversation:
             </div>
             <a href={'https://twitter.com/DmmDAO'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
-            <a href={'https://www.reddit.com/r/DMMDAO/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'reddit']} /></a>
+            <a href={'https://t.me/DmmOfficial'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'telegram']} /></a>
             <a href={'https://medium.com/dmm-dao'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'medium']} /></a>
             <a href={'https://discord.gg/9dM8yaA'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'discord']} /></a>
           </div>
