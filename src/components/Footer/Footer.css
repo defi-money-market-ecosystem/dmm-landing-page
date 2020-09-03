@@ -95,6 +95,10 @@
     text-align: right;
 }
 
+.footer .socialMedia {
+    position: relative;
+}
+
 .footer .socialMedia svg {
     font-size: 35px;
     margin-left: 15px;
@@ -112,6 +116,22 @@
 
 .footer .socialMedia svg:hover path {
     fill: #87b9ef;/*#deeefe;*/
+}
+
+.footer .footerLogo {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-left: -15px;
+    vertical-align: top;
+    margin-top: -14px;
+}
+
+.footer .footerLogo svg {
+    color: white;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-20deg);
 }
 
 
