@@ -1,0 +1,220 @@
+
+.governanceInfo {
+    transform: skewY(5deg);
+    margin-bottom: 220px;
+}
+
+.governanceInfo .content {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.governanceInfo .tokenInfo {
+    width: 100%;
+    display: inline-block;
+}
+
+.governanceInfo .tokenInfo .border {
+    height: 4px;
+    background: #327ccb;
+    width: 110px;
+}
+
+.governanceInfo .tokenInfo .subtext {
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.governanceInfo .tempLogo {
+    border-radius: 50%;
+    margin: 10px 13px 10px;
+    display: inline-block;
+    width: 12%;
+    height: auto;
+}
+
+.governanceInfo .tempLogo svg {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.governanceInfo .tempLogo svg path {
+    fill: #327ccb;
+    height: 40px;
+    width: 40px;
+}
+
+.governanceInfo .name {
+    font-family: 'Raleway', sans-serif;
+    line-height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4%;
+    font-size: 18px;
+    margin-top: 0.7%;
+}
+
+.governanceInfo .textWrapper {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6% 5% 6% 6%;
+    width: 89%;
+    text-align: center;
+}
+
+.governanceInfo .point {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 4%;
+    margin-bottom: 40px;
+    min-width: 310px;
+}
+
+.governanceInfo .point:first-of-type {
+    margin-left: 0;
+}
+
+.governanceInfo .point.short {
+    height: 151px !important;
+    margin-bottom: -60px !important;
+}
+
+.governanceInfo .title {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.governanceInfo .subtitle {
+    margin-top: 3%;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.governanceInfo .tokenInfo .subtitle {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 2.3em;
+    margin-bottom: 2px;
+}
+
+.governanceInfo .buttonOuter {
+    margin-top: 1%;
+    font-weight: 300;
+    text-align: center;
+}
+
+.governanceInfo .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.governanceInfo .buttonText.secondary {
+    background-color: #8b9db1 !important
+}
+
+.governanceInfo .buttonText:hover {
+    background-color: #5490d0 !important;
+}
+
+.governanceInfo .buttonText.secondary:hover {
+    background-color: #9aaec5 !important;
+}
+
+.governanceInfo .buttonOuter.lower {
+    display: none;
+}
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .governanceInfo .point.short {
+        height: 147px !important;
+        margin-bottom: -28px !important
+    }
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+    .governanceInfo {
+        margin-bottom: 200px;
+    }
+
+    .governanceInfo .content {
+        padding: 5%;
+    }
+
+    .governanceInfo .buttonOuter.lower {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .governanceInfo .textWrapper,
+    .governanceInfo .tokenInfo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .governanceInfo .tokenInfo {
+        margin-top: 30px;
+    }
+
+    .governanceInfo .title {
+        font-size: 3em;
+        display: inline-block;
+        margin-right: 13px;
+    }
+
+    .governanceInfo .subtitle {
+        margin-top: 10px;
+    }
+
+    .governanceInfo .point {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .governanceInfo .point.short {
+        height: 127px !important;
+        margin-bottom: -43px !important;
+    }
+
+    .governanceInfo .tokenInfo .subtitle {
+        font-size: 2em;
+    }
+
+    .governanceInfo .tokenInfo .subtext {
+        font-size: 1em;
+    }
+
+    /*.governanceInfo .textWrapper .buttonOuter {
+        display: none;
+    }*/
+
+    .governanceInfo .buttonOuter {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 593px) {
+    .governanceInfo .point {
+        width: 90%;
+    }
+
+    .governanceInfo .point.short {
+        height: 147px !important;
+    }
+}

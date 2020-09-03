@@ -4,6 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import NumberUtil from './utils/NumberUtil';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Governance from './components/Governance/Governance';
 
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
@@ -78,35 +80,49 @@ class App extends React.Component {
       `https://api.defimoneymarket.com/v1/dmm/tokens/3/exchange-rate`,
       {headers: {'Accept': 'application/json'}},
     );
+    const usdtResponse = await fetch(
+      `https://api.defimoneymarket.com/v1/dmm/tokens/4/exchange-rate`,
+      {headers: {'Accept': 'application/json'}},
+    );
 
     const daiRate = new NumberUtil.BN((await daiResponse.json())["data"]["exchange_rate"]);
     const usdcRate = new NumberUtil.BN((await usdcResponse.json())["data"]["exchange_rate"]);
     const ethRate = new NumberUtil.BN((await ethResponse.json())["data"]["exchange_rate"]);
+    const usdtRate = new NumberUtil.BN((await usdtResponse.json())["data"]["exchange_rate"]);
 
-    this.setState({ daiRate, usdcRate, ethRate });
+    this.setState({ daiRate, usdcRate, ethRate, usdtRate });
   }
 
   render() {
     return (
-      <div className={'App'}>
-        <div className={'content'}>
-          <Navbar onClose={() => {}} open selectedValue={1} daiRate={this.state.daiRate} usdcRate={this.state.usdcRate} ethRate={this.state.ethRate}/>
-          <Header/>
-          <QuickFacts/>
-          <Info onClose={() => {}} open selectedValue={1}/>
-          <IntegrationsAndWhitepaper/>
-          <Partners/>
-          <Media/>
-          <Team/>
-          <a name="email"/>
-          <EmailList
-            firebase={Firebase}
-            isSignedIn={this.state.isSignedIn}
-            userProfile={this.state.userProfile}
-          />
-          <Footer onClose={() => {}} open selectedValue={1}/>
+      <Router>
+        <div className={'App'}>
+          <div className={'content'}>
+            <Navbar onClose={() => {}} open selectedValue={1} daiRate={this.state.daiRate} usdcRate={this.state.usdcRate} ethRate={this.state.ethRate} usdtRate={this.state.usdtRate}/>
+            <Switch>
+              <Route path={'/governance'}>
+                <Governance/>
+              </Route>
+              <Route path={'/'}>
+                <Header/>
+                <QuickFacts/>
+                <Info onClose={() => {}} open selectedValue={1}/>
+                <IntegrationsAndWhitepaper/>
+                <Partners/>
+                <Media/>
+                <Team/>
+                <a name="email"/>
+                <EmailList
+                  firebase={Firebase}
+                  isSignedIn={this.state.isSignedIn}
+                  userProfile={this.state.userProfile}
+                />
+              </Route>
+            </Switch>
+            <Footer onClose={() => {}} open selectedValue={1}/>
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }

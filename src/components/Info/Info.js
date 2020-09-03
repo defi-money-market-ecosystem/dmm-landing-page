@@ -31,7 +31,7 @@ const Info = (props) => {
           <div className={'number'}>1</div>
           <div className={'text'}>
             <div className={'main'}>
-              DAI, USDC, or ETH are deposited in exchange for DMM mTokens.
+              DAI, USDC, USDT or ETH are deposited in exchange for DMM mTokens.
             </div>
             <div className={'subtext'} onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2#tokentxns', "_blank")}>
               See the smart contract →
@@ -42,7 +42,7 @@ const Info = (props) => {
           <div className={'number'}>2</div>
           <div className={'text'} id={'text2'}>
             <div className={'main'}>
-              The deposited DAI, USDC, and ETH are used to acquire real-world, income producing assets, all viewable on chain.
+              The deposited DAI, USDC, USDT, and ETH are used to acquire real-world, income producing assets, all viewable on chain.
             </div>
             <div className={'subtext'} onClick={() => window.open('https://explorer.defimoneymarket.com', "_blank")}>
               Browse the assets →
@@ -64,7 +64,7 @@ const Info = (props) => {
           <div className={'number'}>4</div>
           <div className={'text'} id={'text4'}>
             <div className={'main'}>
-              DMM mTokens are freely swapped back for the original DAI/USDC/ETH deposited plus interest accrued.
+              DMM mTokens are freely swapped back for the original DAI/USDC/USDT/ETH deposited plus interest accrued.
             </div>
             <div className={'subtext'} onClick={() => window.open("https://app.defimoneymarket.com", "_blank")}>
               Get your DMM →

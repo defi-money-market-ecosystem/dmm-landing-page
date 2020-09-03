@@ -5,6 +5,8 @@ import Corey from '../../assets/corey-caplan.jpeg';
 import Adam from '../../assets/adam-knuckey.jpeg';
 import Matt from '../../assets/matthew-finestone.jpeg';
 import Zach from '../../assets/zach-rynes.jpeg';
+import Javier from '../../assets/Javier-Keough.jpeg';
+import Keith from '../../assets/Keith-D-Smith-III.jpeg';
 import Tim from '../../assets/tim-draper.jpg';
 import Stephen from '../../assets/stephen-mckeon.jpeg';
 import Alon from '../../assets/alon-goren.jpeg';
@@ -113,6 +115,34 @@ class Team extends React.Component {
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/zachary-rynes-a98417173/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/zachary-rynes-a98417173/" target={'_blank'}>LinkedIn</a>
+              </div>
+            </div>
+            <div className={'teamMember'}>
+              <div className={'image'}>
+                <img src={Javier}/>
+              </div>
+              <div className={'name'}>
+                Javier Keough
+              </div>
+              <div className={'role'}>
+                Member
+              </div>
+              <div className={'linkedIn'}>
+                <a href={'https://www.linkedin.com/in/javier-keough-4549951a8/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/javier-keough-4549951a8/" target={'_blank'}>LinkedIn</a>
+              </div>
+            </div>
+            <div className={'teamMember'}>
+              <div className={'image'}>
+                <img src={Keith}/>
+              </div>
+              <div className={'name'}>
+                Keith D. Smith III
+              </div>
+              <div className={'role'}>
+                Member
+              </div>
+              <div className={'linkedIn'}>
+                <a href={'https://www.linkedin.com/in/keithdsmith3/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/keithdsmith3/" target={'_blank'}>LinkedIn</a>
               </div>
             </div>
             <div className={'title investors'}>
