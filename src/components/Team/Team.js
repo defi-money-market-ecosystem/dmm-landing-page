@@ -131,20 +131,6 @@ class Team extends React.Component {
                 <a href={'https://www.linkedin.com/in/javier-keough-4549951a8/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/javier-keough-4549951a8/" target={'_blank'}>LinkedIn</a>
               </div>
             </div>
-            <div className={'teamMember'}>
-              <div className={'image'}>
-                <img src={Keith}/>
-              </div>
-              <div className={'name'}>
-                Keith D. Smith III
-              </div>
-              <div className={'role'}>
-                Member
-              </div>
-              <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/keithdsmith3/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/keithdsmith3/" target={'_blank'}>LinkedIn</a>
-              </div>
-            </div>
             <div className={'title investors'}>
               Investors
             </div>

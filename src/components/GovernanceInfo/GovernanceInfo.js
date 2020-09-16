@@ -68,7 +68,7 @@ const GovernanceInfo = (props) => {
             <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
               DAO Dashboard
             </Button>
-            <Button className={'buttonText secondary'} onClick={() => window.open('https://defimoneymarket.com/governance')}>
+            <Button href={"/governance"} className={'buttonText secondary'} onClick={() => window.open('/governance', "_self")}>
               Learn more
             </Button>
           </div>
