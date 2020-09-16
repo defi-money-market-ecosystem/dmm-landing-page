@@ -1,5 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
+import Fade from 'react-reveal/Fade';
+import Dialog from '@material-ui/core/Dialog';
 import GovernanceGraphic from '../../assets/governance-graphic.svg';
 import BallotBoxGraphic from '../../assets/ballot-box.svg';
 import RevenueGraphic from '../../assets/revenue-graphic.svg';
@@ -7,7 +10,7 @@ import StructureGraphic from '../../assets/structure-graphic.svg';
 
 import './Governance.css';
 
-const Governance = () => {
+const Governance = (props) => {
 
   return (
     <div className={'governance'}>
@@ -15,6 +18,9 @@ const Governance = () => {
           <div className={'governance-inner'}>
             <h2>DMM Governance</h2>
             <div className={'underline large'}/>
+            {/*<div className={'governanceGraphicTop'}>
+              <img src={GovernanceGraphic} alt={'Governance graphic'}/>
+            </div>*/}
             <p>The DeFi Money Market (DMM) Ecosystem is governed by a global <span className={'highlight'}><a href={'https://medium.com/dmm-dao/the-basics-of-a-decentralized-autonomous-organization-dao-23ac71b357d0'} target={'_blank'}>Decentralized Autonomous Organization (DAO)</a></span>.</p>
             <p>DAO community members dictate the direction of the ecosystem and its revenue-generating real world assets by voting with <span className={'highlight'}><a href={'https://etherscan.io/token/0xEd91879919B71bB6905f23af0A68d231EcF87b14'} target={'_blank'}>DMG</a></span>, the native Governance Token of DMM.</p>
             <div className={'governance-buttons'}>

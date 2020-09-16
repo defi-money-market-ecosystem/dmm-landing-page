@@ -1,25 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dialog from '@material-ui/core/Dialog';
 
 import './Info.css';
-import Navbar from "../Navbar/Navbar";
 
-const Info = (props) => {
+const Info = () => {
+
   Info.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
     selectedValue: PropTypes.string.isRequired,
-  };
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = value => {
-    setOpen(false);
   };
 
   return (
@@ -33,7 +22,8 @@ const Info = (props) => {
             <div className={'main'}>
               DAI, USDC, USDT or ETH are deposited in exchange for DMM mTokens.
             </div>
-            <div className={'subtext'} onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2#tokentxns', "_blank")}>
+            <div className={'subtext'}
+                 onClick={() => window.open('https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2#tokentxns', "_blank")}>
               See the smart contract →
             </div>
           </div>
@@ -42,7 +32,8 @@ const Info = (props) => {
           <div className={'number'}>2</div>
           <div className={'text'} id={'text2'}>
             <div className={'main'}>
-              The deposited DAI, USDC, USDT, and ETH are used to acquire real-world, income producing assets, all viewable on chain.
+              The deposited DAI, USDC, USDT, and ETH are used to acquire real-world, income producing assets, all
+              viewable on chain.
             </div>
             <div className={'subtext'} onClick={() => window.open('https://explorer.defimoneymarket.com', "_blank")}>
               Browse the assets →
@@ -55,7 +46,8 @@ const Info = (props) => {
             <div className={'main'}>
               The assets pay out interest, which is returned to the DMM Ecosystem.
             </div>
-            <div className={'subtext'} onClick={() => window.open('https://etherscan.io/token/0x3564ad35b9e95340e5ace2d6251dbfc76098669b', "_blank")}>
+            <div className={'subtext'}
+                 onClick={() => window.open('https://etherscan.io/token/0x3564ad35b9e95340e5ace2d6251dbfc76098669b', "_blank")}>
               See the accumulated interest →
             </div>
           </div>

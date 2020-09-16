@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 
 import './EmailList.css';
 
@@ -25,9 +24,8 @@ class EmailList extends React.Component {
 
   submitEmail() {
     if (this.props.isSignedIn) {
-      this.props.firebase.auth().signInAnonymously().catch(function(error) {
-        let errorCode = error.code;
-        let errorMessage = error.message;
+      this.props.firebase.auth().signInAnonymously().catch((error) => {
+        console.error('Found error ', error)
       });
 
       const email = document.getElementById('email').value;
@@ -36,14 +34,12 @@ class EmailList extends React.Component {
         this.props.firebase.database().ref("/contact/" + this.props.userProfile.uid).set({
           email: email
         });
-        this.setState({ submitted: true });
-      }
-      else {
+        this.setState({submitted: true});
+      } else {
         console.log('invalid email');
         // TODO - show error
       }
-    }
-    else {
+    } else {
       console.log('not signed in');
       // TODO - error not signed in
     }
@@ -70,7 +66,7 @@ class EmailList extends React.Component {
                 <input type={'text'} id={'email'} placeholder={'Email'}/>
               </div>
               <div className={'buttonOuter'}>
-                { this.state.submitted ? (
+                {this.state.submitted ? (
                   <div className={'successText'}>
                     Success!
                   </div>

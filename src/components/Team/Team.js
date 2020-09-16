@@ -6,7 +6,6 @@ import Adam from '../../assets/adam-knuckey.jpeg';
 import Matt from '../../assets/matthew-finestone.jpeg';
 import Zach from '../../assets/zach-rynes.jpeg';
 import Javier from '../../assets/Javier-Keough.jpeg';
-import Keith from '../../assets/Keith-D-Smith-III.jpeg';
 import Tim from '../../assets/tim-draper.jpg';
 import Stephen from '../../assets/stephen-mckeon.jpeg';
 import Alon from '../../assets/alon-goren.jpeg';
@@ -18,9 +17,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Team.css';
 
 class Team extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
