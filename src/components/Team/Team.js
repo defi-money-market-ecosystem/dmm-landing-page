@@ -11,6 +11,9 @@ import Tim from '../../assets/tim-draper.jpg';
 import Stephen from '../../assets/stephen-mckeon.jpeg';
 import Alon from '../../assets/alon-goren.jpeg';
 import Josef from '../../assets/josef-holm.jpeg';
+import Maria from '../../assets/Maria-Teresa-Siman-Herrera.jpeg';
+import Carlos from '../../assets/Carlos-Ernesto-S.jpeg';
+import Isabel from '../../assets/Maria-Isabel-Siman-Bravo.jpeg';
 import WikipediaIcon from '../../assets/wikipedia-icon.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -143,6 +146,48 @@ class Team extends React.Component {
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/keithdsmith3/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/keithdsmith3/" target={'_blank'}>LinkedIn</a>
+              </div>
+            </div>
+            <div className={'teamMember'}>
+              <div className={'image'}>
+                <img src={Maria}/>
+              </div>
+              <div className={'name'}>
+                Maria Teresa Simán Herrera
+              </div>
+              <div className={'role'}>
+                Member
+              </div>
+              <div className={'linkedIn'}>
+                <a href={'https://www.linkedin.com/in/maria-teresa-sim%C3%A1n-herrera-0850b1143/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-teresa-sim%C3%A1n-herrera-0850b1143/" target={'_blank'}>LinkedIn</a>
+              </div>
+            </div>
+            <div className={'teamMember'}>
+              <div className={'image'}>
+                <img src={Carlos}/>
+              </div>
+              <div className={'name'}>
+                Carlos Ernesto S.
+              </div>
+              <div className={'role'}>
+                Member
+              </div>
+              <div className={'linkedIn'}>
+                <a href={'https://www.linkedin.com/in/cesanchezr/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/cesanchezr/" target={'_blank'}>LinkedIn</a>
+              </div>
+            </div>
+            <div className={'teamMember'}>
+              <div className={'image'}>
+                <img src={Isabel}/>
+              </div>
+              <div className={'name'}>
+                Maria Isabel Siman Bravo
+              </div>
+              <div className={'role'}>
+                Member
+              </div>
+              <div className={'linkedIn'}>
+                <a href={'https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/" target={'_blank'}>LinkedIn</a>
               </div>
             </div>
             <div className={'title investors'}>

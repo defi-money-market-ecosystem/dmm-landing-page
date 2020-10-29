@@ -4,7 +4,7 @@
     text-align: center;
     background: white;
     margin-top: -5px;
-    height: 1200px;
+    height: 1350px;
 }
 
 .team .wrapper {
@@ -118,17 +118,21 @@
     .teamMember .name {
         font-size: 1.2em;
     }
+
+    .team {
+        height: 1600px;
+    }
 }
 
 @media (max-width: 879px) {
     .team {
-        height: 1400px;
+        height: 1900px;
     }
 }
 
 @media (max-width: 749px) {
     .team {
-        height: 1600px;
+        height: 2400px;
     }
 }
 
@@ -138,7 +142,7 @@
     }
 
     .team {
-        height: 1400px;
+        height: 1700px;
     }
 
     .team .teamMember {
@@ -161,12 +165,12 @@
 
 @media (max-width: 479px) {
     .team {
-        height: 1600px;
+        height: 2200px;
     }
 }
 
 @media (max-width: 390px) {
     .team {
-        height: 1600px;
+        height: 2200px;
     }
 }
