@@ -1,10 +1,9 @@
 import React from 'react';
 import Firebase from 'firebase';
-import logo from './logo.svg';
 import './App.css';
 
 import NumberUtil from './utils/NumberUtil';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Governance from './components/Governance/Governance';
 
 import Navbar from './components/Navbar/Navbar';
@@ -12,15 +11,14 @@ import Header from './components/Header/Header';
 import QuickFacts from './components/QuickFacts/QuickFacts';
 import Info from './components/Info/Info';
 import IntegrationsAndWhitepaper from './components/IntegrationsAndWhitepaper/IntegrationsAndWhitepaper';
-import GetStarted from './components/GetStarted/GetStarted';
 import Media from './components/Media/Media';
 import Partners from './components/Partners/Partners';
 import Team from './components/Team/Team';
 import EmailList from './components/EmailList/EmailList';
 import Footer from './components/Footer/Footer';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fab} from '@fortawesome/free-brands-svg-icons';
 
 library.add(fab);
 
@@ -32,7 +30,7 @@ const config = {
 };
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     Firebase.initializeApp(config);
 
@@ -44,15 +42,16 @@ class App extends React.Component {
       ethRate: null,
     };
 
-    const unregisterAuthObserver = Firebase.auth().onAuthStateChanged((user) => {
-      this.setState({ isSignedIn: !!user, userProfile: user });
-    });
-    Firebase.auth().signInAnonymously().catch(function(error) {
-      let errorCode = error.code;
-      let errorMessage = error.message;
+    Firebase.auth().onAuthStateChanged((user) => {
+      this.setState({isSignedIn: !!user, userProfile: user});
     });
 
-    this.loadExchangeRates().then(() => {});
+    Firebase.auth().signInAnonymously().catch((error) => {
+      console.error('Could not sign in anonymously with Firebase due to error ', error)
+    });
+
+    this.loadExchangeRates().then(() => {
+    });
   }
 
   async loadExchangeRates() {
@@ -90,7 +89,7 @@ class App extends React.Component {
     const ethRate = new NumberUtil.BN((await ethResponse.json())["data"]["exchange_rate"]);
     const usdtRate = new NumberUtil.BN((await usdtResponse.json())["data"]["exchange_rate"]);
 
-    this.setState({ daiRate, usdcRate, ethRate, usdtRate });
+    this.setState({daiRate, usdcRate, ethRate, usdtRate});
   }
 
   render() {
@@ -98,7 +97,9 @@ class App extends React.Component {
       <Router>
         <div className={'App'}>
           <div className={'content'}>
-            <Navbar onClose={() => {}} open selectedValue={1} daiRate={this.state.daiRate} usdcRate={this.state.usdcRate} ethRate={this.state.ethRate} usdtRate={this.state.usdtRate}/>
+            <Navbar onClose={() => ''} open selectedValue={'1'} daiRate={this.state.daiRate}
+                    usdcRate={this.state.usdcRate}
+                    ethRate={this.state.ethRate} usdtRate={this.state.usdtRate}/>
             <Switch>
               <Route path={'/governance'}>
                 <Governance/>
@@ -106,7 +107,8 @@ class App extends React.Component {
               <Route path={'/'}>
                 <Header/>
                 <QuickFacts/>
-                <Info onClose={() => {}} open selectedValue={1}/>
+                <Info onClose={() => {
+                }} open selectedValue={1}/>
                 <IntegrationsAndWhitepaper/>
                 <Partners/>
                 <Media/>
@@ -119,7 +121,7 @@ class App extends React.Component {
                 />
               </Route>
             </Switch>
-            <Footer onClose={() => {}} open selectedValue={1}/>
+            <Footer onClose={() => ''} open selectedValue={'1'}/>
           </div>
         </div>
       </Router>

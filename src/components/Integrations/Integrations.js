@@ -3,26 +3,25 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Fade from 'react-reveal/Fade';
-import Dialog from '@material-ui/core/Dialog';
 
 import './Integrations.css';
 
-const Integrations = (props) => {
+const Integrations = () => {
   Integrations.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
     selectedValue: PropTypes.string.isRequired,
   };
 
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = value => {
-    setOpen(false);
-  };
+  // const [open, setOpen] = React.useState(false);
+  //
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  //
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <div className={'integrations'}>
@@ -34,7 +33,8 @@ const Integrations = (props) => {
           Integrations
         </div>
         <div className={'buttonOuter'}>
-          <Button className={'buttonText'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
+          <Button className={'buttonText'}
+                  onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
             Read the docs
           </Button>
         </div>
@@ -44,7 +44,8 @@ const Integrations = (props) => {
           <div className={'integration'} onClick={() => window.open("https://app.defimoneymarket.com", "_blank")}>
             <div className={'leftSection'}>
               <div className={'logo'}>
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt"
+                     viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
                   <metadata>
                     Created by potrace 1.12, written by Peter Selinger 2001-2015
                   </metadata>
@@ -82,7 +83,7 @@ const Integrations = (props) => {
           -29 -235 -14 -258 75 -8 34 -30 195 -55 420 -14 123 -6 101 -130 335 -21 38
           -54 88 -74 111 -20 23 -53 64 -72 90 -19 27 -41 55 -48 64 -8 8 -59 76 -114
           150 -131 175 -157 205 -220 252 -54 41 -150 120 -178 148 -9 9 -34 29 -55 45
-          -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"></path>
+          -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"/>
                   </g>
                 </svg>
               </div>
@@ -102,7 +103,8 @@ const Integrations = (props) => {
               </div>
             </div>
           </div>
-          <div className={'integration'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
+          <div className={'integration'}
+               onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
             <div className={'leftSection'}>
               <div className={'logo blank'}>
                 +
@@ -133,7 +135,8 @@ const Integrations = (props) => {
           Integrations
         </div>
         <div className={'buttonOuter'}>
-          <Button className={'buttonText'} onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
+          <Button className={'buttonText'}
+                  onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
             Read the docs
           </Button>
         </div>

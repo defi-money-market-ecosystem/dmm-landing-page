@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 
-import NumberUtil, { fromDecimalToBN, humanize } from '../../utils/NumberUtil';
+import NumberUtil, {fromDecimalToBN, humanize} from '../../utils/NumberUtil';
 
 import './Navbar.css';
 
@@ -12,16 +12,6 @@ const Navbar = (props) => {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
     selectedValue: PropTypes.string.isRequired,
-  };
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = value => {
-    setOpen(false);
   };
 
   return (
@@ -68,7 +58,7 @@ const Navbar = (props) => {
   -29 -235 -14 -258 75 -8 34 -30 195 -55 420 -14 123 -6 101 -130 335 -21 38
   -54 88 -74 111 -20 23 -53 64 -72 90 -19 27 -41 55 -48 64 -8 8 -59 76 -114
   150 -131 175 -157 205 -220 252 -54 41 -150 120 -178 148 -9 9 -34 29 -55 45
-  -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"></path>
+  -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"/>
               </g>
             </svg>
           </div>
@@ -81,8 +71,8 @@ const Navbar = (props) => {
           <span className={'bold'}>1</span>
           <span className={'light'}>&nbsp;mUSDC =&nbsp;</span>
           <CountUp
-            start={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1),18)) : 0}
-            end={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196,18)),18)) : 0}
+            start={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1), 18)) : 0}
+            end={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
             duration={60 * 60}
             separator=" "
             decimals={8}

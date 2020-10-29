@@ -1,21 +1,21 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
 
 import './Header.css';
 
-const Header = (props) => {
+const Header = () => {
   const myRef = React.createRef();
 
   const handleScrollToElement = () => {
-    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    myRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
   };
 
   return (
     <div className={'header'}>
       <div className={'headerInner'}>
         <div id={'bird'}>
-          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt"
+               viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
             <metadata>
               Created by potrace 1.12, written by Peter Selinger 2001-2015
             </metadata>
@@ -53,13 +53,14 @@ const Header = (props) => {
   -29 -235 -14 -258 75 -8 34 -30 195 -55 420 -14 123 -6 101 -130 335 -21 38
   -54 88 -74 111 -20 23 -53 64 -72 90 -19 27 -41 55 -48 64 -8 8 -59 76 -114
   150 -131 175 -157 205 -220 252 -54 41 -150 120 -178 148 -9 9 -34 29 -55 45
-  -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"></path>
+  -54 40 -215 173 -287 238 -33 28 -57 32 -95 17z"/>
             </g>
           </svg>
         </div>
         <Fade bottom>
           <div className={'content'}>
-            Earn <span className={'blue'}>6.25%</span> on ETH, DAI, USDT, and USDC with <span className={'blue'}>DeFi Money Market (DMM)</span> all backed by real world income generating assets viewable on-chain.
+            Earn <span className={'blue'}>6.25%</span> on ETH, DAI, USDT, and USDC with <span className={'blue'}>DeFi Money Market (DMM)</span> all
+            backed by real world income generating assets viewable on-chain.
           </div>
         </Fade>
         <Fade bottom>

@@ -5,7 +5,6 @@ import Dialog from '@material-ui/core/Dialog';
 import PDF from '../../assets/DMM-Disclamier.pdf';
 
 import './Footer.css';
-import Token from "../Token/Token";
 
 const Footer = (props) => {
   Footer.propTypes = {

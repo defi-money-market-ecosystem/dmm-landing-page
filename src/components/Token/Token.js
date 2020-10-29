@@ -2,26 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
-import Dialog from '@material-ui/core/Dialog';
 
 import './Token.css';
-import Integrations from "../Integrations/Integrations";
 
-const Token = (props) => {
+const Token = () => {
   Token.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
     selectedValue: PropTypes.string.isRequired,
-  };
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = value => {
-    setOpen(false);
   };
 
   return (
@@ -51,7 +39,8 @@ const Token = (props) => {
               </div>
               <div className={'border'}/>
               <div className={'subtext'}>
-                By integrating delegated payments on the Ethereum network, users no longer have to pay gas fees in the form of ETH in
+                By integrating delegated payments on the Ethereum network, users no longer have to pay gas fees in the
+                form of ETH in
                 order to perform transactions.
               </div>
             </div>
@@ -70,7 +59,8 @@ const Token = (props) => {
               </div>
               <div className={'border'}/>
               <div className={'subtext'}>
-                Because DMM is backed by real-world assets and a consistent interest rate, it's growth in value is very predictable and consistent,
+                Because DMM is backed by real-world assets and a consistent interest rate, it's growth in value is very
+                predictable and consistent,
                 making it a dependable source of yield.
               </div>
             </div>

@@ -2,26 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
-import Dialog from '@material-ui/core/Dialog';
 
 import './GovernanceInfo.css';
-import Integrations from "../Integrations/Integrations";
 
-const GovernanceInfo = (props) => {
+const GovernanceInfo = () => {
+
   GovernanceInfo.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
     selectedValue: PropTypes.string.isRequired,
-  };
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = value => {
-    setOpen(false);
   };
 
   return (
@@ -41,7 +30,8 @@ const GovernanceInfo = (props) => {
                 </div>
                 <div className={'border'}/>
                 <div className={'subtext'}>
-                  The DMM Ecosystem is governed by a blockchain-based Decentralized Autonomous Organization, also known as a DAO.
+                  The DMM Ecosystem is governed by a blockchain-based Decentralized Autonomous Organization, also known
+                  as a DAO.
                 </div>
               </div>
               <div className={'point'}>
@@ -50,7 +40,8 @@ const GovernanceInfo = (props) => {
                 </div>
                 <div className={'border'}/>
                 <div className={'subtext'}>
-                  DAO governance allows for control to be decentralized across all token holders around the world, rather than in the hands of a small few.
+                  DAO governance allows for control to be decentralized across all token holders around the world,
+                  rather than in the hands of a small few.
                 </div>
               </div>
               <div className={'point'}>
@@ -68,7 +59,8 @@ const GovernanceInfo = (props) => {
             <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
               DAO Dashboard
             </Button>
-            <Button className={'buttonText secondary'} onClick={() => window.open('https://defimoneymarket.com/governance')}>
+            <Button href={"/governance"} className={'buttonText secondary'}
+                    onClick={() => window.open('/governance', "_self")}>
               Learn more
             </Button>
           </div>
