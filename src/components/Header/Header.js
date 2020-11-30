@@ -2,8 +2,9 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 import './Header.css';
+import { withTranslations } from '../../services/Translations/Translations';
 
-const Header = () => {
+const Header = (props) => {
   const myRef = React.createRef();
 
   const handleScrollToElement = () => {
@@ -59,13 +60,16 @@ const Header = () => {
         </div>
         <Fade bottom>
           <div className={'content'}>
-            Earn <span className={'blue'}>6.25%</span> on ETH, DAI, USDT, and USDC with <span className={'blue'}>DeFi Money Market (DMM)</span> all
-            backed by real world income generating assets viewable on-chain.
+            { props.excerpt('header.mainText.first', props.language) }
+            <span className={'blue'}>{props.excerpt('header.mainText.second', props.language)}</span>
+            { props.excerpt('header.mainText.third', props.language) }
+            <span className={'blue'}>{props.excerpt('header.mainText.fourth', props.language)}</span>
+            { props.excerpt('header.mainText.fifth', props.language) }
           </div>
         </Fade>
         <Fade bottom>
           <div className={'learnMore'}>
-            <span>Find out how ↓</span>
+            <span>{ props.excerpt('header.findOutHow', props.language) }</span>
           </div>
         </Fade>
         <div ref={myRef}/>
@@ -74,4 +78,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withTranslations(Header);

@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
+import Languages from '../../services/Translations/Languages';
+
+import { withTranslations } from '../../services/Translations/Translations';
 
 import './GovernanceInfo.css';
 
-const GovernanceInfo = () => {
+const GovernanceInfo = props => {
 
   GovernanceInfo.propTypes = {
     onClose: PropTypes.func.isRequired,
@@ -18,7 +21,7 @@ const GovernanceInfo = () => {
       <div className={'content'}>
         <div className={'textWrapper'}>
           <div className={'title line2'}>
-            Governance
+            { props.excerpt('governance.title', props.language) }
           </div>
           <div className={'subtitle'}>
           </div>
@@ -26,43 +29,48 @@ const GovernanceInfo = () => {
             <div className={'tokenInfo'}>
               <div className={'point'}>
                 <div className={'subtitle'}>
-                  DAO Structure
+                  { props.excerpt('governance.first.title', props.language) }
                 </div>
                 <div className={'border'}/>
                 <div className={'subtext'}>
-                  The DMM Ecosystem is governed by a blockchain-based Decentralized Autonomous Organization, also known
-                  as a DAO.
+                  { props.excerpt('governance.first.body', props.language) }
                 </div>
               </div>
               <div className={'point'}>
                 <div className={'subtitle'}>
-                  Decentralized
+                  { props.excerpt('governance.second.title', props.language) }
                 </div>
                 <div className={'border'}/>
                 <div className={'subtext'}>
-                  DAO governance allows for control to be decentralized across all token holders around the world,
-                  rather than in the hands of a small few.
+                  { props.excerpt('governance.second.body', props.language) }
                 </div>
               </div>
               <div className={'point'}>
                 <div className={'subtitle'}>
-                  Community Led
+                  { props.excerpt('governance.third.title', props.language) }
                 </div>
                 <div className={'border'}/>
                 <div className={'subtext'}>
-                  Members of the ecosystem community are the ones who get to dictate the direction of the ecosystem.
+                  { props.excerpt('governance.third.body', props.language) }
                 </div>
               </div>
             </div>
           </Fade>
           <div className={'buttonOuter'}>
             <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
-              DAO Dashboard
+              { props.excerpt('governance.button.dashboard', props.language) }
             </Button>
-            <Button href={"/governance"} className={'buttonText secondary'}
-                    onClick={() => window.open('/governance', "_self")}>
-              Learn more
-            </Button>
+            { props.language === Languages.CHINESE ? (
+              <Button href={"/governance/CN"} className={'buttonText secondary'}
+                      onClick={() => window.open('/governance/CN', "_self")}>
+                { props.excerpt('governance.button.learnMore', props.language) }
+              </Button>
+            ) : (
+              <Button href={"/governance"} className={'buttonText secondary'}
+                      onClick={() => window.open('/governance', "_self")}>
+                { props.excerpt('governance.button.learnMore', props.language) }
+              </Button>
+            )}
           </div>
         </div>
       </div>
@@ -70,4 +78,4 @@ const GovernanceInfo = () => {
   );
 };
 
-export default GovernanceInfo;
+export default withTranslations(GovernanceInfo);

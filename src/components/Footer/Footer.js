@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Dialog from '@material-ui/core/Dialog';
 import PDF from '../../assets/DMM-Disclamier.pdf';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Footer.css';
 
 const Footer = (props) => {
@@ -27,12 +29,12 @@ const Footer = (props) => {
     <div className={'footer'}>
       <div className={'content'}>
         <div className={'leftSide'}>
-          <a style={{'fontWeight': '800'}} href={'https://app.defimoneymarket.com'} target={'_blank'}>APP</a>
-          <a href={'https://github.com/defi-money-market-ecosystem/protocol/wiki'} target={'_blank'}>Docs</a>
-          <a href={'https://defimoneymarket.com/DMM-SECBIT-Audit.pdf'} target={'_blank'}>Security Audit</a>
-          <a href={PDF} target={'_blank'}>Legal</a>
-          <a href={'https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2'} target={'_blank'}>Smart Contract</a>
-          <a href={'https://docs.chain.link/docs/defi-money-market-chainlink-ethereum-mainnet'} target={'_blank'}>Chainlink Integration</a>
+          <a style={{'fontWeight': '800'}} href={'https://app.defimoneymarket.com'} target={'_blank'}>{ props.excerpt('footer.app', props.language) }</a>
+          <a href={'https://github.com/defi-money-market-ecosystem/protocol/wiki'} target={'_blank'}>{ props.excerpt('footer.docs', props.language) }</a>
+          <a href={'https://defimoneymarket.com/DMM-SECBIT-Audit.pdf'} target={'_blank'}>{ props.excerpt('footer.securityAudit', props.language) }</a>
+          <a href={PDF} target={'_blank'}>{ props.excerpt('footer.legal', props.language) }</a>
+          <a href={'https://etherscan.io/address/0x4cb120dd1d33c9a3de8bc15620c7cd43418d77e2'} target={'_blank'}>{ props.excerpt('footer.smartContract', props.language) }</a>
+          <a href={'https://docs.chain.link/docs/defi-money-market-chainlink-ethereum-mainnet'} target={'_blank'}>{ props.excerpt('footer.chainlinkIntegration', props.language) }</a>
         </div>
         <div className={'middle'}>
           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="700.000000pt" height="527.000000pt" viewBox="0 0 700.000000 527.000000" preserveAspectRatio="xMidYMid meet">
@@ -77,7 +79,7 @@ c-35 38 -73 65 -134 95 -74 37 -96 43 -164 46 -46 3 -123 -3 -187 -13 -181
             </g>
           </svg>
           <div className={'copyright'}>
-            © DeFi Money Market Foundation 2020
+            { props.excerpt('footer.copyright', props.language) }
           </div>
         </div>
         <div className={'rightSide'}>
@@ -86,7 +88,7 @@ c-35 38 -73 65 -134 95 -74 37 -96 43 -164 46 -46 3 -123 -3 -187 -13 -181
           </div>
           <div className={'socialMedia'}>
             <div className={'comment'}>
-              Join the conversation:
+              { props.excerpt('footer.joinTheConversation', props.language) }
             </div>
             <a href={'https://twitter.com/DmmDAO'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
             <a href={'https://t.me/DmmOfficial'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'telegram']} /></a>
@@ -142,4 +144,4 @@ c-35 38 -73 65 -134 95 -74 37 -96 43 -164 46 -46 3 -123 -3 -187 -13 -181
   );
 };
 
-export default Footer;
+export default withTranslations(Footer);

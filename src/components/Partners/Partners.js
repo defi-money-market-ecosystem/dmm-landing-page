@@ -14,6 +14,8 @@ import BlocknativeLogo from '../../assets/Blocknative-logo.png';
 import LoopringLogo from '../../assets/Loopring-logo.png';
 import ZerionLogo from '../../assets/Zerion-logo.png';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Partners.css';
 
 class Partners extends React.Component {
@@ -27,7 +29,7 @@ class Partners extends React.Component {
         <div className={'wrapper'}>
           <div className={'content'}>
             <div className={'title'}>
-              Partners
+              { this.props.excerpt('partners.title', this.props.language) }
             </div>
             <div className={'partnersWrapper'}>
               <div className={'publication'}>
@@ -98,4 +100,4 @@ class Partners extends React.Component {
   }
 }
 
-export default Partners;
+export default withTranslations(Partners);

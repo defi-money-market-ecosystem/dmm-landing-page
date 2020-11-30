@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 
 import NumberUtil, {fromDecimalToBN, humanize} from '../../utils/NumberUtil';
+import { withTranslations } from '../../services/Translations/Translations';
 
 import './Navbar.css';
 
@@ -129,7 +130,7 @@ const Navbar = (props) => {
         </div>
         <div className={'appButtonWrapper'}>
           <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', '_blank')}>
-            APP
+            { props.excerpt('navbar.appButton', props.language) }
           </Button>
         </div>
       </div>
@@ -137,4 +138,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default withTranslations(Navbar);

@@ -4,9 +4,11 @@ import Button from '@material-ui/core/Button';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Fade from 'react-reveal/Fade';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Integrations.css';
 
-const Integrations = () => {
+const Integrations = props => {
   Integrations.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
@@ -27,15 +29,15 @@ const Integrations = () => {
     <div className={'integrations'}>
       <div className={'textWrapper top'}>
         <div className={'title line1'}>
-          Community
+          { props.excerpt('integrations.title.lineOne', props.language) }
         </div>
         <div className={'title line2'}>
-          Integrations
+          { props.excerpt('integrations.title.lineTwo', props.language) }
         </div>
         <div className={'buttonOuter'}>
           <Button className={'buttonText'}
                   onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
-            Read the docs
+            { props.excerpt('integrations.button', props.language) }
           </Button>
         </div>
       </div>
@@ -90,11 +92,11 @@ const Integrations = () => {
             </div>
             <div className={'rightSection'}>
               <div className={'name'}>
-                DMM App
+                { props.excerpt('integrations.first.title', props.language) }
               </div>
               <div className={'underline'}/>
               <div className={'description'}>
-                The basic app to deposit token and receive mTokens, and visa-versa.
+                { props.excerpt('integrations.first.body', props.language) }
               </div>
             </div>
             <div className={'arrowWrapper'}>
@@ -112,11 +114,11 @@ const Integrations = () => {
             </div>
             <div className={'rightSection'}>
               <div className={'name'}>
-                Integrate DMM
+                { props.excerpt('integrations.second.title', props.language) }
               </div>
               <div className={'underline'}/>
               <div className={'description'}>
-                Get started on your integration today.
+                { props.excerpt('integrations.second.body', props.language) }
               </div>
             </div>
             <div className={'arrowWrapper'}>
@@ -129,15 +131,15 @@ const Integrations = () => {
       </Fade>
       <div className={'textWrapper'}>
         <div className={'title line1'}>
-          Community
+          { props.excerpt('integrations.title.lineOne', props.language) }
         </div>
         <div className={'title line2'}>
-          Integrations
+          { props.excerpt('integrations.title.lineTwo', props.language) }
         </div>
         <div className={'buttonOuter'}>
           <Button className={'buttonText'}
                   onClick={() => window.open("https://github.com/defi-money-market-ecosystem/protocol/wiki", "_blank")}>
-            Read the docs
+            { props.excerpt('integrations.button', props.language) }
           </Button>
         </div>
       </div>
@@ -145,4 +147,4 @@ const Integrations = () => {
   );
 };
 
-export default Integrations;
+export default withTranslations(Integrations);

@@ -12,10 +12,18 @@ import './IntegrationsAndWhitepaper.css';
 const IntegrationsAndWhitepaper = (props) => {
   return (
     <div className={'integrationsAndWhitepaper'}>
-      <Integrations/>
-      <Token/>
-      <GovernanceInfo/>
-      <Whitepaper/>
+      <Integrations
+        language={props.language}
+      />
+      <Token
+        language={props.language}
+      />
+      <GovernanceInfo
+        language={props.language}
+      />
+      <Whitepaper
+        language={props.language}
+      />
       <div className={'whiteThing'}/>
     </div>
   );

@@ -17,6 +17,8 @@ import WikipediaIcon from '../../assets/wikipedia-icon.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Team.css';
 
 class Team extends React.Component {
@@ -30,10 +32,10 @@ class Team extends React.Component {
         <div className={'wrapper'}>
           <div className={'content'}>
             <div className={'title'}>
-              DMM Foundation
+              { this.props.excerpt('team.title', this.props.language) }
             </div>
             <div className={'subtitle'}>
-              An organization with the involvement of a unique mix of seasoned global experts in Fintech, DeFi, Venture Capital, Governance, Legal & Regulatory and Academia.
+              { this.props.excerpt('team.subtitle', this.props.language) }
             </div>
             <div className={'teamMember'}>
               <div className={'image'}>
@@ -43,10 +45,10 @@ class Team extends React.Component {
                 Gregory Keough
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/gregorykeough/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/gregorykeough/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/gregorykeough/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/gregorykeough/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -57,10 +59,10 @@ class Team extends React.Component {
                 Derek Acree
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/derekacree/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/derekacree/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/derekacree/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/derekacree/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -71,10 +73,10 @@ class Team extends React.Component {
                 Corey Caplan
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/corey-caplan/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/corey-caplan/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/corey-caplan/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/corey-caplan/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -85,10 +87,10 @@ class Team extends React.Component {
                 Adam Knuckey
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/adam-knuckey-720612108/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/adam-knuckey-720612108/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/adam-knuckey-720612108/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/adam-knuckey-720612108/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -99,10 +101,10 @@ class Team extends React.Component {
                 Matthew Finestone
               </div>
               <div className={'role'}>
-                Advisor
+                { this.props.excerpt('team.advisor', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/matthew-finestone-cfa-7bb8ba51/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -113,10 +115,10 @@ class Team extends React.Component {
                 Zachary Rynes
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/zachary-rynes-a98417173/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/zachary-rynes-a98417173/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/zachary-rynes-a98417173/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/zachary-rynes-a98417173/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -127,10 +129,10 @@ class Team extends React.Component {
                 Javier Keough
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/javier-keough-4549951a8/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/javier-keough-4549951a8/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/javier-keough-4549951a8/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/javier-keough-4549951a8/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -141,10 +143,10 @@ class Team extends React.Component {
                 Maria Teresa Simán Herrera
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/maria-teresa-sim%C3%A1n-herrera-0850b1143/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-teresa-sim%C3%A1n-herrera-0850b1143/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/maria-teresa-sim%C3%A1n-herrera-0850b1143/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-teresa-sim%C3%A1n-herrera-0850b1143/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -155,10 +157,10 @@ class Team extends React.Component {
                 Carlos Ernesto S.
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/cesanchezr/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/cesanchezr/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/cesanchezr/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/cesanchezr/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -169,14 +171,14 @@ class Team extends React.Component {
                 Maria Isabel Siman Bravo
               </div>
               <div className={'role'}>
-                Member
+                { this.props.excerpt('team.member', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'title investors'}>
-              Investors
+              { this.props.excerpt('investors.title', this.props.language) }
             </div>
             <div className={'teamMember'}>
               <div className={'image'}>
@@ -186,13 +188,13 @@ class Team extends React.Component {
                 Tim Draper
               </div>
               <div className={'role'}>
-                Investor
+                { this.props.excerpt('investors.investor', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://en.wikipedia.org/wiki/Tim_Draper'} target={'_blank'}><img src={WikipediaIcon}/></a><a href="https://en.wikipedia.org/wiki/Tim_Draper" target={'_blank'}>Wikipedia</a>
+                <a href={'https://en.wikipedia.org/wiki/Tim_Draper'} target={'_blank'}><img src={WikipediaIcon}/></a><a href="https://en.wikipedia.org/wiki/Tim_Draper" target={'_blank'}>{ this.props.excerpt('investors.wikipedia', this.props.language) }</a>
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/timothydraper/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/timothydraper/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/timothydraper/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/timothydraper/" target={'_blank'}>{ this.props.excerpt('investors.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -203,10 +205,10 @@ class Team extends React.Component {
                Stephen McKeon
               </div>
               <div className={'role'}>
-                Investor
+                { this.props.excerpt('investors.investor', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/smckeon/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/smckeon/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/smckeon/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/smckeon/" target={'_blank'}>{ this.props.excerpt('investors.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -217,10 +219,10 @@ class Team extends React.Component {
                 Alon Goren
               </div>
               <div className={'role'}>
-                Investor
+                { this.props.excerpt('investors.investor', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/alongoren/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/alongoren/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/alongoren/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/alongoren/" target={'_blank'}>{ this.props.excerpt('investors.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'teamMember'}>
@@ -231,10 +233,10 @@ class Team extends React.Component {
                 Josef Holm
               </div>
               <div className={'role'}>
-                Investor
+                { this.props.excerpt('investors.investor', this.props.language) }
               </div>
               <div className={'linkedIn'}>
-                <a href={'https://www.linkedin.com/in/josefholm/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/josefholm/" target={'_blank'}>LinkedIn</a>
+                <a href={'https://www.linkedin.com/in/josefholm/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/josefholm/" target={'_blank'}>{ this.props.excerpt('investors.linkedIn', this.props.language) }</a>
               </div>
             </div>
           </div>
@@ -244,4 +246,4 @@ class Team extends React.Component {
   }
 }
 
-export default Team;
+export default withTranslations(Team);

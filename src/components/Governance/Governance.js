@@ -8,6 +8,8 @@ import BallotBoxGraphic from '../../assets/ballot-box.svg';
 import RevenueGraphic from '../../assets/revenue-graphic.svg';
 import StructureGraphic from '../../assets/structure-graphic.svg';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Governance.css';
 
 const Governance = (props) => {
@@ -16,13 +18,24 @@ const Governance = (props) => {
     <div className={'governance'}>
         <div className={'topSection'}>
           <div className={'governance-inner'}>
-            <h2>DMM Governance</h2>
+            <h2>{ props.excerpt('governancePage.title', props.language) }</h2>
             <div className={'underline large'}/>
             {/*<div className={'governanceGraphicTop'}>
               <img src={GovernanceGraphic} alt={'Governance graphic'}/>
             </div>*/}
-            <p>The DeFi Money Market (DMM) Ecosystem is governed by a global <span className={'highlight'}><a href={'https://medium.com/dmm-dao/the-basics-of-a-decentralized-autonomous-organization-dao-23ac71b357d0'} target={'_blank'}>Decentralized Autonomous Organization (DAO)</a></span>.</p>
-            <p>DAO community members dictate the direction of the ecosystem and its revenue-generating real world assets by voting with <span className={'highlight'}><a href={'https://etherscan.io/token/0xEd91879919B71bB6905f23af0A68d231EcF87b14'} target={'_blank'}>DMG</a></span>, the native Governance Token of DMM.</p>
+            <p>{ props.excerpt('governancePage.subtitleOne', props.language) }
+              <span className={'highlight'}><a href={'https://medium.com/dmm-dao/the-basics-of-a-decentralized-autonomous-organization-dao-23ac71b357d0'} target={'_blank'}>
+                { props.excerpt('governancePage.subtitleTwo', props.language) }
+              </a></span>
+              { props.excerpt('governancePage.subtitleThree', props.language) }
+            </p>
+            <p>
+              { props.excerpt('governancePage.subtitleFour', props.language) }
+              <span className={'highlight'}><a href={'https://etherscan.io/token/0xEd91879919B71bB6905f23af0A68d231EcF87b14'} target={'_blank'}>
+                { props.excerpt('governancePage.subtitleFive', props.language) }
+              </a></span>
+              { props.excerpt('governancePage.subtitleSix', props.language) }
+            </p>
             <div className={'governance-buttons'}>
               <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
                 DAO Dashboard
@@ -40,16 +53,16 @@ const Governance = (props) => {
           <div className={'governance-inner'}>
             <div className={'section right'}>
               <div className={'textWrapper'}>
-                <h3>Overview</h3>
+                <h3>{ props.excerpt('governancePage.paragraph.first.title', props.language) }</h3>
                 <div className={'underline'}/>
                 <p>
-                  The DMM governance token, DMG, is an ERC-20 token on the Ethereum blockchain used for the governance of the ecosystem via the DMM DAO, which can upgrade and modify the on-chain smart contracts and manage its adjacent assets.
+                  { props.excerpt('governancePage.paragraph.first.body.first', props.language) }
                 </p>
                 <p>
-                  Ownership of DMG represents the right to govern the parameters of the DMM Protocol including the guidelines and decisions surrounding the introduction of new assets to the ecosystem in regards to both asset type and asset location.
+                  { props.excerpt('governancePage.paragraph.first.body.second', props.language) }
                 </p>
                 <p>
-                  DMG is a fork of Compound’s COMP governance token (featuring native delegation and vote weighting) with added capability such as meta-transactions and a native burn function.
+                  { props.excerpt('governancePage.paragraph.first.body.third', props.language) }
                 </p>
               </div>
               <div className={'imageWrapper'}>
@@ -100,55 +113,59 @@ const Governance = (props) => {
             </div>
             <div className={'section'}>
               <div className={'textWrapper'}>
-                <h3>DAO Voting</h3>
+                <h3>{ props.excerpt('governancePage.paragraph.second.title', props.language) }</h3>
                 <div className={'underline'}/>
                 <p>
-                  The initial parameters of the DMM DAO include a 0.2% minimum quorum threshold (500k DMG), a 0.04% proposal creation threshold (100k DMG), where votes lasts three days after creation, and undergo a two day safety period for safe exits as needed.
+                  { props.excerpt('governancePage.paragraph.second.body.first', props.language) }
                 </p>
                 <p>
-                  These parameters can be fully adjusted by the DMM DAO and evolve over time as the needs of the DMM ecosystem changes as more real world assets get brought on-chain.
+                  { props.excerpt('governancePage.paragraph.second.body.second', props.language) }
                 </p>
                 <p>
-                  Current proposals and the DMM DAO dashboard can be found at <a href={'https://dao.defimoneymarket.com'}>dao.defimoneymarket.com</a> under the Vote tab, which provides full transparency into the process.
+                  { props.excerpt('governancePage.paragraph.second.body.third.first', props.language) }
+                  <a href={'https://dao.defimoneymarket.com'}>
+                    { props.excerpt('governancePage.paragraph.second.body.third.second', props.language) }
+                  </a>
+                  { props.excerpt('governancePage.paragraph.second.body.third.third', props.language) }
                 </p>
               </div>
               <div className={'imageWrapper'}><img src={BallotBoxGraphic} alt={'Ballot Box'}/></div>
             </div>
             <div className={'section right'}>
               <div className={'textWrapper'}>
-                <h3>Growth</h3>
+                <h3>{ props.excerpt('governancePage.paragraph.third.title', props.language) }</h3>
                 <div className={'underline'}/>
                 <p>
-                  Since the DMME is overcollateralized — with real-assets yielding more than payments due to mAsset holders — the DMM DAO becomes the recipient of a positive income stream that can be used to fund further loans, capitalize related assets, burn DMG or otherwise grow the ecosystem.
+                  { props.excerpt('governancePage.paragraph.third.body.first', props.language) }
                 </p>
                 <p>
-                  The DMM Ecosystem currently consists of $8M+ in revenue-generating real world assets, that creates a surplus for the DAO today.
+                  { props.excerpt('governancePage.paragraph.third.body.second', props.language) }
                 </p>
                 <p>
-                  As the DMM Ecosystem grows and acquires more exposure to real world assets, the DAO will have more excess at its disposal to further grow and fund the ecosystem further.
+                  { props.excerpt('governancePage.paragraph.third.body.third', props.language) }
                 </p>
               </div>
               <div className={'imageWrapper'}><img src={RevenueGraphic} alt={'Revenue graphic'}/></div>
             </div>
             <div className={'section'}>
               <div className={'textWrapper'}>
-                <h3>DAO Structure</h3>
+                <h3>{ props.excerpt('governancePage.paragraph.fourth.title', props.language) }</h3>
                 <div className={'underline'}/>
                 <p>
-                  After payments are made to lenders, excess generated by the DAO will be used in accordance with how the DAO has voted, namely to grow the ecosystem and reward DMG token holders by burning DMG.
+                  { props.excerpt('governancePage.paragraph.fourth.body.first', props.language) }
                 </p>
                 <p>
-                  As development, marketing, and maintenance of the DMM ecosystem becomes increasingly decentralized, we anticipate a portion of the DAO’s surplus will be used to pay for future protocol work and development.
+                  { props.excerpt('governancePage.paragraph.fourth.body.second', props.language) }
                 </p>
               </div>
               <div className={'imageWrapper'}><img src={StructureGraphic} alt={'structure graphic'}/></div>
             </div>
             <p>
-              Through the governance structure we have laid out above and in our previous articles, it is our goal that the DMG governance token and the DMM community-operated DAO will enable DMM to become a highly decentralized protocol mitigating any potential single point of failure. We anticipate that fine-tuning this structure will be required over time and we are open to any and all feedback you may have as DMM is a community driven project first and foremost.
+              { props.excerpt('governancePage.conclusion', props.language) }
             </p>
             <div className={'bottomLinkWrapper'}>
               <div className={'bottomLinkText'}>
-                <h2>Get started now:</h2>
+                <h2>{ props.excerpt('governancePage.getStarted', props.language) }</h2>
               </div>
               <div className={'bottomButtonWrapper'}>
                 <Button className={'buttonText'} onClick={() => window.open('https://dao.defimoneymarket.com', "_blank")}>
@@ -162,4 +179,4 @@ const Governance = (props) => {
   );
 };
 
-export default Governance;
+export default withTranslations(Governance);

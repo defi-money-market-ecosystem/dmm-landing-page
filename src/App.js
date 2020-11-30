@@ -16,6 +16,10 @@ import Partners from './components/Partners/Partners';
 import Team from './components/Team/Team';
 import EmailList from './components/EmailList/EmailList';
 import Footer from './components/Footer/Footer';
+import USFlag from './assets/US-Flag.png';
+import CNFlag from './assets/CN-Flag.png';
+
+import Languages from './services/Translations/Languages';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fab} from '@fortawesome/free-brands-svg-icons';
@@ -40,6 +44,7 @@ class App extends React.Component {
       daiRate: null,
       usdcRate: null,
       ethRate: null,
+      language: Languages.ENGLISH,
     };
 
     Firebase.auth().onAuthStateChanged((user) => {
@@ -52,6 +57,12 @@ class App extends React.Component {
 
     this.loadExchangeRates().then(() => {
     });
+  }
+
+  componentDidMount() {
+    if (window.location.href.includes('/CN')) {
+      this.setState({ language: Languages.CHINESE });
+    }
   }
 
   async loadExchangeRates() {
@@ -97,31 +108,88 @@ class App extends React.Component {
       <Router>
         <div className={'App'}>
           <div className={'content'}>
-            <Navbar onClose={() => ''} open selectedValue={'1'} daiRate={this.state.daiRate}
+            <Navbar onClose={() => ''} open
+                    selectedValue={'1'}
+                    daiRate={this.state.daiRate}
                     usdcRate={this.state.usdcRate}
-                    ethRate={this.state.ethRate} usdtRate={this.state.usdtRate}/>
+                    ethRate={this.state.ethRate}
+                    usdtRate={this.state.usdtRate}
+                    language={this.state.language}/>
             <Switch>
               <Route path={'/governance'}>
-                <Governance/>
+                <div className={'language-selector'}>
+                  { this.state.language === Languages.CHINESE ? (
+                    <div className={'language'}>
+                      <a href={'https://www.defimoneymarket.com'}>
+                        <img src={USFlag} />English
+                      </a>
+                    </div>
+                  ) : (
+                    <div className={'language'}>
+                      <a href={'https://www.defimoneymarket.com/CN'}>
+                        <img src={CNFlag} />中文
+                      </a>
+                    </div>
+                  )}
+                </div>
+                <Governance
+                  language={this.state.language}
+                />
               </Route>
               <Route path={'/'}>
-                <Header/>
-                <QuickFacts/>
-                <Info onClose={() => {
-                }} open selectedValue={1}/>
-                <IntegrationsAndWhitepaper/>
-                <Partners/>
-                <Media/>
-                <Team/>
+                <div className={'language-selector'}>
+                  { this.state.language === Languages.CHINESE ? (
+                    <div className={'language'}>
+                      <a href={'https://www.defimoneymarket.com'}>
+                        <img src={USFlag} />English
+                      </a>
+                    </div>
+                  ) : (
+                    <div className={'language'}>
+                      <a href={'https://www.defimoneymarket.com/CN'}>
+                        <img src={CNFlag} />中文
+                      </a>
+                    </div>
+                  )}
+                </div>
+                <Header
+                  language={this.state.language}
+                />
+                <QuickFacts
+                  language={this.state.language}
+                />
+                <Info
+                  onClose={() => {
+                }} open selectedValue={1}
+                  language={this.state.language}
+                />
+                <IntegrationsAndWhitepaper
+                  language={this.state.language}
+                />
+                <Partners
+                  language={this.state.language}
+                />
+                <Media
+                  language={this.state.language}
+                />
+                <Team
+                  language={this.state.language}
+                />
                 <a name="email"/>
                 <EmailList
                   firebase={Firebase}
                   isSignedIn={this.state.isSignedIn}
                   userProfile={this.state.userProfile}
+                  language={this.state.language}
                 />
               </Route>
             </Switch>
-            <Footer onClose={() => ''} open selectedValue={'1'}/>
+            <Footer
+              onClose={() => ''}
+              open
+              selectedValue={'1'}
+              language={this.state.language}
+            />
           </div>
         </div>
       </Router>

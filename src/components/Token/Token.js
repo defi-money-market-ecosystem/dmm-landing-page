@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Fade from 'react-reveal/Fade';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Token.css';
 
-const Token = () => {
+const Token = props => {
   Token.propTypes = {
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
@@ -17,17 +19,17 @@ const Token = () => {
       <div className={'content'}>
         <div className={'textWrapper'}>
           <div className={'title line1'}>
-            DMM
+            { props.excerpt('token.title.lineOne', props.language) }
           </div>
           <div className={'title line2'}>
-            Tokens
+            { props.excerpt('token.title.lineTwo', props.language) }
           </div>
           <div className={'subtitle'}>
-            Transferable. Usable. Stable.
+            { props.excerpt('token.subtitle', props.language) }
           </div>
           <div className={'buttonOuter'}>
             <Button className={'buttonText'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
-              Get your DMM
+              { props.excerpt('token.button', props.language) }
             </Button>
           </div>
         </div>
@@ -35,40 +37,36 @@ const Token = () => {
           <div className={'tokenInfo'}>
             <div className={'point'}>
               <div className={'subtitle'}>
-                No more gas fees
+                { props.excerpt('token.info.first.title', props.language) }
               </div>
               <div className={'border'}/>
               <div className={'subtext'}>
-                By integrating delegated payments on the Ethereum network, users no longer have to pay gas fees in the
-                form of ETH in
-                order to perform transactions.
+                { props.excerpt('token.info.first.body', props.language) }
               </div>
             </div>
             <div className={'point short'}>
               <div className={'subtitle'}>
-                ERC-20 Compliant
+                { props.excerpt('token.info.second.title', props.language) }
               </div>
               <div className={'border'}/>
               <div className={'subtext'}>
-                Easily manage and transfer your DMM from any standard Ethereum wallet.
+                { props.excerpt('token.info.second.body', props.language) }
               </div>
             </div>
             <div className={'point'}>
               <div className={'subtitle'}>
-                Stable growth
+                { props.excerpt('token.info.third.title', props.language) }
               </div>
               <div className={'border'}/>
               <div className={'subtext'}>
-                Because DMM is backed by real-world assets and a consistent interest rate, it's growth in value is very
-                predictable and consistent,
-                making it a dependable source of yield.
+                { props.excerpt('token.info.third.body', props.language) }
               </div>
             </div>
           </div>
         </Fade>
         <div className={'buttonOuter lower'}>
           <Button className={'buttonText'} onClick={() => window.open('https://app.defimoneymarket.com', "_blank")}>
-            Get your DMM
+            { props.excerpt('token.button', props.language) }
           </Button>
         </div>
       </div>
@@ -76,4 +74,4 @@ const Token = () => {
   );
 };
 
-export default Token;
+export default withTranslations(Token);

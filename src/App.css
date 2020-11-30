@@ -11,3 +11,22 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
+
+.language-selector {
+    position: absolute;
+    transform: rotate(-90deg);
+    right: -20px;
+    top: 120px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.language-selector img {
+    width: 30px;
+    margin-right: 8px;
+    margin-bottom: -2px;
+}
+
+.language-selector a {
+    text-decoration: none !important;
+}

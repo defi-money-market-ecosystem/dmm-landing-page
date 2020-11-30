@@ -8,6 +8,8 @@ import BaiduBlogLogo from '../../assets/BaiduBlog-logo.png';
 import CryptoDivisasLogo from '../../assets/CryptoDivisas-logo.png';
 import ChainNewsLogo from '../../assets/ChainNews-logo.svg';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './Media.css';
 
 class Media extends React.Component {
@@ -21,7 +23,7 @@ class Media extends React.Component {
         <div className={'wrapper'}>
           <div className={'content'}>
             <div className={'title'}>
-              In the Media
+              { this.props.excerpt('media.title', this.props.language) }
             </div>
             <div className={'publicationsWrapper'}>
               <div className={'publication'}>
@@ -62,4 +64,4 @@ class Media extends React.Component {
   }
 }
 
-export default Media;
+export default withTranslations(Media);

@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
+import { withTranslations } from '../../services/Translations/Translations';
+
 import './EmailList.css';
 
 class EmailList extends React.Component {
@@ -51,28 +53,28 @@ class EmailList extends React.Component {
         <div className={'wrapper'}>
           <div className={'content'}>
             <div className={'title'}>
-              Stay up to Date
+              { this.props.excerpt('email.title', this.props.language) }
             </div>
             <div className={'subtitles'}>
               <div className={'subtitle'}>
-                Join our email list to receive important updates about the DMM Ecosystem.
+                { this.props.excerpt('email.subtitle.lineOne', this.props.language) }
               </div>
               <div className={'subtitle'}>
-                Don't worry, we never spam or share your email!
+                { this.props.excerpt('email.subtitle.lineTwo', this.props.language) }
               </div>
             </div>
             <div className={'inputWrapper'}>
               <div className={'emailInput'}>
-                <input type={'text'} id={'email'} placeholder={'Email'}/>
+                <input type={'text'} id={'email'} placeholder={this.props.excerpt('email.email', this.props.language)}/>
               </div>
               <div className={'buttonOuter'}>
                 {this.state.submitted ? (
                   <div className={'successText'}>
-                    Success!
+                    { this.props.excerpt('email.success', this.props.language) }
                   </div>
                 ) : (
                   <Button className={'buttonText'} onClick={() => this.submitEmail()}>
-                    Join
+                    { this.props.excerpt('email.button', this.props.language) }
                   </Button>
                 )}
               </div>
@@ -84,4 +86,4 @@ class EmailList extends React.Component {
   }
 }
 
-export default EmailList;
+export default withTranslations(EmailList);
