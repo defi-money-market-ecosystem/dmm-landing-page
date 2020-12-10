@@ -76,7 +76,7 @@ class App extends React.Component {
       token.address = token["dmm_token_address"];
       token.imageUrl = token["image_url"];
       token.underlyingTokenAddress = token["underlying_token_address"];
-      return {...map, [token.underlyingTokenAddress]: token};
+      return {...map, [token.underlyingTokenAddress.toLowerCase()]: token};
     }, {});
     const daiResponse = await fetch(
       `https://api.defimoneymarket.com/v1/dmm/tokens/${tokenList['0x6b175474e89094c44da98b954eedeac495271d0f'].dmmTokenId.toString(10)}/exchange-rate`,
