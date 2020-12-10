@@ -21,6 +21,7 @@ export default {
   'header.mainText.fourth': `DeFi Money Market (DMM)`,
   'header.mainText.fifth': ` all backed by real world income generating assets viewable on-chain.`,
   'header.findOutHow': 'Find out how ↓',
+  'header.appButton': 'Start Earning',
 
   'quickFacts.title': 'DMM Assets',
   'quickFacts.first.title': 'Earn consistent interest',

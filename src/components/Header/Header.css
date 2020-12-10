@@ -20,13 +20,81 @@
 .header .content {
     width: 80%;
     animation-duration: 1000ms !important;
-    height: 40px;
-    margin-bottom: 250px;
+    height: fit-content;/*40px;*/
+    overflow: hidden;
+    /*margin-bottom: 250px;*/
+}
+
+.header .contentInner {
+    width: 300%;
+    /*animation: cycleTitles 24s infinite;*/
+}
+
+/*@keyframes cycleTitles {
+    0%, 32% {
+        margin-left: 0;
+    }
+    34%, 65% {
+        margin-left: -100%;
+    }
+    67%, 98% {
+        margin-left: -200%;
+    }
+}*/
+
+.header .content .contentSection {
+    width: 33.3%;
+    display: inline-block;
+    vertical-align: top;
+    animation: cycleTitles 24s infinite;
+}
+
+.header .content .contentSection:nth-of-type(2) {
+    margin-left: -33.3%;
+    animation: cycleTitles 24s infinite;
+    animation-delay: -16s;
+}
+
+.header .content .contentSection:nth-of-type(3) {
+    margin-left: -33.3%;
+    animation: cycleTitles 24s infinite;
+    animation-delay: -8s;
+}
+
+/*.header .content .contentSection:nth-of-type(2) {
+    animation: cycleTitles 24s infinite;
+}
+
+.header .content .contentSection:nth-of-type(3) {
+    animation: cycleTitles 24s infinite;
+}*/
+
+@keyframes cycleTitles {
+    0%, 32% {
+        visibility: visible;
+        transform: translateX(0);
+    }
+    34%, 65% {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+    66% {
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+    67%, 98% {
+        visibility: hidden;
+        transform: translateX(100%);
+    }
+    99% {
+        visibility: visible;
+        transform: translateX(100%);
+    }
 }
 
 @media (min-width: 1200px) {
     .header .content {
-        margin-bottom: 250px;
+        /*margin-bottom: 250px;*/
     }
 }
 
@@ -52,6 +120,17 @@
 .header .learnMore:hover {
     margin-top: 52px;
     margin-bottom: -2px;
+}
+
+.header .appButton {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 17px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    width: 190px;
+    margin-top: 10px;
 }
 
 .header #bird {
@@ -80,7 +159,7 @@
 
 @media (max-width: 1025px) {
     .header .content {
-        margin-bottom: 350px;
+        /*margin-bottom: 350px;*/
     }
 }
 
@@ -97,7 +176,7 @@
     }
 
     .header .content {
-        margin-bottom: 350px;
+        /*margin-bottom: 350px;*/
     }
 
     .header .learnMore {
@@ -135,7 +214,7 @@
 
 @media (max-width: 646px) {
     .header .content {
-        margin-bottom: 350px;
+        /*margin-bottom: 350px;*/
     }
 }
 

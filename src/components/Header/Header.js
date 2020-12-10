@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import Button from '@material-ui/core/Button';
 
 import './Header.css';
 import { withTranslations } from '../../services/Translations/Translations';
@@ -60,16 +61,28 @@ const Header = (props) => {
         </div>
         <Fade bottom>
           <div className={'content'}>
-            { props.excerpt('header.mainText.first', props.language) }
-            <span className={'blue'}>{props.excerpt('header.mainText.second', props.language)}</span>
-            { props.excerpt('header.mainText.third', props.language) }
-            <span className={'blue'}>{props.excerpt('header.mainText.fourth', props.language)}</span>
-            { props.excerpt('header.mainText.fifth', props.language) }
+            <div className={'contentInner'}>
+              <div className={'contentSection'}>
+                { props.excerpt('header.mainText.first', props.language) }
+                <span className={'blue'}>{props.excerpt('header.mainText.second', props.language)}</span>
+                { props.excerpt('header.mainText.third', props.language) }
+                <span className={'blue'}>{props.excerpt('header.mainText.fourth', props.language)}</span>
+                { props.excerpt('header.mainText.fifth', props.language) }
+              </div>
+              <div className={'contentSection'}>
+                1,212,125 USDC currently earning 6.25% through DeFi Money Market
+              </div>
+              <div className={'contentSection'}>
+                2,124,446 DAI currently earning 6.25% through DeFi Money Market
+              </div>
+            </div>
           </div>
         </Fade>
         <Fade bottom>
-          <div className={'learnMore'}>
-            <span>{ props.excerpt('header.findOutHow', props.language) }</span>
+          <div className={'appButtonWrapper'}>
+            <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', '_blank')}>
+              { props.excerpt('header.appButton', props.language) }
+            </Button>
           </div>
         </Fade>
         <div ref={myRef}/>
