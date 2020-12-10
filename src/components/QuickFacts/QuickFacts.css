@@ -1,7 +1,7 @@
 
 .quickFacts {
     width: 100%;
-    margin: calc(100vh) auto 0;
+    margin: calc(100vh - 70px) auto 0;
     position: absolute;
     z-index: 9999999;
     top: 0;
@@ -11,8 +11,16 @@
 .quickFacts .content {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     text-align: left;
+    margin: 50px auto 0;
+}
+
+.quickFacts .tickerRates {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .quickFacts .exchangeRatesWrapper {
@@ -22,7 +30,7 @@
 }
 
 .quickFacts .exchangeRatesWrapper span {
-    line-height: 60px;
+    line-height: 70px;
 }
 
 .quickFacts .bold {
@@ -39,11 +47,17 @@
 }
 
 .quickFacts .factsList {
-    text-align: center;
+    /*text-align: center;
     width: calc(96%);
     display: flex;
     justify-content: space-between;
-    padding: 0 2%;
+    flex-direction: column;
+    padding: 0 2%;*/
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 0;
+    text-align: left;
 }
 
 .quickFacts .factRow {
@@ -54,9 +68,22 @@
 
 .quickFacts .fact {
     display: inline-block;
-    max-width: 250px;
     vertical-align: top;
     text-align: left;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.quickFacts .videoWrapper {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.quickFacts iFrame {
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.3) 1px 1px 4px -4px, rgba(0,0,0,0.3) 1px 1px 8px 0px;
 }
 
 @media (max-width: 1200px) {
@@ -90,13 +117,12 @@
 .quickFacts .icon {
     height: 170px;
     text-align: center;
-    display: table-cell;
-    vertical-align: bottom;
+    width: 30%;
+    display: inline-block;
 }
 
 .quickFacts .iconInner {
-    width: 240px;
-    margin-bottom: 30px;
+    width: 100%;
 }
 
 .quickFacts img {
@@ -112,6 +138,13 @@
     max-height: 220px;
     max-width: 220px;
     width: 150px;
+}
+
+.quickFacts .factDetails {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    margin-top: -10px;
 }
 
 @media (max-width: 900px) {

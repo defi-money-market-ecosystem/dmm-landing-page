@@ -95,6 +95,11 @@ class App extends React.Component {
       {headers: {'Accept': 'application/json'}},
     );
 
+    const lockupResponse = await fetch(
+      'http://api.defimoneymarket.com/v1/dmm/tokens/total-value-locked',
+      {headers: {'Accept': 'application/json'}},
+    );
+
     const daiRate = new NumberUtil.BN((await daiResponse.json())["data"]["exchange_rate"]);
     const usdcRate = new NumberUtil.BN((await usdcResponse.json())["data"]["exchange_rate"]);
     const ethRate = new NumberUtil.BN((await ethResponse.json())["data"]["exchange_rate"]);

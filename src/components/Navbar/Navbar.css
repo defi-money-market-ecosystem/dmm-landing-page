@@ -72,6 +72,17 @@
     font-weight: 100;
 }
 
+.navbar .navLink {
+    line-height: 60px;
+}
+
+.navbar .navLink a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #327ccb;
+}
+
 .navbar .appButtonWrapper {
   float: right;
 }

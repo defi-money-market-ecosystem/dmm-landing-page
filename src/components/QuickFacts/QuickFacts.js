@@ -90,12 +90,14 @@ const QuickFacts = (props) => {
                 <img src={GraphIcon} alt={'graph icon'}/>
               </div>
             </div>
-            <div className={'factTitle'}>
-              { props.excerpt('quickFacts.first.title', props.language) }
-            </div>
-            <div className={'underline'}/>
-            <div className={'text'}>
-              { props.excerpt('quickFacts.first.body', props.language) }
+            <div className={'factDetails'}>
+              <div className={'factTitle'}>
+                { props.excerpt('quickFacts.first.title', props.language) }
+              </div>
+              <div className={'underline'}/>
+              <div className={'text'}>
+                { props.excerpt('quickFacts.first.body', props.language) }
+              </div>
             </div>
           </div>
           <div className={'fact'}>
@@ -104,12 +106,14 @@ const QuickFacts = (props) => {
                 <img className={'vehiclesImage'} src={VehicleIcon} alt={'vehicle icon'}/>
               </div>
             </div>
-            <div className={'factTitle'}>
-              { props.excerpt('quickFacts.second.title', props.language) }
-            </div>
-            <div className={'underline'}/>
-            <div className={'text'}>
-              { props.excerpt('quickFacts.second.body', props.language) }
+            <div className={'factDetails'}>
+              <div className={'factTitle'}>
+                { props.excerpt('quickFacts.second.title', props.language) }
+              </div>
+              <div className={'underline'}/>
+              <div className={'text'}>
+                { props.excerpt('quickFacts.second.body', props.language) }
+              </div>
             </div>
           </div>
           <div className={'fact'}>
@@ -118,12 +122,14 @@ const QuickFacts = (props) => {
                 <img src={ChainIcon} alt={'chain icon'}/>
               </div>
             </div>
-            <div className={'factTitle'}>
-              { props.excerpt('quickFacts.third.title', props.language) }
-            </div>
-            <div className={'underline'}/>
-            <div className={'text'}>
-              { props.excerpt('quickFacts.third.body', props.language) }
+            <div className={'factDetails'}>
+              <div className={'factTitle'}>
+                { props.excerpt('quickFacts.third.title', props.language) }
+              </div>
+              <div className={'underline'}/>
+              <div className={'text'}>
+                { props.excerpt('quickFacts.third.body', props.language) }
+              </div>
             </div>
           </div>
           <div className={'fact gold'}>
@@ -132,14 +138,21 @@ const QuickFacts = (props) => {
                 <img src={GoldIcon} alt={'gold icon'}/>
               </div>
             </div>
-            <div className={'factTitle'}>
-              { props.excerpt('quickFacts.fourth.title', props.language) }
-            </div>
-            <div className={'underline'}/>
-            <div className={'text'}>
-              { props.excerpt('quickFacts.fourth.body', props.language) }
+            <div className={'factDetails'}>
+              <div className={'factTitle'}>
+                { props.excerpt('quickFacts.fourth.title', props.language) }
+              </div>
+              <div className={'underline'}/>
+              <div className={'text'}>
+                { props.excerpt('quickFacts.fourth.body', props.language) }
+              </div>
             </div>
           </div>
+        </div>
+        <div className={'videoWrapper'}>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen/>
         </div>
       </div>
     </div>

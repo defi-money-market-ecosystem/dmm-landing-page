@@ -1,6 +1,9 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Button from '@material-ui/core/Button';
+import CountUp from 'react-countup';
+
+import NumberUtil, {fromDecimalToBN, humanize} from '../../utils/NumberUtil';
 
 import './Header.css';
 import { withTranslations } from '../../services/Translations/Translations';
@@ -11,6 +14,8 @@ const Header = (props) => {
   const handleScrollToElement = () => {
     myRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
   };
+
+
 
   return (
     <div className={'header'}>
@@ -70,10 +75,33 @@ const Header = (props) => {
                 { props.excerpt('header.mainText.fifth', props.language) }
               </div>
               <div className={'contentSection'}>
-                1,212,125 USDC currently earning 6.25% through DeFi Money Market
+                <span className={'blue'}>
+                  <CountUp
+                    start={true ? 3006692 : 0}
+                    end={true ? 3006713.45 : 0}
+                    duration={60 * 60}
+                    separator=","
+                    decimals={2}
+                    decimal="."
+                    prefix="$"
+                    suffix=" "
+                  />
+                </span>
+                of USDC, DAI, USDT, and ETH currently earning <span className={'blue'}>6.25% APY</span> with <span className={'blue'}>DeFi Money Market (DMM)</span>
               </div>
               <div className={'contentSection'}>
-                2,124,446 DAI currently earning 6.25% through DeFi Money Market
+                <span className={'blue'}>
+                  <CountUp
+                    start={true ? 1228775.31 : 0}
+                    end={true ? 1228790.89 : 0}
+                    duration={60 * 60}
+                    separator=","
+                    decimals={2}
+                    decimal="."
+                    prefix=""
+                    suffix=" DAI "
+                  />
+                </span> backed by real world income generating assets currently earning <span className={'blue'}>6.25% APY</span> with <span className={'blue'}>DeFi Money Market (DMM)</span>
               </div>
             </div>
           </div>

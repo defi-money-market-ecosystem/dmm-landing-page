@@ -68,65 +68,25 @@ const Navbar = (props) => {
           </div>
         </div>
 
-        <div className={'exchangeRatesWrapper usdc'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mUSDC =&nbsp;</span>
-          <CountUp
-            start={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1), 18)) : 0}
-            end={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;USDC</span>
+        <div className={'navLink'}>
+          <a href={'https://dao.defimoneymarket.com'} target={'_blank'}>
+            Governance
+          </a>
         </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mETH =&nbsp;</span>
-          <CountUp
-            start={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1), 18)) : 0}
-            end={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;ETH</span>
+        <div className={'navLink'}>
+          <a href={'https://explorer.defimoneymarket.com'} target={'_blank'}>
+            Explorer
+          </a>
         </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mUSDT =&nbsp;</span>
-          <CountUp
-            start={props.usdtRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdtRate).div(NumberUtil._1), 18)) : 0}
-            end={props.usdtRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdtRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;USDT</span>
+        <div className={'navLink'}>
+          <a href={'https://app.defimoneymarket.com'} target={'_blank'}>
+            Purchase
+          </a>
         </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mDAI =&nbsp;</span>
-          <CountUp
-            start={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1), 18)) : 0}
-            end={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;DAI</span>
+        <div className={'navLink'}>
+          <a href={'https://explorer.defimoneymarket.com/asset-introducers'} target={'_blank'}>
+            Affiliates
+          </a>
         </div>
         <div className={'appButtonWrapper'}>
           <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', '_blank')}>
