@@ -122,6 +122,12 @@
     margin-bottom: -2px;
 }
 
+.header .appButtonWrapper {
+    width: 190px;
+    overflow: hidden;
+}
+
+
 .header .appButton {
     color: white !important;
     background-color: #327ccb !important;
@@ -131,6 +137,32 @@
     height: 45px;
     width: 190px;
     margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header .appButtonWrapper .appButton:nth-of-type(2) {
+    margin-left: -100%;
+    animation: cycleButton 24s infinite;
+}
+
+@keyframes cycleButton {
+    0%, 32% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    66% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    67%, 98% {
+        opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .header #bird {
@@ -203,7 +235,7 @@
 
     .header .content {
         width: 90%;
-        margin: 150px 0 280px;
+        margin: 125px 0 25px;
     }
 
     .header .learnMore {
@@ -234,7 +266,7 @@
 
     .header .content {
         width: 90%;
-        margin: 150px auto 180px;
+        margin: 150px auto 30px;
     }
 
     .header .learnMore {

@@ -4,14 +4,32 @@ import {
 } from './_helper';
 
 export default {
-  'navbar.appButton': '下载',
+  'navbar.appButton': '赚',
+  'navbar.governance': '治理',
+  'navbar.explorer': 'Explorer',
+  'navbar.forum': '论坛',
+  'navbar.introducers': '附属',
 
   'header.mainText.first': `当您将 ETH, DAI,USDT 和 USDC 存入 `,
   'header.mainText.second': `DeFi 货币市场(DMM)`,
   'header.mainText.third': `，可以赚取 `,
   'header.mainText.fourth': `6.25%`,
   'header.mainText.fifth': `的利息, 收益由现实世界的资产支持以链上 代表。`,
+  'header.secondText.first.before': '的 ',
+  'header.secondText.first.after': ' 现在以 ',
+  'header.secondText.second': 'Defi Money Market (DMM) ',
+  'header.secondText.third': ' 赚取 ',
+  'header.secondText.fourth': '6.25% 利息',
+  'header.secondText.fifth': '。',
+  'header.thirdText.first': `当您将 ETH, DAI,USDT 和 USDC 存入 `,
+  'header.thirdText.second': 'DeFi 货币市场(DMM)',
+  'header.thirdText.third': '，可以赚取 ',
+  'header.thirdText.fourth': '6.25%',
+  'header.thirdText.fifth': '的利息, 收益由现实世界的资产支持以链上 代表。',
   'header.findOutHow': '更多了解 ↓',
+  'header.appButton': '开始赚钱',
+  'header.appButtonAlt': '参加',
+  'header.and': '和',
 
   'quickFacts.title': 'DMM 资产',
   'quickFacts.first.title': '获得持续的利息',

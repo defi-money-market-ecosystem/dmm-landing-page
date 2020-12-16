@@ -18,141 +18,107 @@ const QuickFacts = (props) => {
   return (
     <div className={'quickFacts'}>
       <div className={'tickerRates'}>
-        <div className={'exchangeRatesWrapper usdc'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mUSDC =&nbsp;</span>
-          <CountUp
-            start={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1), 18)) : 0}
-            end={props.usdcRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdcRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;USDC</span>
-        </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mETH =&nbsp;</span>
-          <CountUp
-            start={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1), 18)) : 0}
-            end={props.ethRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.ethRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;ETH</span>
-        </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mUSDT =&nbsp;</span>
-          <CountUp
-            start={props.usdtRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdtRate).div(NumberUtil._1), 18)) : 0}
-            end={props.usdtRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.usdtRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;USDT</span>
-        </div>
-        <div className={'exchangeRatesWrapper'}>
-          <span className={'bold'}>1</span>
-          <span className={'light'}>&nbsp;mDAI =&nbsp;</span>
-          <CountUp
-            start={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1), 18)) : 0}
-            end={props.daiRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.daiRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
-            duration={60 * 60}
-            separator=" "
-            decimals={8}
-            decimal="."
-            prefix=""
-            suffix=""
-          />
-          <span className={'light'}>&nbsp;DAI</span>
-        </div>
+        {props.tokenList && Object.keys(props.tokenList).map((key,index) =>
+          <div className={`exchangeRatesWrapper ${props.tokenList[key].symbol.replace('m','').toLowerCase()}`}>
+            <span className={'bold'}>1</span>
+            <span className={'light'}>&nbsp;{props.tokenList[key].symbol} =&nbsp;</span>
+            <CountUp
+              start={props.tokenList[key].underlyingRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.tokenList[key].underlyingRate).div(NumberUtil._1), 18)) : 0}
+              end={props.tokenList[key].underlyingRate ? Number.parseFloat(humanize(NumberUtil._1.mul(props.tokenList[key].underlyingRate).div(NumberUtil._1).add(fromDecimalToBN(0.000007134703196, 18)), 18)) : 0}
+              duration={60 * 60}
+              separator=" "
+              decimals={8}
+              decimal="."
+              prefix=""
+              suffix=""
+            />
+            <span className={'light'}>&nbsp;{props.tokenList[key].symbol.replace('m','')}</span>
+          </div>
+        )}
       </div>
       <div className={'content'}>
+        <div className={'videoWrapperTop'}>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen/>
+        </div>
         <div className={'title'}>
           { props.excerpt('quickFacts.title', props.language) }
         </div>
         <div className={'factsList'}>
-          <div className={'fact'}>
-            <div className={'icon'}>
-              <div className={'iconInner'}>
-                <img src={GraphIcon} alt={'graph icon'}/>
+          <div className={'factsSectionOne'}>
+            <div className={'fact'}>
+              <div className={'icon'}>
+                <div className={'iconInner'}>
+                  <img src={GraphIcon} alt={'graph icon'}/>
+                </div>
+              </div>
+              <div className={'factDetails'}>
+                <div className={'factTitle'}>
+                  { props.excerpt('quickFacts.first.title', props.language) }
+                </div>
+                <div className={'underline'}/>
+                <div className={'text'}>
+                  { props.excerpt('quickFacts.first.body', props.language) }
+                </div>
               </div>
             </div>
-            <div className={'factDetails'}>
-              <div className={'factTitle'}>
-                { props.excerpt('quickFacts.first.title', props.language) }
+            <div className={'fact'}>
+              <div className={'icon'}>
+                <div className={'iconInner'}>
+                  <img className={'vehiclesImage'} src={VehicleIcon} alt={'vehicle icon'}/>
+                </div>
               </div>
-              <div className={'underline'}/>
-              <div className={'text'}>
-                { props.excerpt('quickFacts.first.body', props.language) }
-              </div>
-            </div>
-          </div>
-          <div className={'fact'}>
-            <div className={'icon'}>
-              <div className={'iconInner'}>
-                <img className={'vehiclesImage'} src={VehicleIcon} alt={'vehicle icon'}/>
-              </div>
-            </div>
-            <div className={'factDetails'}>
-              <div className={'factTitle'}>
-                { props.excerpt('quickFacts.second.title', props.language) }
-              </div>
-              <div className={'underline'}/>
-              <div className={'text'}>
-                { props.excerpt('quickFacts.second.body', props.language) }
-              </div>
-            </div>
-          </div>
-          <div className={'fact'}>
-            <div className={'icon'}>
-              <div className={'iconInner'}>
-                <img src={ChainIcon} alt={'chain icon'}/>
-              </div>
-            </div>
-            <div className={'factDetails'}>
-              <div className={'factTitle'}>
-                { props.excerpt('quickFacts.third.title', props.language) }
-              </div>
-              <div className={'underline'}/>
-              <div className={'text'}>
-                { props.excerpt('quickFacts.third.body', props.language) }
+              <div className={'factDetails'}>
+                <div className={'factTitle'}>
+                  { props.excerpt('quickFacts.second.title', props.language) }
+                </div>
+                <div className={'underline'}/>
+                <div className={'text'}>
+                  { props.excerpt('quickFacts.second.body', props.language) }
+                </div>
               </div>
             </div>
           </div>
-          <div className={'fact gold'}>
-            <div className={'icon'}>
-              <div className={'iconInner'}>
-                <img src={GoldIcon} alt={'gold icon'}/>
+          <div className={'videoWrapper'}>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen/>
+          </div>
+          <div className={'factsSectionTwo'}>
+            <div className={'fact'}>
+              <div className={'icon'}>
+                <div className={'iconInner'}>
+                  <img src={ChainIcon} alt={'chain icon'}/>
+                </div>
+              </div>
+              <div className={'factDetails'}>
+                <div className={'factTitle'}>
+                  { props.excerpt('quickFacts.third.title', props.language) }
+                </div>
+                <div className={'underline'}/>
+                <div className={'text'}>
+                  { props.excerpt('quickFacts.third.body', props.language) }
+                </div>
               </div>
             </div>
-            <div className={'factDetails'}>
-              <div className={'factTitle'}>
-                { props.excerpt('quickFacts.fourth.title', props.language) }
+            <div className={'fact gold'}>
+              <div className={'icon'}>
+                <div className={'iconInner'}>
+                  <img src={GoldIcon} alt={'gold icon'}/>
+                </div>
               </div>
-              <div className={'underline'}/>
-              <div className={'text'}>
-                { props.excerpt('quickFacts.fourth.body', props.language) }
+              <div className={'factDetails'}>
+                <div className={'factTitle'}>
+                  { props.excerpt('quickFacts.fourth.title', props.language) }
+                </div>
+                <div className={'underline'}/>
+                <div className={'text'}>
+                  { props.excerpt('quickFacts.fourth.body', props.language) }
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={'videoWrapper'}>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen/>
         </div>
       </div>
     </div>
