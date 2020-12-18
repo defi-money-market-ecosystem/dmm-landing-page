@@ -46,7 +46,7 @@ class App extends React.Component {
       ethRate: null,
       tokenList: null,
       totalLocked: null,
-      language: Languages.CHINESE, // TODO - Languages.ENGLISH,
+      language: Languages.ENGLISH,
     };
 
     Firebase.auth().onAuthStateChanged((user) => {
@@ -73,7 +73,7 @@ class App extends React.Component {
 
   async totalValueLocked() {
     return await fetch(
-      `http://api.defimoneymarket.com/v1/dmm/tokens/total-value-locked`,
+      `https://api.defimoneymarket.com/v1/dmm/tokens/total-value-locked`,
       {headers: {'Accept': 'application/json'}},
     ).then(response => response.json()).then(response => response['data']);
     //tokenList[token].underlyingRate = new NumberUtil.BN((await response.json())["data"]["exchange_rate"]);

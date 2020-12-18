@@ -13,6 +13,7 @@ import Josef from '../../assets/josef-holm.jpeg';
 import Maria from '../../assets/Maria-Teresa-Siman-Herrera.jpeg';
 import Carlos from '../../assets/Carlos-Ernesto-S.jpeg';
 import Isabel from '../../assets/Maria-Isabel-Siman-Bravo.jpeg';
+import Jordan from '../../assets/Jordan-Lyall.jpeg';
 import WikipediaIcon from '../../assets/wikipedia-icon.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -175,6 +176,20 @@ class Team extends React.Component {
               </div>
               <div className={'linkedIn'}>
                 <a href={'https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/maria-isabel-siman-bravo-3a056aa4/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
+              </div>
+            </div>
+            <div className={'teamMember'}>
+              <div className={'image'}>
+                <img src={Jordan}/>
+              </div>
+              <div className={'name'}>
+                Jordan Lyall
+              </div>
+              <div className={'role'}>
+                { this.props.excerpt('team.member', this.props.language) }
+              </div>
+              <div className={'linkedIn'}>
+                <a href={'https://www.linkedin.com/in/jordanlyall/'} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a><a href="https://www.linkedin.com/in/jordanlyall/" target={'_blank'}>{ this.props.excerpt('team.linkedIn', this.props.language) }</a>
               </div>
             </div>
             <div className={'title investors'}>

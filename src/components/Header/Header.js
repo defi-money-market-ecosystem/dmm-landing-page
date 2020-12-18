@@ -87,8 +87,8 @@ const Header = (props) => {
               <div className={'contentSection'}>
                 <span className={'blue'}>
                   <CountUp
-                    start={props.totalLocked ? Number.parseFloat(humanize(NumberUtil._1.mul(props.totalLocked).div(NumberUtil._1), 18)) : 0}
-                    end={props.totalLocked ? Number.parseFloat(humanize(fromDecimalToBN(1.000007134703196, 18).mul(props.totalLocked).div(NumberUtil._1), 18)) : 0}
+                    start={props.totalLocked ? Number.parseFloat(humanize(NumberUtil._1.mul(props.totalLocked).div(NumberUtil._1), 18)) : 3145928.54}
+                    end={props.totalLocked ? Number.parseFloat(humanize(fromDecimalToBN(1.000007134703196, 18).mul(props.totalLocked).div(NumberUtil._1), 18)) : 3146018.54}
                     duration={60 * 60}
                     separator=","
                     decimals={2}

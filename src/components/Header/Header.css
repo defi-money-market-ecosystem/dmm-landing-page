@@ -235,12 +235,22 @@
 
     .header .content {
         width: 90%;
-        margin: 125px 0 25px;
+        margin: 20vh 0 25px;
     }
 
     .header .learnMore {
         width: 90%;
         margin: 50px 0 0;
+    }
+
+    .header .appButtonWrapper {
+        width: 150px;
+        margin-left: 20px;
+    }
+
+    .header .appButtonWrapper .appButton {
+        width: 150px;
+        font-size: 14px;
     }
 }
 

@@ -73,7 +73,7 @@ const Navbar = (props) => {
         </div>
 
         <div className={'navLink governanceTab'}>
-          <a href={'http://localhost:3000/governance'} target={'_blank'}>
+          <a href={'https://www.defimoneymarket.com/governance'}>
             { props.excerpt('navbar.governance', props.language) }
           </a>
         </div>
