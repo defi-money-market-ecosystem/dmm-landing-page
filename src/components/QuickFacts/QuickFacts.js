@@ -12,6 +12,8 @@ import CountUp from 'react-countup';
 import NumberUtil, {fromDecimalToBN, humanize} from '../../utils/NumberUtil';
 import { withTranslations } from '../../services/Translations/Translations';
 
+import Languages from '../../services/Translations/Languages';
+
 import './QuickFacts.css';
 
 const QuickFacts = (props) => {
@@ -38,9 +40,15 @@ const QuickFacts = (props) => {
       </div>
       <div className={'content'}>
         <div className={'videoWrapperTop'}>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen/>
+          { props.language === Languages.CHINESE ? (
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/T_3HSS18XjQ" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen/>
+          ) : (
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen/>
+          )}
         </div>
         <div className={'title'}>
           { props.excerpt('quickFacts.title', props.language) }
@@ -81,9 +89,15 @@ const QuickFacts = (props) => {
             </div>
           </div>
           <div className={'videoWrapper'}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen/>
+            { props.language === Languages.CHINESE ? (
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/T_3HSS18XjQ" frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen/>
+            ) : (
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qM0PrnzmF-w?controls=0" frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen/>
+            )}
           </div>
           <div className={'factsSectionTwo'}>
             <div className={'fact'}>

@@ -38,6 +38,21 @@ class App extends React.Component {
     super(props);
     Firebase.initializeApp(config);
 
+    const lang = navigator.language || navigator.userLanguage;
+
+    let browserLanguage = Languages.ENGLISH;
+
+    if (lang) {
+      if (lang === 'zh-CN' || lang === 'zh') {
+        browserLanguage = Languages.CHINESE;
+      }
+    }
+    else if (props.lang) {
+      if (props.lang === 'CN') {
+        browserLanguage = Languages.CHINESE;
+      }
+    }
+
     this.state = {
       isSignedIn: false,
       userProfile: null,
@@ -46,7 +61,7 @@ class App extends React.Component {
       ethRate: null,
       tokenList: null,
       totalLocked: null,
-      language: Languages.ENGLISH,
+      language: browserLanguage,
     };
 
     Firebase.auth().onAuthStateChanged((user) => {
@@ -66,8 +81,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (window.location.href.includes('/CN')) {
+    if (window.location.href.includes('/cn')) {
       this.setState({ language: Languages.CHINESE });
+    }
+    if (window.location.href.includes('/en')) {
+      this.setState({ language: Languages.ENGLISH });
     }
   }
 
@@ -85,7 +103,6 @@ class App extends React.Component {
         `https://api.defimoneymarket.com/v1/dmm/tokens/${tokenList[token]["dmm_token_id"]}/exchange-rate`,
         {headers: {'Accept': 'application/json'}},
       );
-      console.log(tokenList[token]);
       tokenList[token].underlyingRate = new NumberUtil.BN((await response.json())["data"]["exchange_rate"]);
     }
 
@@ -131,13 +148,13 @@ class App extends React.Component {
                 <div className={'language-selector'}>
                   { this.state.language === Languages.CHINESE ? (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com'}>
+                      <a href={'https://www.defimoneymarket.com/en'}>
                         <img src={USFlag} />English
                       </a>
                     </div>
                   ) : (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/CN'}>
+                      <a href={'https://www.defimoneymarket.com/cn'}>
                         <img src={CNFlag} />中文
                       </a>
                     </div>
@@ -151,13 +168,13 @@ class App extends React.Component {
                 <div className={'language-selector'}>
                   { this.state.language === Languages.CHINESE ? (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com'}>
+                      <a href={'https://www.defimoneymarket.com/en'}>
                         <img src={USFlag} />English
                       </a>
                     </div>
                   ) : (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/CN'}>
+                      <a href={'https://www.defimoneymarket.com/cn'}>
                         <img src={CNFlag} />中文
                       </a>
                     </div>

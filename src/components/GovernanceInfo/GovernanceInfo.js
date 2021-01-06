@@ -61,13 +61,13 @@ const GovernanceInfo = props => {
               { props.excerpt('governance.button.dashboard', props.language) }
             </Button>
             { props.language === Languages.CHINESE ? (
-              <Button href={"/governance/CN"} className={'buttonText secondary'}
-                      onClick={() => window.open('/governance/CN', "_self")}>
+              <Button href={"/governance/cn"} className={'buttonText secondary'}
+                      onClick={() => window.open('/governance/cn', "_self")}>
                 { props.excerpt('governance.button.learnMore', props.language) }
               </Button>
             ) : (
-              <Button href={"/governance"} className={'buttonText secondary'}
-                      onClick={() => window.open('/governance', "_self")}>
+              <Button href={"/governance/en"} className={'buttonText secondary'}
+                      onClick={() => window.open('/governance/en', "_self")}>
                 { props.excerpt('governance.button.learnMore', props.language) }
               </Button>
             )}

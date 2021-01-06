@@ -1,0 +1,331 @@
+
+.roadmap {
+    transform: skewY(5deg);
+    margin-bottom: 320px;
+}
+
+.roadmap .title {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+/*.roadmap > div > div > div > div > div {
+    transform: none !important;
+}*/
+
+.roadmap .events {
+    top: 80px !important;
+}
+
+.roadmap .buttons li {
+    top: 80px !important;
+}
+
+.roadmap div > ol > li > span {
+    bottom: -7px !important;
+}
+
+.roadmap .buttons li.enabled {
+    border: 2px solid #327ccb !important;
+}
+
+.roadmap .buttons li svg {
+    transition: all 0.2s ease-in-out !important;
+}
+
+.roadmap .buttons li.enabled svg {
+    fill: #327ccb !important;
+    width: 34px !important;
+}
+
+.roadmap .buttons li.disabled {
+    border: 2px solid #ffffff !important;
+}
+
+.roadmap .buttons li.disabled svg {
+    fill: #ffffff !important;
+    width: 34px !important;
+}
+
+.roadmap .roadmapItemTitle {
+    text-align: left;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.roadmap .roadmapItemDate {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.roadmap .roadmapItemBody {
+    text-align: left;
+}
+
+.roadmap .text-center {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.roadmap .roadmapItemBody li {
+    /*line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.3px;*/
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.roadmap .buttonOuter {
+    margin-top: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.roadmap .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.roadmap .buttonText:hover {
+    background-color: #5490d0 !important;
+}
+
+@media (max-width: 767px) {
+    .roadmap {
+        margin-bottom: 180px;
+    }
+
+    .roadmap .text-center {
+        width: 88%;
+    }
+
+    .roadmap .text-center ul {
+        margin-left: -10px;
+    }
+
+    .roadmap .roadmapItemBody li {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+}
+
+/*.roadmap .content {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.roadmap .tokenInfo {
+    width: 100%;
+    display: inline-block;
+}
+
+.roadmap .tokenInfo .border {
+    height: 4px;
+    background: #327ccb;
+    width: 110px;
+}
+
+.roadmap .tokenInfo .subtext {
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.roadmap .tempLogo {
+    border-radius: 50%;
+    margin: 10px 13px 10px;
+    display: inline-block;
+    width: 12%;
+    height: auto;
+}
+
+.roadmap .tempLogo svg {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.roadmap .tempLogo svg path {
+    fill: #327ccb;
+    height: 40px;
+    width: 40px;
+}
+
+.roadmap .name {
+    font-family: 'Raleway', sans-serif;
+    line-height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4%;
+    font-size: 18px;
+    margin-top: 0.7%;
+}
+
+.roadmap .textWrapper {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6% 5% 6% 6%;
+    width: 89%;
+    text-align: center;
+}
+
+.roadmap .point {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 4%;
+    margin-bottom: 40px;
+    min-width: 310px;
+}
+
+.roadmap .point:first-of-type {
+    margin-left: 0;
+}
+
+.roadmap .point.short {
+    height: 151px !important;
+    margin-bottom: -60px !important;
+}
+
+.roadmap .subtitle {
+    margin-top: 3%;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.roadmap .tokenInfo .subtitle {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 2.3em;
+    margin-bottom: 2px;
+}
+
+.roadmap .buttonOuter {
+    margin-top: 1%;
+    font-weight: 300;
+    text-align: center;
+}
+
+.roadmap .buttonText {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 18px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 45px;
+    margin-top: 9px;
+    padding: 6px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.roadmap .buttonText.secondary {
+    background-color: #8b9db1 !important
+}
+
+.roadmap .buttonText:hover {
+    background-color: #5490d0 !important;
+}
+
+.roadmap .buttonText.secondary:hover {
+    background-color: #9aaec5 !important;
+}
+
+.roadmap .buttonOuter.lower {
+    display: none;
+}*/
+
+
+/* tablet */
+/*@media (min-width: 768px) and (max-width: 991px) {
+    .roadmap .point.short {
+        height: 147px !important;
+        margin-bottom: -28px !important
+    }
+}*/
+
+
+/* mobile */
+/*@media (max-width: 767px) {
+    .roadmap {
+        margin-bottom: 200px;
+    }
+
+    .roadmap .content {
+        padding: 5%;
+    }
+
+    .roadmap .buttonOuter.lower {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .roadmap .textWrapper,
+    .roadmap .tokenInfo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .roadmap .tokenInfo {
+        margin-top: 30px;
+    }
+
+    .roadmap .title {
+        font-size: 3em;
+        display: inline-block;
+        margin-right: 13px;
+    }
+
+    .roadmap .subtitle {
+        margin-top: 10px;
+    }
+
+    .roadmap .point {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .roadmap .point.short {
+        height: 127px !important;
+        margin-bottom: -43px !important;
+    }
+
+    .roadmap .tokenInfo .subtitle {
+        font-size: 2em;
+    }
+
+    .roadmap .tokenInfo .subtext {
+        font-size: 1em;
+    }
+
+    .roadmap .buttonOuter {
+        margin-top: 10px;
+    }
+}*/
+
+/*@media (max-width: 593px) {
+    .roadmap .point {
+        width: 90%;
+    }
+
+    .roadmap .point.short {
+        height: 147px !important;
+    }
+}*/
