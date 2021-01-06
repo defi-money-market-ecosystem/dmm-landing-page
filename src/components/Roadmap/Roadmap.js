@@ -37,7 +37,7 @@ class Roadmap extends React.Component {
             <div className={"roadmapItemBodyText"}>
               <ul>
                 <li>
-                  Gnosis safe integration for minting/redeeming DMM mTokens
+                  Gnosis Safe integration for minting/redeeming DMM mTokens
                 </li>
                 <li>
                   Create new governance voting contract that tracks staked DMG balances
@@ -65,26 +65,13 @@ class Roadmap extends React.Component {
                   Publish website learning materials and community-led Wiki page that showcases more “lively” information of project
                 </li>
                 <li>
-                  Launch additional language/regional communities
-                  <ul>
-                    <li>
-                      Start with China
-                    </li>
-                  </ul>
+                  Launch Chinese language support and regional communities
                 </li>
                 <li>
-                  Finish staking mechanics with community feedback - governance post on forum
+                  Finalize staking mechanics with community feedback - post for feedback will be made on the governance forum
                 </li>
                 <li>
-                  Open Sea official launch with verified contracts
-                  <ul>
-                    <li>
-                      Perform first secondary market purchase for El Salvador (if person willing to sell)
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Launch WBTC mToken pair
+                  Launch wBTC mToken pair
                 </li>
               </ul>
             </div>
@@ -106,31 +93,31 @@ class Roadmap extends React.Component {
                   Integrate DMM Protocol with another blockchain for scalability and community expansion
                 </li>
                 <li>
-                  Staking - see below (really done in Q2)
+                  Launch DMG Staking
                 </li>
                 <li>
-                  DeFi SDK Interactive Adapter
+                  Submit pull request for DeFi SDK Interactive Adapter
                 </li>
                 <li>
-                  mToken CRV LP Pool with yield farming - this doubles as a partnership
+                  Create mToken CRV LP Pool with yield farming
                 </li>
                 <li>
-                  Quality of life updates to the DAO site to see vote ranking, delegate to other wallets, view NFTs, and more.
+                  Quality of life updates to the DAO site to see vote ranking, delegate to other wallets, view NFTs, and more
                 </li>
                 <li>
-                  Publish preliminary research/article on Chainlink-based fiat tracker for movement of offchain-funds, broken down by asset introducer (and possible per asset)
+                  Publish preliminary research on Chainlink-based fiat tracker for movement of offchain-funds, broken down by asset introducer (and possibly per asset)
                 </li>
                 <li>
-                  Launch additional language/regional communities
+                  Launch Spanish language support and regional community
                 </li>
                 <li>
-                  Security and Health page
+                  Security and Health Live Information on Site
                   <ul>
                     <li>
-                      Discusses security audits with links
+                      Discusses security audits
                     </li>
                     <li>
-                      Discusses fiat tracker, once it’s out
+                      Breaks down current status fiat tracker and real-world asset verification
                     </li>
                     <li>
                       Showcases collateralization ratios and reserve ratios
@@ -138,10 +125,7 @@ class Roadmap extends React.Component {
                   </ul>
                 </li>
                 <li>
-                  Voting rewards - grant DMG to users that participate in voting
-                </li>
-                <li>
-                  Launch PAX mToken pair; needs Chainlink oracle
+                  Launch PAX mToken pair and add corresponding Chainlink oracle
                 </li>
               </ul>
             </div>
@@ -160,16 +144,16 @@ class Roadmap extends React.Component {
             <div className={"roadmapItemBodyText"}>
               <ul>
                 <li>
-                  Create an open source module for other blockchain, that allows users that fork the repository to offer interest to the DEX’s users
+                  Create an open source module for the other integrated blockchain, which allows developers to fork a repository to easily offer interest to the DEX's users
                 </li>
                 <li>
                   Dynamic swap pool on another blockchain, where LPs earn additional interest by using mTokens
                 </li>
                 <li>
-                  Chainlink fiat tracker - depends on research and Chainlink
+                  Chainlink fiat tracker - depends on published research and Chainlink's speed to roll out any necessary features
                 </li>
                 <li>
-                  Launch additional language/regional communities
+                  Launch additional language support and regional community
                 </li>
               </ul>
             </div>
@@ -188,36 +172,18 @@ class Roadmap extends React.Component {
             <div className={"roadmapItemBodyText"}>
               <ul>
                 <li>
-                  Governance proposal builder
-                  <ul>
-                    <li>
-                      For anyone to submit a proposal via the UI on the DAO site
-                    </li>
-                  </ul>
+                  Governance proposal builder - used to allow anyone to submit a proposal via the UI on the DAO site. Will be made handy for asset introducers as well
                 </li>
                 <li>
                   Smart Router for mTokens that allows users to mint/redeem mTokens through the core contracts or secondary markets if there is a liquidity crunch
                 </li>
                 <li>
-                  Launch additional language/regional communities
+                  Voting rewards - grant DMG to users that participate in voting
+                </li>
+                <li>
+                  Launch additional language support and regional community
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      );
-      case 4: return (
-        <div className={"roadmapItemWrapper"}>
-          <div className={"roadmapItemTitle"}>
-            Full release of Slate market API
-          </div>
-          <div className={"roadmapItemDate"}>
-            February 2019
-          </div>
-          <div className={"roadmapItemBody"}>
-            <div className={"roadmapItemBodyText"}>
-              Dolomite's Slate market API service is opened up to the public. Everyone can now tap
-              into the comprehensive market tools powering Dolomite for their own project.
             </div>
           </div>
         </div>
