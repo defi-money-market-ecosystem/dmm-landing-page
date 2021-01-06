@@ -1,5 +1,10 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import Button from '@material-ui/core/Button';
+import CountUp from 'react-countup';
+
+import NumberUtil, {fromDecimalToBN, humanize} from '../../utils/NumberUtil';
+import Languages from '../../services/Translations/Languages';
 
 import './Header.css';
 import { withTranslations } from '../../services/Translations/Translations';
@@ -10,6 +15,15 @@ const Header = (props) => {
   const handleScrollToElement = () => {
     myRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
   };
+
+  let tokenString = '';
+  if (props.tokenList){
+    for (let token in props.tokenList) {
+      if (props.tokenList[token].symbol.replace('m','') !== 'ETH')
+        tokenString = tokenString + props.tokenList[token].symbol.replace('m','') + ', ';
+    }
+    tokenString = tokenString + props.excerpt('header.and', props.language) + ' ETH';
+  }
 
   return (
     <div className={'header'}>
@@ -60,16 +74,67 @@ const Header = (props) => {
         </div>
         <Fade bottom>
           <div className={'content'}>
-            { props.excerpt('header.mainText.first', props.language) }
-            <span className={'blue'}>{props.excerpt('header.mainText.second', props.language)}</span>
-            { props.excerpt('header.mainText.third', props.language) }
-            <span className={'blue'}>{props.excerpt('header.mainText.fourth', props.language)}</span>
-            { props.excerpt('header.mainText.fifth', props.language) }
+            <div className={'contentInner'}>
+              <div className={'contentSection'}>
+                { props.excerpt('header.mainText.first', props.language) }
+                <span className={'blue'}>{props.excerpt('header.mainText.second', props.language)}</span>
+                { props.excerpt('header.mainText.third.before', props.language) }
+                { props.tokenList ? tokenString : 'USDC, DAI, USDT, and ETH' }
+                { props.excerpt('header.mainText.third.after', props.language) }
+                <span className={'blue'}>{props.excerpt('header.mainText.fourth', props.language)}</span>
+                { props.excerpt('header.mainText.fifth', props.language) }
+              </div>
+              <div className={'contentSection'}>
+                <span className={'blue'}>
+                  <CountUp
+                    start={props.totalLocked ? Number.parseFloat(humanize(NumberUtil._1.mul(props.totalLocked).div(NumberUtil._1), 18)) : 3145928.54}
+                    end={props.totalLocked ? Number.parseFloat(humanize(fromDecimalToBN(1.000007134703196, 18).mul(props.totalLocked).div(NumberUtil._1), 18)) : 3146018.54}
+                    duration={60 * 60}
+                    separator=","
+                    decimals={2}
+                    decimal="."
+                    prefix="$"
+                    suffix=" "
+                  />
+                </span>
+                { props.excerpt('header.secondText.first.before', props.language) }
+                {props.tokenList ? tokenString : 'USDC, DAI, USDT, '+props.excerpt('header.and', props.language)+' ETH'}
+                { props.excerpt('header.secondText.first.after', props.language) }
+                <span className={'blue'}>{ props.excerpt('header.secondText.second', props.language) }</span>
+                { props.excerpt('header.secondText.third', props.language) }
+                <span className={'blue'}>{ props.excerpt('header.secondText.fourth', props.language) }</span>
+                { props.excerpt('header.secondText.first.fifth', props.language) }
+              </div>
+              {props.language === Languages.CHINESE ? (
+                <div className={'contentSection'}>
+                  { props.excerpt('header.mainText.first', props.language) }
+                  <span className={'blue'}>{props.excerpt('header.mainText.second', props.language)}</span>
+                  { props.excerpt('header.mainText.third.before', props.language) }
+                  { props.tokenList ? tokenString : 'USDC, DAI, USDT, and ETH' }
+                  { props.excerpt('header.mainText.third.after', props.language) }
+                  <span className={'blue'}>{props.excerpt('header.mainText.fourth', props.language)}</span>
+                  { props.excerpt('header.mainText.fifth', props.language) }
+                </div>
+              ) : (
+                <div className={'contentSection'}>
+                  { props.excerpt('header.thirdText.first', props.language) }
+                  <span className={'blue'}>{ props.excerpt('header.thirdText.second', props.language) }</span>
+                  { props.excerpt('header.thirdText.third', props.language) }
+                  <span className={'blue'}>{ props.excerpt('header.thirdText.fourth', props.language) }</span>
+                  { props.excerpt('header.thirdText.fifth', props.language) }
+                </div>
+              )}
+            </div>
           </div>
         </Fade>
         <Fade bottom>
-          <div className={'learnMore'}>
-            <span>{ props.excerpt('header.findOutHow', props.language) }</span>
+          <div className={'appButtonWrapper'}>
+            <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', '_blank')}>
+              { props.excerpt('header.appButton', props.language) }
+            </Button>
+            <Button className={'appButton'} onClick={() => window.open('https://governance.defimoneymarket.com/', '_blank')}>
+              { props.excerpt('header.appButtonAlt', props.language) }
+            </Button>
           </div>
         </Fade>
         <div ref={myRef}/>

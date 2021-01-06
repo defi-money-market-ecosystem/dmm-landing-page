@@ -1,7 +1,7 @@
 
 .quickFacts {
     width: 100%;
-    margin: calc(100vh) auto 0;
+    margin: calc(100vh - 70px) auto 0;
     position: absolute;
     z-index: 9999999;
     top: 0;
@@ -11,8 +11,34 @@
 .quickFacts .content {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     text-align: left;
+    margin: 50px auto 0;
+}
+
+.quickFacts .tickerRates {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.quickFacts .exchangeRatesWrapper {
+    width: fit-content;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.quickFacts .exchangeRatesWrapper span {
+    line-height: 70px;
+}
+
+.quickFacts .bold {
+    font-weight: 400;
+}
+
+.quickFacts .light {
+    font-weight: 100;
 }
 
 .quickFacts .title {
@@ -21,11 +47,17 @@
 }
 
 .quickFacts .factsList {
-    text-align: center;
+    /*text-align: center;
     width: calc(96%);
     display: flex;
     justify-content: space-between;
-    padding: 0 2%;
+    flex-direction: column;
+    padding: 0 2%;*/
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding: 0;
+    text-align: left;
 }
 
 .quickFacts .factRow {
@@ -36,9 +68,44 @@
 
 .quickFacts .fact {
     display: inline-block;
-    max-width: 250px;
     vertical-align: top;
     text-align: left;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.quickFacts .factsSectionOne {
+    width: 50%;
+    display: inline-block;
+}
+
+.quickFacts .factsSectionOne .fact {
+    width: 100%;
+}
+
+.quickFacts .factsSectionTwo {
+    width: 100%;
+}
+
+.quickFacts .factsSectionTwo .fact {
+    width: 50%;
+}
+
+.quickFacts .videoWrapper {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.quickFacts .videoWrapperTop {
+    display: none;
+}
+
+.quickFacts iFrame {
+    border-radius: 5px;
+    max-width: 90vw;
+    box-shadow: rgba(0,0,0,0.3) 1px 1px 4px -4px, rgba(0,0,0,0.3) 1px 1px 8px 0px;
 }
 
 @media (max-width: 1200px) {
@@ -47,8 +114,23 @@
         padding-top: 30px;
     }
 
-    .quickFacts .fact {
-        margin: 0 10%;
+    .quickFacts .videoWrapperTop {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .quickFacts .videoWrapper {
+        display: none;
+    }
+
+    .quickFacts .factsSectionOne {
+        width: 100%;
+    }
+
+    .quickFacts .factsSectionOne .fact {
+        width: 50%;
     }
 }
 
@@ -72,13 +154,12 @@
 .quickFacts .icon {
     height: 170px;
     text-align: center;
-    display: table-cell;
-    vertical-align: bottom;
+    width: 30%;
+    display: inline-block;
 }
 
 .quickFacts .iconInner {
-    width: 240px;
-    margin-bottom: 30px;
+    width: 100%;
 }
 
 .quickFacts img {
@@ -96,9 +177,35 @@
     width: 150px;
 }
 
+.quickFacts .factDetails {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    margin-top: -10px;
+}
+
+@media (max-width: 1075px) {
+    .quickFacts .factsSectionOne,
+    .quickFacts .factsSectionTwo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .quickFacts .factsSectionOne .fact,
+    .quickFacts .factsSectionTwo .fact {
+        width: 80%;
+    }
+}
+
 @media (max-width: 900px) {
     .quickFacts .fact {
         margin: 0 6%;
+    }
+}
+
+@media (max-width: 767px) {
+    .quickFacts .exchangeRatesWrapper {
+        display: none;
     }
 }
 
@@ -112,13 +219,21 @@
         font-size: 2.5em;
     }
 
-    .quickFacts .fact {
-        margin: 0 5%;
-        max-width: 190px;
+    .quickFacts .iconInner {
+        width: 120px;
     }
 
-    .quickFacts .iconInner {
-        width: 190px;
+    .quickFacts img {
+        width: 100%;
+    }
+
+    .quickFacts .gold img {
+        width: 120px;
+    }
+
+    /*.quickFacts .fact {
+        margin: 0 5%;
+        max-width: 190px;
     }
 
     .quickFacts .factTitle {
@@ -127,25 +242,32 @@
 
     .quickFacts .text {
         font-size: 1em;
-    }
+    }*/
 }
 
 @media (max-width: 600px) {
-    .quickFacts .fact {
-        max-width: 40%;
-    }
-
-    .quickFacts .icon {
-        height: 125px;
-    }
-
-    .quickFacts .iconInner {
-        max-width: 120px;
-    }
-
     .quickFacts img {
         max-height: 70px;
         max-width: 70px;
+    }
+
+    .quickFacts .text {
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    .quickFacts .factsSectionTwo {
+        margin-top: 40px;
+    }
+
+    .quickFacts .fact {
+        max-width: 38%;
+        margin: 0 5%;
+    }
+
+    .quickFacts .icon {
+        height: 100px;
+        width: 100%;
     }
 
     .quickFacts .gold img {
@@ -154,16 +276,24 @@
         width: 100px;
     }
 
-    .quickFacts .factTitle {
-        font-size: 1em;
-    }
-
     .quickFacts .underline {
         width: 50px;
     }
 
-    .quickFacts .text {
-        font-size: 0.8em;
-        font-weight: 300;
+    .quickFacts .factTitle {
+        font-size: 1em;
+    }
+
+    .quickFacts img {
+        max-height: 70px;
+        max-width: 70px;
+    }
+
+    .quickFacts .iconInner {
+        max-width: 120px;
+    }
+
+    .quickFacts .factDetails {
+        width: 100%;
     }
 }

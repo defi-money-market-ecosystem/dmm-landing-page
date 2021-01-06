@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 import Integrations from '../Integrations/Integrations';
 import Token from '../Token/Token';
 import GovernanceInfo from '../GovernanceInfo/GovernanceInfo';
+import Roadmap from '../Roadmap/Roadmap';
 import Whitepaper from '../Whitepaper/Whitepaper';
 
 import './IntegrationsAndWhitepaper.css';
@@ -19,6 +20,9 @@ const IntegrationsAndWhitepaper = (props) => {
         language={props.language}
       />
       <GovernanceInfo
+        language={props.language}
+      />
+      <Roadmap
         language={props.language}
       />
       <Whitepaper

@@ -2,7 +2,7 @@ import React from 'react';
 import Firebase from 'firebase';
 import './App.css';
 
-import NumberUtil from './utils/NumberUtil';
+import NumberUtil, {humanize} from './utils/NumberUtil';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Governance from './components/Governance/Governance';
 
@@ -38,13 +38,30 @@ class App extends React.Component {
     super(props);
     Firebase.initializeApp(config);
 
+    const lang = navigator.language || navigator.userLanguage;
+
+    let browserLanguage = Languages.ENGLISH;
+
+    if (lang) {
+      if (lang === 'zh-CN' || lang === 'zh') {
+        browserLanguage = Languages.CHINESE;
+      }
+    }
+    else if (props.lang) {
+      if (props.lang === 'CN') {
+        browserLanguage = Languages.CHINESE;
+      }
+    }
+
     this.state = {
       isSignedIn: false,
       userProfile: null,
       daiRate: null,
       usdcRate: null,
       ethRate: null,
-      language: Languages.ENGLISH,
+      tokenList: null,
+      totalLocked: null,
+      language: browserLanguage,
     };
 
     Firebase.auth().onAuthStateChanged((user) => {
@@ -57,12 +74,39 @@ class App extends React.Component {
 
     this.loadExchangeRates().then(() => {
     });
+
+    this.totalValueLocked().then(response => {
+      this.setState({ totalLocked: new NumberUtil.BN(response['total_value_locked_usd']) });
+    })
   }
 
   componentDidMount() {
-    if (window.location.href.includes('/CN')) {
+    if (window.location.href.includes('/cn')) {
       this.setState({ language: Languages.CHINESE });
     }
+    if (window.location.href.includes('/en')) {
+      this.setState({ language: Languages.ENGLISH });
+    }
+  }
+
+  async totalValueLocked() {
+    return await fetch(
+      `https://api.defimoneymarket.com/v1/dmm/tokens/total-value-locked`,
+      {headers: {'Accept': 'application/json'}},
+    ).then(response => response.json()).then(response => response['data']);
+    //tokenList[token].underlyingRate = new NumberUtil.BN((await response.json())["data"]["exchange_rate"]);
+  }
+
+  async populateRates(tokenList) {
+    for (let token in tokenList) {
+      const response = await fetch(
+        `https://api.defimoneymarket.com/v1/dmm/tokens/${tokenList[token]["dmm_token_id"]}/exchange-rate`,
+        {headers: {'Accept': 'application/json'}},
+      );
+      tokenList[token].underlyingRate = new NumberUtil.BN((await response.json())["data"]["exchange_rate"]);
+    }
+
+    return tokenList;
   }
 
   async loadExchangeRates() {
@@ -75,32 +119,19 @@ class App extends React.Component {
       token.dmmTokenId = token["dmm_token_id"];
       token.address = token["dmm_token_address"];
       token.imageUrl = token["image_url"];
+      token.symbol = token["symbol"];
       token.underlyingTokenAddress = token["underlying_token_address"];
+      /*const response = await fetch(
+        `https://api.defimoneymarket.com/v1/dmm/tokens/${token["dmm_token_id"]}/exchange-rate`,
+        {headers: {'Accept': 'application/json'}},
+      );
+      token.underlyingRate = new NumberUtil.BN((await response.json())["data"]["exchange_rate"]);*/
       return {...map, [token.underlyingTokenAddress.toLowerCase()]: token};
     }, {});
-    const daiResponse = await fetch(
-      `https://api.defimoneymarket.com/v1/dmm/tokens/${tokenList['0x6b175474e89094c44da98b954eedeac495271d0f'].dmmTokenId.toString(10)}/exchange-rate`,
-      {headers: {'Accept': 'application/json'}},
-    );
-    const usdcResponse = await fetch(
-      `https://api.defimoneymarket.com/v1/dmm/tokens/${tokenList['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'].dmmTokenId.toString(10)}/exchange-rate`,
-      {headers: {'Accept': 'application/json'}},
-    );
-    const ethResponse = await fetch(
-      `https://api.defimoneymarket.com/v1/dmm/tokens/3/exchange-rate`,
-      {headers: {'Accept': 'application/json'}},
-    );
-    const usdtResponse = await fetch(
-      `https://api.defimoneymarket.com/v1/dmm/tokens/4/exchange-rate`,
-      {headers: {'Accept': 'application/json'}},
-    );
 
-    const daiRate = new NumberUtil.BN((await daiResponse.json())["data"]["exchange_rate"]);
-    const usdcRate = new NumberUtil.BN((await usdcResponse.json())["data"]["exchange_rate"]);
-    const ethRate = new NumberUtil.BN((await ethResponse.json())["data"]["exchange_rate"]);
-    const usdtRate = new NumberUtil.BN((await usdtResponse.json())["data"]["exchange_rate"]);
-
-    this.setState({daiRate, usdcRate, ethRate, usdtRate});
+    this.populateRates(tokenList).then(result => {
+      this.setState({ tokenList: result });
+    });
   }
 
   render() {
@@ -110,23 +141,20 @@ class App extends React.Component {
           <div className={'content'}>
             <Navbar onClose={() => ''} open
                     selectedValue={'1'}
-                    daiRate={this.state.daiRate}
-                    usdcRate={this.state.usdcRate}
-                    ethRate={this.state.ethRate}
-                    usdtRate={this.state.usdtRate}
-                    language={this.state.language}/>
+                    language={this.state.language}
+            />
             <Switch>
               <Route path={'/governance'}>
                 <div className={'language-selector'}>
                   { this.state.language === Languages.CHINESE ? (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com'}>
+                      <a href={'https://www.defimoneymarket.com/en'}>
                         <img src={USFlag} />English
                       </a>
                     </div>
                   ) : (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/CN'}>
+                      <a href={'https://www.defimoneymarket.com/cn'}>
                         <img src={CNFlag} />中文
                       </a>
                     </div>
@@ -140,22 +168,25 @@ class App extends React.Component {
                 <div className={'language-selector'}>
                   { this.state.language === Languages.CHINESE ? (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com'}>
+                      <a href={'https://www.defimoneymarket.com/en'}>
                         <img src={USFlag} />English
                       </a>
                     </div>
                   ) : (
                     <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/CN'}>
+                      <a href={'https://www.defimoneymarket.com/cn'}>
                         <img src={CNFlag} />中文
                       </a>
                     </div>
                   )}
                 </div>
                 <Header
+                  tokenList={this.state.tokenList}
                   language={this.state.language}
+                  totalLocked={this.state.totalLocked}
                 />
                 <QuickFacts
+                  tokenList={this.state.tokenList}
                   language={this.state.language}
                 />
                 <Info
