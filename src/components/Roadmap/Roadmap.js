@@ -43,25 +43,6 @@ class Roadmap extends React.Component {
                   Create new governance voting contract that tracks staked DMG balances
                 </li>
                 <li>
-                  Add burning interface and DMG locked stats to the Explorer, for tracking the deflationary properties of DMG
-                </li>
-                <li>
-                  Add asset introducer breakdowns on the Explorer, allowing the community to analyze each asset introducer’s performance and health
-                  <ul>
-                    <li>
-                      Showcases amount of DMG being staked per asset introducer, and other basic stats
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Consolidate UX of web application to use the DAO site
-                  <ul>
-                    <li>
-                      Move the minting/redemption capabilities to the DAO site and clean our site’s navigation experience
-                    </li>
-                  </ul>
-                </li>
-                <li>
                   Publish website learning materials and community-led Wiki page that showcases more “lively” information of project
                 </li>
                 <li>
@@ -96,33 +77,10 @@ class Roadmap extends React.Component {
                   Launch DMG Staking
                 </li>
                 <li>
-                  Submit pull request for DeFi SDK Interactive Adapter
-                </li>
-                <li>
-                  Create mToken CRV LP Pool with yield farming
-                </li>
-                <li>
-                  Quality of life updates to the DAO site to see vote ranking, delegate to other wallets, view NFTs, and more
-                </li>
-                <li>
                   Publish preliminary research on Chainlink-based fiat tracker for movement of offchain-funds, broken down by asset introducer (and possibly per asset)
                 </li>
                 <li>
                   Launch Spanish language support and regional community
-                </li>
-                <li>
-                  Security and Health Live Information on Site
-                  <ul>
-                    <li>
-                      Discusses security audits
-                    </li>
-                    <li>
-                      Breaks down current status fiat tracker and real-world asset verification
-                    </li>
-                    <li>
-                      Showcases collateralization ratios and reserve ratios
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   Launch PAX mToken pair and add corresponding Chainlink oracle
