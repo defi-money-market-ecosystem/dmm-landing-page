@@ -187,8 +187,8 @@ class Roadmap extends React.Component {
         </div>
         <div className={'buttonOuter'}>
           {/* TODO - ADD LINK TO MEDIUM ARTICLE HERE */}
-          <Button className={'buttonText'} onClick={() => window.open('https://www.defimoneymarket.com', "_blank")}>
-            READ MORE
+          <Button className={'buttonText'} onClick={() => window.open('https://medium.com/dmm-dao/dmm-2021-development-roadmap-104e83e5362f', "_blank")}>
+            FULL ROADMAP
           </Button>
         </div>
       </div>
