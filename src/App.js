@@ -1,5 +1,6 @@
 import React from 'react';
 import Firebase from 'firebase';
+import Button from '@material-ui/core/Button';
 import './App.css';
 
 import NumberUtil, {humanize} from './utils/NumberUtil';
@@ -62,6 +63,7 @@ class App extends React.Component {
       tokenList: null,
       totalLocked: null,
       language: browserLanguage,
+      selectedLanguage: null,
     };
 
     Firebase.auth().onAuthStateChanged((user) => {
@@ -141,85 +143,35 @@ class App extends React.Component {
           <div className={'content'}>
             <Navbar onClose={() => ''} open
                     selectedValue={'1'}
-                    language={this.state.language}
+                    language={this.state.selectedLanguage || this.state.language}
             />
-            <Switch>
-              <Route path={'/governance'}>
-                <div className={'language-selector'}>
-                  { this.state.language === Languages.CHINESE ? (
-                    <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/en'}>
-                        <img src={USFlag} />English
-                      </a>
-                    </div>
-                  ) : (
-                    <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/cn'}>
-                        <img src={CNFlag} />中文
-                      </a>
-                    </div>
-                  )}
-                </div>
-                <Governance
-                  language={this.state.language}
-                />
-              </Route>
-              <Route path={'/'}>
-                <div className={'language-selector'}>
-                  { this.state.language === Languages.CHINESE ? (
-                    <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/en'}>
-                        <img src={USFlag} />English
-                      </a>
-                    </div>
-                  ) : (
-                    <div className={'language'}>
-                      <a href={'https://www.defimoneymarket.com/cn'}>
-                        <img src={CNFlag} />中文
-                      </a>
-                    </div>
-                  )}
-                </div>
-                <Header
-                  tokenList={this.state.tokenList}
-                  language={this.state.language}
-                  totalLocked={this.state.totalLocked}
-                />
-                <QuickFacts
-                  tokenList={this.state.tokenList}
-                  language={this.state.language}
-                />
-                <Info
-                  onClose={() => {
-                }} open selectedValue={1}
-                  language={this.state.language}
-                />
-                <IntegrationsAndWhitepaper
-                  language={this.state.language}
-                />
-                <Partners
-                  language={this.state.language}
-                />
-                <Media
-                  language={this.state.language}
-                />
-                <Team
-                  language={this.state.language}
-                />
-                <a name="email"/>
-                <EmailList
-                  firebase={Firebase}
-                  isSignedIn={this.state.isSignedIn}
-                  userProfile={this.state.userProfile}
-                  language={this.state.language}
-                />
-              </Route>
-            </Switch>
+            <div className={'contentWrapper'}>
+              <h1>DMM IS CEASING OPERATIONS</h1>
+              <h2>mTokens can be redeemed with interest accrued to-date by following the link below.</h2>
+              <h2>A process for DMG token redemption is being rolled out.</h2>
+
+              <div className={'appButtonWrapper'}>
+                <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com')}>
+                  Redeem mTokens
+                </Button>
+              </div>
+
+
+              <p>
+                As a result of regulatory inquiries, DMM is shutting down.  Effective immediately, mToken minting is no longer available.  mToken redemption will remain available indefinitely, though the interest rate on mTokens will drop to 0% on or about February 10th, 2021.   Capital and interest are currently available to fund redemption of all outstanding mTokens plus accrued interest.  Please redeem your mTokens as soon as possible.
+              </p>
+              <p>
+                An additional fund of available assets is being established to facilitate redemption of DMG tokens.  Details will follow.  We’re sure that you have questions, but unfortunately we are not able to answer questions at this time.
+              </p>
+              <p>
+                DMM regrets the necessity of this action, and would like to thank the DMM community for its support and active participation in this project.
+              </p>
+            </div>
             <Footer
               onClose={() => ''}
               open
               selectedValue={'1'}
-              language={this.state.language}
+              language={this.state.selectedLanguage || this.state.language}
             />
           </div>
         </div>

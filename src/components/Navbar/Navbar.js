@@ -72,26 +72,6 @@ const Navbar = (props) => {
           </div>
         </div>
 
-        <div className={'navLink governanceTab'}>
-          <a href={'https://www.defimoneymarket.com/governance'}>
-            { props.excerpt('navbar.governance', props.language) }
-          </a>
-        </div>
-        <div className={'navLink'}>
-          <a href={'https://explorer.defimoneymarket.com'} target={'_blank'}>
-            { props.excerpt('navbar.explorer', props.language) }
-          </a>
-        </div>
-        <div className={'navLink forum'}>
-          <a href={'https://governance.defimoneymarket.com/'} target={'_blank'}>
-            { props.excerpt('navbar.forum', props.language) }
-          </a>
-        </div>
-        <div className={'navLink introducers'}>
-          <a href={'https://explorer.defimoneymarket.com/asset-introducers'} target={'_blank'}>
-            { props.excerpt('navbar.introducers', props.language) }
-          </a>
-        </div>
         <div className={'appButtonWrapper'}>
           <Button className={'appButton'} onClick={() => window.open('https://app.defimoneymarket.com', '_blank')}>
             { props.excerpt('navbar.appButton', props.language) }

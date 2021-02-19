@@ -20,6 +20,8 @@ const QuickFacts = (props) => {
   return (
     <div className={'quickFacts'}>
       <div className={'tickerRates'}>
+        <div className={'tickerEdge'}/>
+        <div className={'tickerEdge right'}/>
         {props.tokenList && Object.keys(props.tokenList).map((key,index) =>
           <div className={`exchangeRatesWrapper ${props.tokenList[key].symbol.replace('m','').toLowerCase()}`}>
             <span className={'bold'}>1</span>

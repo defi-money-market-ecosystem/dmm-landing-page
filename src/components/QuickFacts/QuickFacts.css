@@ -21,6 +21,8 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    height: 60px;
 }
 
 .quickFacts .exchangeRatesWrapper {
@@ -106,6 +108,69 @@
     border-radius: 5px;
     max-width: 90vw;
     box-shadow: rgba(0,0,0,0.3) 1px 1px 4px -4px, rgba(0,0,0,0.3) 1px 1px 8px 0px;
+}
+
+.quickFacts .exchangeRatesWrapper {
+    position: absolute;
+    animation: scroll-fade 24s infinite linear;
+}
+
+.quickFacts .tickerEdge {
+    position: absolute;
+    left: 0;
+    height: 60px;
+    width: 200px;
+
+    background: rgb(50,124,203);
+    background: linear-gradient(90deg, rgba(50,124,203,1) 55%, rgba(50,124,203,0) 100%);
+    z-index: 999;
+}
+
+.quickFacts .tickerEdge.right {
+    right: 0;
+    left: auto;
+    background: linear-gradient(270deg, rgba(50,124,203,1) 55%, rgba(50,124,203,0) 100%);
+}
+
+.quickFacts .exchangeRatesWrapper:nth-of-type(2) {
+    animation-delay: -4s;
+}
+
+.quickFacts .exchangeRatesWrapper:nth-of-type(3) {
+    animation-delay: -8s;
+}
+
+.quickFacts .exchangeRatesWrapper:nth-of-type(4) {
+    animation-delay: -12s;
+}
+
+.quickFacts .exchangeRatesWrapper:nth-of-type(5) {
+    animation-delay: -16s;
+}
+
+.quickFacts .exchangeRatesWrapper:nth-of-type(6) {
+    animation-delay: -20s;
+}
+
+@keyframes scroll-fade {
+    0% {
+        left: 82%;
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    66% {
+        left: 0;
+        opacity: 0;
+    }
+    100% {
+        left: 82%;
+        opacity: 0;
+    }
 }
 
 @media (max-width: 1200px) {

@@ -4,7 +4,34 @@
 }
 
 .App > .content {
-  margin: 0 auto;
+    margin: 0 auto;
+    background: linear-gradient(360deg, #327ccb, #4f94de 5%, #8bbbef 15%, #bdddff 25%, #deeeff 40%);
+    position: relative;
+    min-height: 100vh;
+    padding-top: 150px;
+}
+
+.App .contentWrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.App .contentWrapper p {
+    text-align: left;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+h1 {
+    margin: 0 0 25px;
+    font-size: 40px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-weight: 400;
 }
 
 body {
@@ -29,4 +56,26 @@ body {
 
 .language-selector a {
     text-decoration: none !important;
+}
+
+.App > .content > .contentWrapper > .appButtonWrapper {
+    width: 100%;
+}
+
+.App > .content > .contentWrapper > .appButtonWrapper > .appButton {
+    color: white !important;
+    background-color: #327ccb !important;
+    font-size: 17px;
+    font-weight: 200;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 8px -4px, rgba(0,0,0,0.5) 1px 1px 4px -4px;
+    height: 40px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+    .App > .content {
+        min-height: fit-content;
+        padding-bottom: 200px;
+    }
 }

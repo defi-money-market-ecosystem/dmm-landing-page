@@ -1,7 +1,9 @@
 /*eslint-disable */
-import {
-  h1, h2, bold, a
-} from './_helper';
+
+const h1 = title => (title ? `<h1>${title}</h1>` : '');
+const h2 = title => (title ? `<h2>${title}</h2>` : '');
+const bold = text => (text ? `<b>${text}</b>` : '');
+const a = (text, href, target) => (text ? `<a href=${href} target=${target}>${text}</a>` : '');
 
 /*
  * Rules for translating:

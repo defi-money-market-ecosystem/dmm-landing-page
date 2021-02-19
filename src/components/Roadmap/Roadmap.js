@@ -28,7 +28,7 @@ class Roadmap extends React.Component {
       case 0: return (
         <div className={"roadmapItemWrapper"}>
           <div className={"roadmapItemTitle"}>
-            Quarter 1, 2020
+            Quarter 1, 2021
           </div>
           <div className={"roadmapItemDate"}>
             January - March
@@ -62,7 +62,7 @@ class Roadmap extends React.Component {
       case 1: return (
         <div className={"roadmapItemWrapper"}>
           <div className={"roadmapItemTitle"}>
-            Quarter 2, 2020
+            Quarter 2, 2021
           </div>
           <div className={"roadmapItemDate"}>
             April - June
@@ -93,7 +93,7 @@ class Roadmap extends React.Component {
       case 2: return (
         <div className={"roadmapItemWrapper"}>
           <div className={"roadmapItemTitle"}>
-            Quarter 3, 2020
+            Quarter 3, 2021
           </div>
           <div className={"roadmapItemDate"}>
             July - September
@@ -121,7 +121,7 @@ class Roadmap extends React.Component {
       case 3: return (
         <div className={"roadmapItemWrapper"}>
           <div className={"roadmapItemTitle"}>
-            Quarter 4, 2020
+            Quarter 4, 2021
           </div>
           <div className={"roadmapItemDate"}>
             October - December
