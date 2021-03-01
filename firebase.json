@@ -14,9 +14,6 @@
     "rewrites": [ {
       "source": "**",
       "destination": "/index.html"
-    } ],
-    "i18n": {
-      "root": "/localized-files"
-    }
+    } ]
   }
 }
